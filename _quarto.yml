@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Meer doen met data"
+  navbar:
+    logo: "images/JTIP_grey80.png"
+    logo-alt: "Inverse Pi"
+    left:
+      - blog.qmd
+      - text: "Boeken"
+        icon: book
+        file: boeken.qmd
+      - packages.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/RedTent
+  
+format:
+  html:
+    theme: 
+      light: sandstone
+      dark: slate
+    css: styles.css
+
+
+execute: 
+  freeze: auto
+

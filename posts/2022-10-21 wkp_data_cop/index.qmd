@@ -1,0 +1,202 @@
+---
+title: "Gebruik van WKP-data"
+date: "2022-10-28"
+editor_options: 
+  chunk_output_type: console
+format: 
+  html:
+    code-fold: show
+reference-location: margin
+---
+
+```{r setup}
+#| include: false
+options(tidyverse.quiet = TRUE)
+```
+
+Alle monitoringsdata van de waterkwaliteits van de waterbeheerders wordt beschikbaar gesteld via het [Waterkwaliteitsportaal](https://www.waterkwaliteitsportaal.nl/oppervlaktewaterkwaliteit) (WKP). In deze blogpost wil ik laten zien hoe je deze data kunt gebruiken.
+
+::: callout-tip
+## Tip
+
+Je kunt de code-blokken inklappen door op de *Code*-knop boven aan het blok te klikken.
+:::
+
+# Downloaden en uitpakken
+
+De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2016. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
+
+Ik maak gebruik van de functies `walk` en `walk2`. Deze functies maken het mogelijk om zonder loops de bestanden een voor een te downloaden en uit te pakken.
+
+```{r}
+#| message: false
+library(tidyverse)
+library(vroom)
+library(twn)
+```
+
+```{r}
+#| eval: false
+#| code-overflow: scroll
+
+# Download
+
+urls <- 
+  c(
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2021.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2020.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2019.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2018.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2017.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2016.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand01_totenmet_04.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand05_totenmet_07.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand_08totenmet_12.zip"
+  )
+
+
+urls_meetpunten <- 
+  c(
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2021.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2020.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2019.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2018.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2017.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2016.zip"
+  )
+
+purrr::walk2(urls, paste0("data-raw/", basename(urls)), download.file)
+purrr::walk2(urls_meetpunten, paste0("data-raw/", basename(urls_meetpunten)), download.file)
+
+# Extract -----------------------------------------------------------------
+
+
+files <- list.files("data-raw", pattern = "^IM_Metingen", full.names = TRUE)
+purrr::walk(files, .f = ~unzip(.x, exdir = "data-raw/IM-metingen"))
+
+files_meetpunten <- list.files("data-raw", pattern = "^Meetlocaties", full.names = TRUE)
+purrr::walk(files_meetpunten, .f = ~unzip(.x, exdir = "data-raw/meetpunten"))
+
+```
+
+Het resultaat is dat we een map *IM-metingen* hebben met 26 bestanden en een map *meetpunten* met 6 bestanden met meetpunten.
+
+# Inlezen
+
+De volgende stap is om de uitgepakte bestanden in te lezen. Gezien het grote aantal bestanden is het handig om een aanpak te verzinnen waarbij niet ieder bestand afzonderlijk ingelezen hoeft te worden.
+
+## Eerste idee
+
+Hoewel de bestanden allemaal in het IM-metingen format zijn, verschilt het aantal kolommen per bestand. Om dit probleem op te lossen was mijn eerste idee om elk afzonderlijk bestand automatisch in te lezen in een lijst met `map()`. Daarna combineer ik al deze tibbles met `reduce()` en `bind_rows()`.
+
+```{r}
+#| eval: false
+
+files_IM <- list.files("data-raw/IM-metingen/", full.names = TRUE)
+
+data <-
+  map(files_IM, .f = read_csv2) %>% 
+  reduce(bind_rows)
+
+
+```
+
+Deze manier van inlezen werkt op zich wel, maar de voorwaarde is dat er genoeg computergeheugen beschikbaar is. Bij het uitproberen op mijn persoonlijke computer kwam ik erachter dat 8 Gb RAM onvoldoende was en dat dit dus misschien niet de beste oplossing is.
+
+## Alternatieve aanpak
+
+Alles in het geheugen inlezen is dus niet de optimale aanpak. Een betere aanpak is een database-achtige aanpak waarbij niet alle data in één keer in het geheugen ingelezen wordt, maar waarbij data pas wordt ingelezen wanneer dat nodig is. De library `vroom` is heel geschikt voor deze aanpak. `vroom` kan een groot aantal tekstbestanden indexeren en dit als een lazy[^1] dataframe beschikbaar maken.
+
+[^1]: Lazy betekent dat R zo weinig mogelijk werk doet. De data wordt dus niet in het geheugen geladen zolang dat niet nodig is.
+
+Om `vroom` te laten werken is het belangrijk dat alle bestanden dezelfde kolommen bevatten. Dit is bij de IM-metingbestanden niet het geval. Daarom is het voor deze aanpak nodig om eerst ieder bestand te uniformeren (inlezen, aanpassen en weer opslaan als .csv).
+
+Ik gebruik deze stap ook gelijk als een mogelijkheid om de bestanden een klein beetje op te schonen door alleen de kolommen te bewaren die ik nodig heb en onnodige aanhalingstekens uit tekstvelden te verwijderen.
+
+Voor het gemak heb ik alle stappen opgenomen in een functie. Die functie wordt met `walk()` uitgevoerd voor elk IM-metingenbestand.
+
+```{r}
+#| eval: false
+files_IM <- list.files("data-raw/IM-metingen/", full.names = TRUE)
+
+opschoon_functie <- function(filename){
+  
+  im_kolommen <- c(
+    "Meetobject.namespace",
+    "Meetobject.lokaalID",
+    "MonsterCompartiment.code",
+    "Begindatum",
+    "Begintijd",
+    "Typering.code",
+    "Grootheid.code",
+    "Parameter.groep",
+    "Parameter.code",
+    "Parameter.omschrijving",
+    "Biotaxon.naam",
+    "Eenheid.code",
+    "Hoedanigheid.code",
+    "Levensstadium.code",
+    "Lengteklasse.code",
+    "Geslacht.code",
+    "Verschijningsvorm.code",
+    "Levensvorm.code",
+    "Gedrag.code",
+    "Waardebewerkingsmethode.code",
+    "Limietsymbool",
+    "Numeriekewaarde",
+    "Alfanumeriekewaarde",
+    "AnalyseCompartiment.code",
+    "Kwaliteitsoordeel.code")
+  
+  read_csv2(filename, 
+            col_types = cols(Numeriekewaarde = col_number(), 
+                             Begindatum = col_date(),
+                             Begintijd = col_time(),
+                             .default = col_character())) %>% 
+    select(all_of(im_kolommen)) %>% 
+    mutate(across(where(is.character), ~str_remove_all(.x, '"'))) %>% 
+    write_csv2(file.path("data/IM-metingen", basename(filename)),
+               na = "")
+}
+
+
+dir.create("data/IM-metingen", recursive = TRUE)
+walk(files_IM, opschoon_functie)
+```
+
+Het opschonen van de bestanden kost behoorlijk wat tijd. Maar gelukkig is dit een eenmalige stap. Hierna kunnen we de WKP-data vrij snel inlezen met `vroom` en gebruiken. Voor het gemak heb ik de code voor het inlezen in een functie verwerkt.
+
+```{r}
+get_wkp_data <- function(){
+  files_IM_clean <- list.files("data/IM-metingen/", full.names = TRUE)
+  
+  vroom(files_IM_clean, 
+        col_types = cols(Numeriekewaarde = col_number(), 
+                         Begindatum = col_date(),
+                         Begintijd = col_time(),
+                         .default = col_character()))
+  
+}
+```
+
+# Gebruik WKP-data
+
+We hebben de WKP-data nu beschikbaar in een vorm die tot onze beschikking in een bruikbaar formaat. We kunnen deze data nu gaan gebruiken om vragen mee te beantwoorden. Als demonstratie de volgende vragen:
+
+-   Op welke meetlocaties zijn er in Nederland (uitheemse) rivierkreeften gerapporteerd.
+-   Op welke meetlocaties is er krabbenscheer aanwezig?
+
+```{r}
+#| eval: true
+
+wkp_data <- get_wkp_data()
+
+kreeften_taxa <- twn::twn_children("Astacidea", only_preferred = FALSE)
+kreeften <- wkp_data %>% filter(Biotaxon.naam %in% kreeften_taxa) %>% tibble()
+print(kreeften)
+
+krabbenscheer <- wkp_data %>% filter(Biotaxon.naam == "Stratiotes aloides") %>% tibble()
+print(krabbenscheer)
+
+
+```

@@ -1,0 +1,18 @@
+---
+title: "Over mij"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/inversepi
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/johan-van-tent
+    - icon: github
+      text: Github
+      href: https://github.com/RedTent
+---
+
+About this blog
