@@ -28,14 +28,14 @@ De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De 
 
 Ik maak gebruik van de functies `walk` en `walk2`. Deze functies maken het mogelijk om zonder loops de bestanden een voor een te downloaden en uit te pakken.
 
-```{r}
+```{r libs}
 #| message: false
 library(tidyverse)
-library(vroom)
+# library(vroom)
 library(twn)
 ```
 
-```{r}
+```{r download-and-extract}
 #| eval: false
 #| code-overflow: scroll
 
@@ -43,17 +43,20 @@ library(twn)
 
 urls <- 
   c(
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2021.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2020.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2019.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2018.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2017.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2016.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand01_totenmet_04.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand05_totenmet_07.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand_08totenmet_12.zip"
-  )
-
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2021.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2020.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2019.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2018.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2017.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/MeetgegevensPerJaar/IM_Metingen_2016.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand01_totenmet_04.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand05_totenmet_07.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2016-maand_08totenmet_12.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2015.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2014.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2013.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2012.zip",
+"https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Meetgegevens/IM_Metingen_Biologie_2011.zip")
 
 urls_meetpunten <- 
   c(
@@ -62,15 +65,27 @@ urls_meetpunten <-
     "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2019.zip",
     "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2018.zip",
     "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2017.zip",
-    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2016.zip"
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2016.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2015.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2014.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2013.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2012.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Basisgegevens/Meetlocaties_2011.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Basisgegevens/Meetlocaties_Biologie_2015.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Basisgegevens/Meetlocaties_Biologie_2014.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Basisgegevens/Meetlocaties_Biologie_2013.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Basisgegevens/Meetlocaties_Biologie_2012.zip",
+    "https://waterkwaliteitsportaal.overheidsbestanden.nl/Oppervlaktewaterkwaliteit/Limno/Basisgegevens/Meetlocaties_Biologie_2011.zip"
   )
 
+dir.create("data-raw")
 purrr::walk2(urls, paste0("data-raw/", basename(urls)), download.file)
 purrr::walk2(urls_meetpunten, paste0("data-raw/", basename(urls_meetpunten)), download.file)
 
 # Extract -----------------------------------------------------------------
 
 
+# dir.create("data-raw/IM-metingen")
 files <- list.files("data-raw", pattern = "^IM_Metingen", full.names = TRUE)
 purrr::walk(files, .f = ~unzip(.x, exdir = "data-raw/IM-metingen"))
 
@@ -79,7 +94,7 @@ purrr::walk(files_meetpunten, .f = ~unzip(.x, exdir = "data-raw/meetpunten"))
 
 ```
 
-Het resultaat is dat we een map *IM-metingen* hebben met 26 bestanden en een map *meetpunten* met 6 bestanden met meetpunten.
+Het resultaat is dat we een map *IM-metingen* hebben met 31 bestanden en een map *meetpunten* met 16 bestanden met meetpunten.
 
 # Inlezen
 
@@ -89,7 +104,7 @@ De volgende stap is om de uitgepakte bestanden in te lezen. Gezien het grote aan
 
 Hoewel de bestanden allemaal in het IM-metingen format zijn, verschilt het aantal kolommen per bestand. Om dit probleem op te lossen was mijn eerste idee om elk afzonderlijk bestand automatisch in te lezen in een lijst met `map()`. Daarna combineer ik al deze tibbles met `reduce()` en `bind_rows()`.
 
-```{r}
+```{r map-reduce}
 #| eval: false
 
 files_IM <- list.files("data-raw/IM-metingen/", full.names = TRUE)
@@ -105,21 +120,88 @@ Deze manier van inlezen werkt op zich wel, maar de voorwaarde is dat er genoeg c
 
 ## Alternatieve aanpak
 
-Alles in het geheugen inlezen is dus niet de optimale aanpak. Een betere aanpak is een database-achtige aanpak waarbij niet alle data in één keer in het geheugen ingelezen wordt, maar waarbij data pas wordt ingelezen wanneer dat nodig is. De library `vroom` is heel geschikt voor deze aanpak. `vroom` kan een groot aantal tekstbestanden indexeren en dit als een lazy[^1] dataframe beschikbaar maken.
+Alles in het geheugen inlezen is dus niet de optimale aanpak. Een betere aanpak is een database-achtige aanpak waarbij niet alle data in één keer in het geheugen ingelezen wordt, maar waarbij data pas wordt ingelezen wanneer dat nodig is. 
 
-[^1]: Lazy betekent dat R zo weinig mogelijk werk doet. De data wordt dus niet in het geheugen geladen zolang dat niet nodig is.
+Voor deze aanpak is het wel handig om de bestanden eerst te uniformeren en op te schonen. Ik gebruik deze stap ook gelijk om de meetpuntcoordinaten aan de IM-metingbestanden toe te voegen.
 
-Om `vroom` te laten werken is het belangrijk dat alle bestanden dezelfde kolommen bevatten. Dit is bij de IM-metingbestanden niet het geval. Daarom is het voor deze aanpak nodig om eerst ieder bestand te uniformeren (inlezen, aanpassen en weer opslaan als .csv).
+### Opschonen meetpunten
 
-Ik gebruik deze stap ook gelijk als een mogelijkheid om de bestanden een klein beetje op te schonen door alleen de kolommen te bewaren die ik nodig heb en onnodige aanhalingstekens uit tekstvelden te verwijderen.
+Voor het opschonen van de meetpuntbestanden zijn er een paar aandachtspunten:
 
-Voor het gemak heb ik alle stappen opgenomen in een functie. Die functie wordt met `walk()` uitgevoerd voor elk IM-metingenbestand.
+- Dezelfde informatie zit in de verschillende bestanden niet in dezelfde kolom. De namen verschillen.
+- Er zijn soms onnodige aanhalingstekens toegevoegd, die haal ik weer weg.
+- Veel meetpunten komen in meer dan 1 bestand voor. Het is wenselijk om voor elk meeetpunt maar 1 set met informatie te hebben. Hiervoor maak ik een aparte tabel en bestand.
 
-```{r}
+
+```{r opschonen-meetpunten}
 #| eval: false
-files_IM <- list.files("data-raw/IM-metingen/", full.names = TRUE)
 
-opschoon_functie <- function(filename){
+files_mp <- list.files("data-raw/meetpunten/", full.names = TRUE)
+
+meetpunten <- 
+  tibble(pad = files_mp, bestandsnaam = basename(files_mp)) %>% 
+    mutate(jaar = str_extract(bestandsnaam, "\\d{4}")) %>% 
+    arrange(jaar) %>% 
+    mutate(meetpuntinfo = map(pad, ~read_csv2(.x, col_types = cols(.default = col_character())))) %>% 
+    unnest(meetpuntinfo) %>% 
+  mutate( 
+    Meetobject.namespace = case_when(
+      !is.na(Meetobject.namespace) ~ Meetobject.namespace,
+      !is.na(Namespace) ~ Namespace,
+      !is.na(Waterbeheerder.code) ~ paste0("NL", Waterbeheerder.code),
+      !is.na(sub_subident) ~ paste0("NL", sub_subident)),
+    Meetobject.lokaalID = coalesce(Identificatie, Meetpunt.identificatie, mpn_mpnident),
+    GeometriePunt.X_RD = coalesce(GeometriePunt.X_RD, mpn_mrfxcoor),
+    GeometriePunt.Y_RD = coalesce(GeometriePunt.Y_RD, mpn_mrfycoor),
+    Meetobject.Omschrijving = coalesce(Omschrijving, Meetpuntomschrijving, Meetpunt.omschrijving, mpn_mpnomsch)) %>% 
+  select(Meetobject.namespace,
+         Meetobject.lokaalID,
+         Meetobject.Omschrijving,
+         GeometriePunt.X_RD,
+         GeometriePunt.Y_RD,
+         bestandsnaam,
+         jaar) %>% 
+  mutate(across(where(is.character), ~str_remove_all(.x, '"'))) %>% 
+  mutate(across(.cols = contains("GeometriePunt"), 
+                .fns = ~parse_double(.x, locale = locale(decimal_mark = ".")))) %>% 
+  distinct()
+    
+dir.create("data")
+meetpunten %>% write_csv2("data/meetpunten_2011-2021.csv", na = "")
+
+
+# Een aangepaste tabel met de meeste recente set coordinaten en zonder dummy coords.
+
+meetpunten_clean <- 
+  meetpunten %>% 
+  filter(GeometriePunt.X_RD != 0, GeometriePunt.Y_RD != 0,
+         GeometriePunt.X_RD != 123546, GeometriePunt.Y_RD != 456789) %>% 
+  arrange(desc(jaar)) %>% 
+  group_by(Meetobject.namespace, Meetobject.lokaalID) %>% 
+  summarise(GeometriePunt.X_RD = first(GeometriePunt.X_RD),
+            GeometriePunt.Y_RD = first(GeometriePunt.Y_RD),
+            Meetobject.Omschrijving = first(Meetobject.Omschrijving)) %>% 
+  ungroup()
+
+meetpunten_clean %>% write_csv2("data/meetpunten_2011-2021_clean.csv", na = "")
+```
+
+### Opschonen metingen
+
+De volgende stap is het opschonen van de metingen bestanden. Dit doe ik door de volgende stappen:
+
+- selectie van de noodzakelijke kolommen
+- verwijderen van de overbodige aanhalingstekens
+- het toevoegen van de meest recente coordinaten
+
+
+```{r opschonen-metingen}
+#| eval: false
+
+files_IM <- list.files("data-raw/IM-metingen/", full.names = TRUE)
+dir.create("data/IM-metingen")
+
+opschoon_fun <- function(filename){
   
   im_kolommen <- c(
     "Meetobject.namespace",
@@ -152,51 +234,52 @@ opschoon_functie <- function(filename){
             col_types = cols(Numeriekewaarde = col_number(), 
                              Begindatum = col_date(),
                              Begintijd = col_time(),
-                             .default = col_character())) %>% 
-    select(all_of(im_kolommen)) %>% 
+                             .default = col_character()),
+            col_select = any_of(im_kolommen),
+            locale = locale(decimal_mark = ".")) %>% 
+    
     mutate(across(where(is.character), ~str_remove_all(.x, '"'))) %>% 
+    left_join(meetpunten_clean, by = c("Meetobject.namespace", "Meetobject.lokaalID")) %>% 
+    
     write_csv2(file.path("data/IM-metingen", basename(filename)),
                na = "")
 }
 
+walk(files_IM, opschoon_fun)
 
-dir.create("data/IM-metingen", recursive = TRUE)
-walk(files_IM, opschoon_functie)
-```
-
-Het opschonen van de bestanden kost behoorlijk wat tijd. Maar gelukkig is dit een eenmalige stap. Hierna kunnen we de WKP-data vrij snel inlezen met `vroom` en gebruiken. Voor het gemak heb ik de code voor het inlezen in een functie verwerkt.
-
-```{r}
-get_wkp_data <- function(){
-  files_IM_clean <- list.files("data/IM-metingen/", full.names = TRUE)
-  
-  vroom(files_IM_clean, 
-        col_types = cols(Numeriekewaarde = col_number(), 
-                         Begindatum = col_date(),
-                         Begintijd = col_time(),
-                         .default = col_character()))
-  
-}
 ```
 
 # Gebruik WKP-data
 
-We hebben de WKP-data nu beschikbaar in een vorm die tot onze beschikking in een bruikbaar formaat. We kunnen deze data nu gaan gebruiken om vragen mee te beantwoorden. Als demonstratie de volgende vragen:
+We hebben de WKP-data nu beschikbaar in een vorm die we verder kunnen gebruiken. We kunnen deze data nu gaan gebruiken om vragen mee te beantwoorden. Als demonstratie gebruik ik de vraag: *Waar in Nederland zijn er (uitheemse) rivierkreeften gerapporteerd?*
 
--   Op welke meetlocaties zijn er in Nederland (uitheemse) rivierkreeften gerapporteerd.
--   Op welke meetlocaties is er krabbenscheer aanwezig?
+Voor het inlezen van de data maak ik eerst een aparte functie zodat ik niet steeds hoef na te denken over de datatypen van de verschillende kolommen.
 
-```{r}
-#| eval: true
+```{r read-wkp-functie}
 
-wkp_data <- get_wkp_data()
-
-kreeften_taxa <- twn::twn_children("Astacidea", only_preferred = FALSE)
-kreeften <- wkp_data %>% filter(Biotaxon.naam %in% kreeften_taxa) %>% tibble()
-print(kreeften)
-
-krabbenscheer <- wkp_data %>% filter(Biotaxon.naam == "Stratiotes aloides") %>% tibble()
-print(krabbenscheer)
-
-
+read_wkp <- function(filename, lazy = FALSE){
+  read_csv2(filename, 
+            col_types = cols(Begindatum = col_date(),
+                                       Begintijd = col_time(),
+                                       Numeriekewaarde = col_double(),
+                                       GeometriePunt.X_RD = col_double(),
+                                       GeometriePunt.Y_RD = col_double(),
+                                       .default = col_character()),
+            lazy = lazy)
+}
 ```
+
+
+
+
+
+
+# OLD
+
+De library `vroom` is heel geschikt voor deze aanpak. `vroom` kan een groot aantal tekstbestanden indexeren en dit als een lazy[^1] dataframe beschikbaar maken.
+
+[^1]: Lazy betekent dat R zo weinig mogelijk werk doet. De data wordt dus niet in het geheugen geladen zolang dat niet nodig is.
+
+Om `vroom` te laten werken is het belangrijk dat alle bestanden dezelfde kolommen bevatten. Dit is bij de IM-metingbestanden niet het geval. Daarom is het voor deze aanpak nodig om eerst ieder bestand te uniformeren (inlezen, aanpassen en weer opslaan als .csv).
+
+Ik gebruik deze stap ook gelijk als een mogelijkheid om de bestanden een klein beetje op te schonen door alleen de kolommen te bewaren die ik nodig heb en onnodige aanhalingstekens uit tekstvelden te verwijderen.
