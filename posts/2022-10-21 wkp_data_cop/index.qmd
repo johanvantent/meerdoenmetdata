@@ -12,6 +12,7 @@ reference-location: margin
 ```{r setup}
 #| include: false
 options(tidyverse.quiet = TRUE)
+ggplot2::theme_set(HHSKwkl::hhskthema_kaart())
 ```
 
 Alle monitoringsdata van de waterkwaliteits van de waterbeheerders wordt beschikbaar gesteld via het [Waterkwaliteitsportaal](https://www.waterkwaliteitsportaal.nl/oppervlaktewaterkwaliteit) (WKP). In deze blogpost wil ik laten zien hoe je deze data kunt gebruiken.
@@ -271,6 +272,42 @@ read_wkp <- function(filename, lazy = FALSE){
 
 
 
+```{r kreeften-data}
+#| cache: true
+
+
+kreeften_taxa <- twn_children("Astacidea", only_preferred = FALSE)
+
+wkp_bestanden <- list.files("data/IM-metingen/", full.names = TRUE)
+
+kreeften <- 
+  map(wkp_bestanden, ~read_wkp(.x) %>% filter(Biotaxon.naam %in% kreeften_taxa)) %>% 
+  reduce(bind_rows)
+
+```
+
+
+```{r kreeften-kaartjes}
+#| fig-height: 8
+#| fig-width: 6
+#| fig-cap: "Locaties met kreeften uit het waterkwaliteitsportaal"
+
+# Downloaden van waterschapsgrenzen van PDOK als achtergrond
+download.file("https://geodata.nationaalgeoregister.nl/hwh/eenheden/atom/v1_0/downloads/AdministrativeUnits.zip", "data/ws_grenzen.zip")
+unzip("data/ws_grenzen.zip", exdir = "data")
+ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml") %>% sf::st_transform(crs = 28992)
+
+kreeften %>% 
+  filter(!is.na(GeometriePunt.X_RD)) %>% 
+  mutate(jaar = lubridate::year(Begindatum)) %>% 
+  sf::st_as_sf(coords = c("GeometriePunt.X_RD", "GeometriePunt.Y_RD"), crs = 28992, remove = FALSE) %>% 
+  ggplot() +
+  geom_sf(data = ws_grenzen, colour = "grey") +
+  geom_sf(alpha = 0.5) +
+  facet_wrap(~jaar) +
+  labs(title = "(Uitheemse) rivierkreeften gerapporteerd door de waterschappen",
+       caption = "Bron: https://www.waterkwaliteitsportaal.nl/")
+```
 
 
 
