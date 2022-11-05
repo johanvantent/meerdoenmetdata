@@ -6,6 +6,9 @@ editor_options:
 format: 
   html:
     code-fold: show
+    toc: true
+    toc-location: right
+    toc-title: Op deze pagina
 reference-location: margin
 ---
 
@@ -15,6 +18,8 @@ options(tidyverse.quiet = TRUE)
 ggplot2::theme_set(HHSKwkl::hhskthema_kaart())
 ```
 
+# Het waterkwaliteitsportaal
+
 Alle monitoringsdata van de waterkwaliteits van de waterbeheerders wordt beschikbaar gesteld via het [Waterkwaliteitsportaal](https://www.waterkwaliteitsportaal.nl/oppervlaktewaterkwaliteit) (WKP). In deze blogpost wil ik laten zien hoe je deze data kunt gebruiken.
 
 ::: callout-tip
@@ -23,7 +28,7 @@ Alle monitoringsdata van de waterkwaliteits van de waterbeheerders wordt beschik
 Je kunt de code-blokken inklappen door op de *Code*-knop boven aan het blok te klikken.
 :::
 
-# Downloaden en uitpakken
+# Downloaden en uitpakken van WKP-data
 
 De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2016. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
 
@@ -97,7 +102,7 @@ purrr::walk(files_meetpunten, .f = ~unzip(.x, exdir = "data-raw/meetpunten"))
 
 Het resultaat is dat we een map *IM-metingen* hebben met 31 bestanden en een map *meetpunten* met 16 bestanden met meetpunten.
 
-# Inlezen
+# Inlezen WKP-data
 
 De volgende stap is om de uitgepakte bestanden in te lezen. Gezien het grote aantal bestanden is het handig om een aanpak te verzinnen waarbij niet ieder bestand afzonderlijk ingelezen hoeft te worden.
 
@@ -250,7 +255,7 @@ walk(files_IM, opschoon_fun)
 
 ```
 
-# Gebruik WKP-data
+# Gebruik WKP-data voor een concrete casus
 
 We hebben de WKP-data nu beschikbaar in een vorm die we verder kunnen gebruiken. We kunnen deze data nu gaan gebruiken om vragen mee te beantwoorden. Als demonstratie gebruik ik de vraag: *Waar in Nederland zijn er (uitheemse) rivierkreeften gerapporteerd?*
 
@@ -285,6 +290,11 @@ kreeften <-
   map(wkp_bestanden, ~read_wkp(.x) %>% filter(Biotaxon.naam %in% kreeften_taxa)) %>% 
   reduce(bind_rows)
 
+# Downloaden van waterschapsgrenzen van PDOK als achtergrond voor de kaarten
+download.file("https://geodata.nationaalgeoregister.nl/hwh/eenheden/atom/v1_0/downloads/AdministrativeUnits.zip", "data/ws_grenzen.zip")
+unzip("data/ws_grenzen.zip", exdir = "data")
+ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 28992)
+
 ```
 
 
@@ -293,11 +303,6 @@ kreeften <-
 #| fig-width: 8
 #| fig-cap: "Locaties met kreeften uit het waterkwaliteitsportaal"
 #| 
-
-# Downloaden van waterschapsgrenzen van PDOK als achtergrond
-download.file("https://geodata.nationaalgeoregister.nl/hwh/eenheden/atom/v1_0/downloads/AdministrativeUnits.zip", "data/ws_grenzen.zip")
-unzip("data/ws_grenzen.zip", exdir = "data")
-ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 28992)
 
 kreeften %>% 
   filter(!is.na(GeometriePunt.X_RD)) %>% 
@@ -313,12 +318,27 @@ kreeften %>%
 
 
 
-# OLD
+# Een alternatieve manier van inlezen
 
-De library `vroom` is heel geschikt voor deze aanpak. `vroom` kan een groot aantal tekstbestanden indexeren en dit als een lazy[^1] dataframe beschikbaar maken.
+De library *vroom* kan een groot aantal tekstbestanden (.csv) indexeren en dit als een lazy[^1] dataframe beschikbaar maken. Om *vroom* te laten werken is het belangrijk dat alle bestanden dezelfde kolommen bevatten. Bij het opschonen van  de bestanden hebben we deze stap al gemaakt.
 
 [^1]: Lazy betekent dat R zo weinig mogelijk werk doet. De data wordt dus niet in het geheugen geladen zolang dat niet nodig is.
 
-Om `vroom` te laten werken is het belangrijk dat alle bestanden dezelfde kolommen bevatten. Dit is bij de IM-metingbestanden niet het geval. Daarom is het voor deze aanpak nodig om eerst ieder bestand te uniformeren (inlezen, aanpassen en weer opslaan als .csv).
+Hieronder staat een code-voorbeeld met *vroom* voor de kreeftendata. *Vroom* is erg snel, maar vraagt wel nog steeds veel geheugen. Daarom heb ik hierboven voor een andere aanpak gekozen.
 
-Ik gebruik deze stap ook gelijk als een mogelijkheid om de bestanden een klein beetje op te schonen door alleen de kolommen te bewaren die ik nodig heb en onnodige aanhalingstekens uit tekstvelden te verwijderen.
+```{r code-vroom}
+#| eval: false
+
+kreeften <-
+  vroom::vroom(wkp_bestanden,
+               col_types = cols(Begindatum = col_date(),
+                                Begintijd = col_time(),
+                                Numeriekewaarde = col_double(),
+                                GeometriePunt.X_RD = col_double(),
+                                GeometriePunt.Y_RD = col_double(),
+                                .default = col_character()),
+               locale = locale(decimal_mark = ",")) %>%
+  filter(Biotaxon.naam %in% kreeften_taxa)
+```
+
+
