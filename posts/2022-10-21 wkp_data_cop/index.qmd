@@ -274,6 +274,7 @@ read_wkp <- function(filename, lazy = FALSE){
 
 ```{r kreeften-data}
 #| cache: true
+#| output: false
 
 
 kreeften_taxa <- twn_children("Astacidea", only_preferred = FALSE)
@@ -288,14 +289,15 @@ kreeften <-
 
 
 ```{r kreeften-kaartjes}
-#| fig-height: 8
-#| fig-width: 6
+#| fig-height: 10
+#| fig-width: 8
 #| fig-cap: "Locaties met kreeften uit het waterkwaliteitsportaal"
+#| 
 
 # Downloaden van waterschapsgrenzen van PDOK als achtergrond
 download.file("https://geodata.nationaalgeoregister.nl/hwh/eenheden/atom/v1_0/downloads/AdministrativeUnits.zip", "data/ws_grenzen.zip")
 unzip("data/ws_grenzen.zip", exdir = "data")
-ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml") %>% sf::st_transform(crs = 28992)
+ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 28992)
 
 kreeften %>% 
   filter(!is.na(GeometriePunt.X_RD)) %>% 
