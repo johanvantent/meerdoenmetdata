@@ -275,7 +275,9 @@ read_wkp <- function(filename, lazy = FALSE){
 }
 ```
 
+Ik gebruik de inleesfunctie om de opgeschoonde bestanden een voor een in te lezen en alleen de regels met kreeften te bewaren. Dat resulteert in een `list` met dataframes die ik samenvoeg met `reduce(bind_rows)`.
 
+Voor het weergeven van de data op een kaart download ik ook de waterschapsgrenzen van PDOK.
 
 ```{r kreeften-data}
 #| cache: true
@@ -296,7 +298,7 @@ unzip("data/ws_grenzen.zip", exdir = "data")
 ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 28992)
 
 ```
-
+Nu ik alle benodigde data heb ingelezen kan ik de data eindelijk gebruiken om leuke dingen mee te doen: zoals het weergeven per jaar waar er door waterschappen kreeften zijn waargenomen en gerapporteerd aan het waterkwaliteitsportaal.
 
 ```{r kreeften-kaartjes}
 #| fig-height: 10
@@ -316,7 +318,7 @@ kreeften %>%
        caption = "Bron: https://www.waterkwaliteitsportaal.nl/")
 ```
 
-
+Op kaartjes is ook te zien waarom ik ervoor heb gekozen om de kreeften te selecteren. Hier is namelijk duidelijk te zien dat HHSK vanaf 2020 de kreeften uitgebreid is gaan monitoren. Iets waarvan ik denk dat het belangrijk is en waarvan ik hoop dat andere waterschappen dat voorbeeld zullen volgen.
 
 # Een alternatieve manier van inlezen
 
