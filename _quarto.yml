@@ -8,11 +8,15 @@ website:
     logo: "images/JTIP_grey80.png"
     logo-alt: "Inverse Pi"
     left:
-      - blog.qmd
+      - text: "Blog"
+        icon: pencil
+        file: blog.qmd
       - text: "Boeken"
         icon: book
         file: boeken.qmd
-      - packages.qmd
+      - text: "R-packages"
+        icon: box
+        file: packages.qmd
     right:
       - about.qmd
       - icon: github
