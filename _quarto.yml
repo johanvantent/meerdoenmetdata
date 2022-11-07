@@ -21,7 +21,7 @@ website:
 format:
   html:
     theme: 
-      light: sandstone
+      light: [sandstone, styles.scss]
       dark: slate
     css: styles.css
 

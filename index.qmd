@@ -11,4 +11,16 @@
 # title-block-banner: true
 ---
 
-# Home
+
+
+### {{< fa pencil >}} [Blog](blog.qmd) 
+Op mijn blog schrijf ik vooral over de onderwerpen data-analyse, R en waterkwaliteit en ecologie.
+
+### {{<  fa book-open >}} [ Boeken](boeken.qmd) 
+Hier hou ik een lijst van boeken bij die ik heb gelezen of die ik interessant vind. Veel boeken zijn gratis online te lezen of te downloaden!
+
+### {{< fa box-open >}} [ R-packages](packages.qmd)
+Ik heb een aantal packages gemaakt voor R. Op deze pagina vind je een beschrijving en een korte demonstratie van hoe ze werken.
+
+### {{< fa user >}} [ Over mij](about.qmd)
+Voor als je wat meer over mij wilt weten.
