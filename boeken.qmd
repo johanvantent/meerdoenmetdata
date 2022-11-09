@@ -7,7 +7,6 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 
 -   Big book of R
 -   Rework podcast
--   diverse boeken (KAhneman, How we learn etc.)
 
 ------------------------------------------------------------------------
 
@@ -129,23 +128,48 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 ## Overig
 
 -   **The Sense of Structure** - George D. Gopen - *2018*
+
     -   Erg nuttig om te begrijpen hoe je als schrijver de juiste boodschap overbrengt aan je lezers. George Gopen doet dit aan de hand van de Reader Expectation Approach. Het helpt om erachter te komen wat een lezer verwacht en hoe je die kennis als schrijver kunt gebruiken.
     -   Veel van de principes worden ook uitgelegd in the Litigation Articles <https://www.georgegopen.com/the-litigation-articles.html>
+
 -   **The design of everyday things** - Don Norman - *2017*
+
     -   Over ontwerpen: hoe maak je iets dat goed functioneert, dat voldoet aan de wensen van de gebruikers.
+
 -   **An introduction to APIs** - Brian Cooksey - *2019*
+
     -   Over hoe APIs werken
     -   <https://zapier.com/learn/apis/>
+
 -   **The Creative Curve** - Allen Gannett - *2020*
+
     -   How to Develop the Right Idea, at the Right Time
+
 -   **How design makes the world** - Scott Berkun - *2020*
+
     -   Overzichtelijk en goed leesbaar boek dat een overzicht geeft wat "design" is en hoe dat in de praktijk werkt.
+
 -   **Design Thinking** - Nigel Cross - *2021*
+
     -   Hoe werken en denken designers?
     -   Boek met diverse voorbeelden en studies die illustreren hoe designers denken.
+
 -   **Badass - Making Users Awesome** - Kathy Sierra - *2021*
+
     -   Geweldig boek dat veel inzicht geeft je mensen kunt leren om ergens goed in te worden.
     -   Veel inzichten over hoe mensen en de automatische processen werken en hoe je dat kunt benutten om ze iets te leren.
+
+-   *Thinking, Fast and slow* - Daniel Kahneman - *2022*
+
+    -   
+
+-   **How we learn- The Surprising Truth About When, Where, and Why It Happens** - Benedict Carey - *2022*
+
+    -   Over op welke manieren we informatie onthouden. Dat is soms anders dan je zou denken.
+
+-   **The programmers brain** - Felienne Hermans - *2021*
+
+    -   Hoe je inzichten over de werking van de hersenen praktisch kunt toepassen bij het (leren van) programmeren.
 
 ------------------------------------------------------------------------
 
