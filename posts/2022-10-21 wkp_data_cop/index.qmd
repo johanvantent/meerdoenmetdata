@@ -3,6 +3,7 @@ title: "Gebruik van WKP-data"
 date: "2022-10-28"
 editor_options: 
   chunk_output_type: console
+image: "logo-waterkwaliteitsportaal.png"
 format: 
   html:
     code-fold: show
@@ -33,6 +34,13 @@ Je kunt de code-blokken inklappen door op de *Code*-knop boven aan het blok te k
 De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2016. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
 
 Ik maak gebruik van de functies `walk` en `walk2`. Deze functies maken het mogelijk om zonder loops de bestanden een voor een te downloaden en uit te pakken.
+
+::: callout-tip
+## Tip
+
+Je kunt in de codeblokken klikken en dan wordt je doorverwezen naar de documentatie van die functie.
+:::
+
 
 ```{r libs}
 #| message: false
