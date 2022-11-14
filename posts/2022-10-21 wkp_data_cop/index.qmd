@@ -11,6 +11,9 @@ format:
     toc-location: right
     toc-title: Op deze pagina
 reference-location: margin
+filters:
+   - lightbox
+lightbox: auto
 ---
 
 ```{r setup}
