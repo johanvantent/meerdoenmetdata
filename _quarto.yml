@@ -3,6 +3,7 @@ project:
   output-dir: docs
 
 website:
+  favicon: "images/JTIP.png"
   title: "Meer doen met data"
   navbar:
     logo: "images/JTIP_grey80.png"
