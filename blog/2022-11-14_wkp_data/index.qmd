@@ -1,6 +1,6 @@
 ---
 title: "Gebruik van WKP-data"
-date: "2022-10-28"
+date: "2022-11-14"
 editor_options: 
   chunk_output_type: console
 image: "logo-waterkwaliteitsportaal.png"
@@ -22,17 +22,71 @@ options(tidyverse.quiet = TRUE)
 ggplot2::theme_set(HHSKwkl::hhskthema_kaart())
 ```
 
+
 # Het waterkwaliteitsportaal
 
-Alle monitoringsdata van de waterkwaliteits van de waterbeheerders wordt beschikbaar gesteld via het [Waterkwaliteitsportaal](https://www.waterkwaliteitsportaal.nl/oppervlaktewaterkwaliteit) (WKP). In deze blogpost wil ik laten zien hoe je deze data kunt gebruiken.
+Alle monitoringsdata van de waterkwaliteit van de waterbeheerders wordt beschikbaar gesteld via het [Waterkwaliteitsportaal](https://www.waterkwaliteitsportaal.nl/oppervlaktewaterkwaliteit) (WKP). In deze blogpost wil ik laten zien hoe je deze data kunt downloaden en bewerken zodat je deze kunt gebruiken.
+
+Onderstaande kaart met waterpest is een voorbeeld van een eindproduct dat je kunt maken met de WKP-data. Opvallend is dat er van sommige waterbeheerders helemaal geen of erg weinig locaties in het WKP aanwezig zijn. Dat laat zien dat het gebruik van WKP-data ook beperkingen heeft.
+
+```{r waterpest-kaart}
+#| include: false
+#| cache: true
+library(tidyverse)
+library(HHSKwkl)
+library(twn)
+library(sf)
+library(leaflet)
+
+# theme_set(hhskthema_kaart())
+# ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 28992)
+ws_grenzen_wgs <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %>% sf::st_transform(crs = 4326)
+
+read_wkp <- function(filename, lazy = FALSE){
+  read_csv2(filename, 
+            col_types = cols(Begindatum = col_date(),
+                                       Begintijd = col_time(),
+                                       Numeriekewaarde = col_double(),
+                                       GeometriePunt.X_RD = col_double(),
+                                       GeometriePunt.Y_RD = col_double(),
+                                       .default = col_character()),
+            lazy = lazy)
+}
+
+wkp_bestanden <- list.files("data/IM-metingen/", full.names = TRUE)
+
+waterpest <- 
+  map(wkp_bestanden, ~read_wkp(.x) %>% filter(Biotaxon.naam == "Elodea nuttallii")) %>% 
+  reduce(bind_rows)
+
+waterpest_kaart <- 
+  waterpest %>% 
+  mutate(jaar = lubridate::year(Begindatum)) %>% 
+  select(Meetobject.namespace, Meetobject.lokaalID, GeometriePunt.X_RD, GeometriePunt.Y_RD, jaar) %>% 
+  distinct() %>% 
+  filter(!is.na(GeometriePunt.X_RD)) %>% 
+  sf::st_as_sf(coords = c("GeometriePunt.X_RD", "GeometriePunt.Y_RD"), crs = 28992, remove = FALSE) %>% 
+  st_transform(crs = 4326) %>% 
+  basiskaart(type = "cartolight") %>% 
+  addPolylines(data = ws_grenzen_wgs, color = "grey", weight = 2) %>% 
+  addCircleMarkers(radius = 6, fillOpacity = 1,  stroke = FALSE, label = ~Meetobject.lokaalID) 
+```
+
+```{r leaflet-waterpest}
+#| fig-cap: "Alle locaties met waterpest van 2011-2021 in het waterkwaliteitsportaal"
+#| out-height: "600px"
+#| out-width: "100%"
+#| echo: false
+waterpest_kaart
+```
+
+# Downloaden en uitpakken van WKP-data
 
 ::: callout-tip
 ## Tip
 
 Je kunt de code-blokken inklappen door op de *Code*-knop boven aan het blok te klikken.
 :::
-
-# Downloaden en uitpakken van WKP-data
 
 De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2016. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
 
@@ -119,7 +173,7 @@ De volgende stap is om de uitgepakte bestanden in te lezen. Gezien het grote aan
 
 ## Eerste idee
 
-Hoewel de bestanden allemaal in het IM-metingen format zijn, verschilt het aantal kolommen per bestand. Om dit probleem op te lossen was mijn eerste idee om elk afzonderlijk bestand automatisch in te lezen in een lijst met `map()`. Daarna combineer ik al deze tibbles met `reduce()` en `bind_rows()`.
+Hoewel de bestanden allemaal in het IM-metingen format zijn, verschilt het aantal kolommen per bestand. Om dit probleem op te lossen was mijn eerste idee om elk afzonderlijk bestand automatisch in te lezen in een lijst met `map()`. Daarna combineer ik de data van al deze bestanden met `reduce()` en `bind_rows()`.
 
 ```{r map-reduce}
 #| eval: false
@@ -133,21 +187,21 @@ data <-
 
 ```
 
-Deze manier van inlezen werkt op zich wel, maar de voorwaarde is dat er genoeg computergeheugen beschikbaar is. Bij het uitproberen op mijn persoonlijke computer kwam ik erachter dat 8 Gb RAM onvoldoende was en dat dit dus misschien niet de beste oplossing is.
+Deze manier van inlezen werkt op zich wel, maar de voorwaarde is dat er genoeg computergeheugen beschikbaar is. Bij het uitproberen op mijn persoonlijke computer kwam ik erachter dat 8 GB RAM onvoldoende was en dat dit dus misschien niet de beste oplossing is.
 
 ## Alternatieve aanpak
 
 Alles in het geheugen inlezen is dus niet de optimale aanpak. Een betere aanpak is een database-achtige aanpak waarbij niet alle data in één keer in het geheugen ingelezen wordt, maar waarbij data pas wordt ingelezen wanneer dat nodig is. 
 
-Voor deze aanpak is het wel handig om de bestanden eerst te uniformeren en op te schonen. Ik gebruik deze stap ook gelijk om de meetpuntcoordinaten aan de IM-metingbestanden toe te voegen.
+Voor deze aanpak is het wel handig om de bestanden eerst te uniformeren en op te schonen. Ik gebruik deze stap ook gelijk om de meetpuntcoördinaten aan de IM-metingbestanden toe te voegen.
 
 ### Opschonen meetpunten
 
 Voor het opschonen van de meetpuntbestanden zijn er een paar aandachtspunten:
 
-- Dezelfde informatie zit in de verschillende bestanden niet in dezelfde kolom. De namen verschillen.
+- Dezelfde informatie zit in de verschillende bestanden niet in dezelfde kolom. De namen verschillen en soms is het soort informatie een beetje verschillend.
 - Er zijn soms onnodige aanhalingstekens toegevoegd, die haal ik weer weg.
-- Veel meetpunten komen in meer dan 1 bestand voor. Het is wenselijk om voor elk meeetpunt maar 1 set met informatie te hebben. Hiervoor maak ik een aparte tabel en bestand.
+- Veel meetpunten komen in meer dan 1 bestand voor. Het is wenselijk om voor elk meetpunt maar 1 set met informatie te hebben. Hiervoor maak ik een aparte tabel en bestand.
 
 
 ```{r opschonen-meetpunten}
@@ -209,7 +263,7 @@ De volgende stap is het opschonen van de metingen bestanden. Dit doe ik door de 
 
 - selectie van de noodzakelijke kolommen
 - verwijderen van de overbodige aanhalingstekens
-- het toevoegen van de meest recente coordinaten
+- het toevoegen van de meest recente coördinaten van ieder meetpunt.
 
 
 ```{r opschonen-metingen}
@@ -286,7 +340,7 @@ read_wkp <- function(filename, lazy = FALSE){
 }
 ```
 
-Ik gebruik de inleesfunctie om de opgeschoonde bestanden een voor een in te lezen en alleen de regels met kreeften te bewaren. Dat resulteert in een `list` met dataframes die ik samenvoeg met `reduce(bind_rows)`.
+Ik gebruik de inleesfunctie om de opgeschoonde bestanden één voor één in te lezen en alleen de regels met kreeften te bewaren. Dat resulteert in een `list` met dataframes die ik samenvoeg met `reduce(bind_rows)`.
 
 Voor het weergeven van de data op een kaart download ik ook de waterschapsgrenzen van PDOK.
 
@@ -312,7 +366,7 @@ ws_grenzen <- sf::st_read("data/AdministrativeUnits_ETRS89.gml", quiet = TRUE) %
 Nu ik alle benodigde data heb ingelezen kan ik de data eindelijk gebruiken om leuke dingen mee te doen: zoals het weergeven per jaar waar er door waterschappen kreeften zijn waargenomen en gerapporteerd aan het waterkwaliteitsportaal.
 
 ```{r kreeften-kaartjes}
-#| fig-height: 10
+#| fig-height: 8
 #| fig-width: 8
 #| fig-cap: "Locaties met kreeften uit het waterkwaliteitsportaal"
 #| 
@@ -329,7 +383,7 @@ kreeften %>%
        caption = "Bron: https://www.waterkwaliteitsportaal.nl/")
 ```
 
-Op kaartjes is ook te zien waarom ik ervoor heb gekozen om de kreeften te selecteren. Hier is namelijk duidelijk te zien dat HHSK vanaf 2020 de kreeften uitgebreid is gaan monitoren. Iets waarvan ik denk dat het belangrijk is en waarvan ik hoop dat andere waterschappen dat voorbeeld zullen volgen.
+Op kaartjes is ook te zien waarom ik ervoor heb gekozen om de kreeften te selecteren. Hier is namelijk duidelijk te zien dat HHSK vanaf 2020 de kreeften uitgebreid is gaan monitoren. Die monitoring is belangrijk ik hoop dat andere waterschappen ons voorbeeld zullen volgen.
 
 # Een alternatieve manier van inlezen
 
