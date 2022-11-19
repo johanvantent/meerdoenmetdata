@@ -32,7 +32,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Gebruik van WKP-data\n\n\n\n\n\n\n\n\n\n\n\n\nNov 14, 2022\n\n\n\n\n\n\nNo matching items"
+    "text": "Gebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",
@@ -158,6 +158,6 @@
     "href": "packages.html",
     "title": "R-packages",
     "section": "",
-    "text": "Ik heb verschillende R-packages gemaakt. Hieronder vind je een overzicht van deze packages.\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\ntwn - de TWN-lijst voor R\n\n\n\n\n\nTaxa Waterbeheer Nederland (TWN) twn heeft diverse functies die het gemakkelijk maken om de TWN-lijst te gebruiken bij de analyse van ecologische data in R.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\naquodom\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nHHSKwkl\n\n\n\n\n\nDit package bevat uiteenlopende functies voor gebruik bij analyse en rapportage van waterkwaliteit voor HHSK.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nkrw\n\n\n\n\n\nHet doel van het package krw is om KRW-toetsingen uit te kunnen voeren in R.\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Ik heb verschillende R-packages gemaakt. Hieronder vind je een overzicht van deze packages.\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\ntwn - de TWN-lijst voor R\n\n\n\n\n\nTaxa Waterbeheer Nederland (TWN) twn heeft diverse functies die het gemakkelijk maken om de TWN-lijst te gebruiken bij de analyse van ecologische data in R.\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\naquodom\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nHHSKwkl\n\n\n\n\n\nDit package bevat uiteenlopende functies voor gebruik bij analyse en rapportage van waterkwaliteit voor HHSK.\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nkrw\n\n\n\n\n\nHet doel van het package krw is om KRW-toetsingen uit te kunnen voeren in R.\n\n\n\n\n \n\n\n\n\nGeen overeenkomsten"
   }
 ]

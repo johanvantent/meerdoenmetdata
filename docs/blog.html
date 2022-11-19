@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.262">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -52,15 +52,15 @@ ul.task-list li input[type="checkbox"] {
   "type": "overlay",
   "limit": 20,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-no-results-text": "Geen resultaten",
+    "search-matching-documents-text": "Gevonden documenten",
+    "search-copy-link-title": "Kopieer link om te zoeken",
+    "search-hide-matches-text": "Extra overeenkomsten verbergen",
+    "search-more-match-text": "meer overeenkomst in dit document",
+    "search-more-matches-text": "meer overeenkomsten in dit document",
+    "search-clear-button-title": "Wissen",
+    "search-detached-cancel-button-title": "Annuleren",
+    "search-submit-button-title": "Verzenden"
   }
 }</script>
 <script>
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categorieën</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Alle <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Analyse">Analyse <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Waterkwaliteit">Waterkwaliteit <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1668380400000" data-listing-file-modified-sort="1668764630725" data-listing-reading-time-sort="12.935">
+<div class="quarto-post image-right" data-index="0" data-categories="R,Waterkwaliteit,Analyse" data-listing-date-sort="1668380400000" data-listing-file-modified-sort="1668850644574" data-listing-reading-time-sort="12.935">
 <div class="thumbnail">
 <p><a href="./blog/2022-11-14_wkp_data/index.html"> <img src="./blog/2022-11-14_wkp_data/logo-waterkwaliteitsportaal.png" class="thumnail-image"> </a></p>
 </div>
@@ -199,6 +199,19 @@ Gebruik van WKP-data
 <div class="listing-subtitle">
 
 </div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
+R
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Waterkwaliteit'); return false;">
+Waterkwaliteit
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Analyse'); return false;">
+Analyse
+</div>
+</div>
+<a href="./blog/2022-11-14_wkp_data/index.html">
 <div class="listing-description">
 Alle monitoringsdata van de waterkwaliteit van de waterbeheerders wordt beschikbaar gesteld via het Waterkwaliteitsportaal (WKP). In deze blogpost wil ik laten zien hoe je deze data…
 </div>
@@ -207,14 +220,14 @@ Alle monitoringsdata van de waterkwaliteit van de waterbeheerders wordt beschikb
 <div class="metadata">
 <a href="./blog/2022-11-14_wkp_data/index.html">
 <div class="listing-date">
-Nov 14, 2022
+2022-11-14
 </div>
 </a>
 </div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
-No matching items
+Geen overeenkomsten
 </div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -372,12 +385,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "Gekopieerd!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "Gekopieerd!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
