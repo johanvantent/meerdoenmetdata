@@ -7,6 +7,19 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
+editor_options: 
+  chunk_output_type: console
+
 format:
   html:
+    code-fold: show
     code-link: true
+    toc: true
+    toc-location: right
+    toc-title: Op deze pagina
+
+date-format: "D MMMM YYYY"
+reference-location: margin
+filters:
+   - lightbox
+lightbox: auto

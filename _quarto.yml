@@ -31,6 +31,7 @@ format:
       dark: slate
     css: styles.css
 
+lang: nl
 
 execute: 
   freeze: auto

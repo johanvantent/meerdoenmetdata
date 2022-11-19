@@ -1,19 +1,9 @@
 ---
 title: "Gebruik van WKP-data"
 date: "2022-11-14"
-editor_options: 
-  chunk_output_type: console
 image: "logo-waterkwaliteitsportaal.png"
-format: 
-  html:
-    code-fold: show
-    toc: true
-    toc-location: right
-    toc-title: Op deze pagina
-reference-location: margin
-filters:
-   - lightbox
-lightbox: auto
+format: html
+categories: [R, Waterkwaliteit, Analyse] 
 ---
 
 ```{r setup}
