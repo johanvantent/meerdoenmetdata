@@ -4,6 +4,7 @@ project:
   # output-dir: TEMP
 
 website:
+  site-url: "https://johanvantent.github.io/meerdoenmetdata"
   favicon: "images/JTIP.png"
   title: "Meer doen met data"
   page-navigation: true
@@ -24,6 +25,14 @@ website:
       - about.qmd
       - icon: github
         href: https://github.com/RedTent
+  twitter-card:
+    creator: "@inversepi"
+    title: "Meer doen met data"
+    description: "Over data, visualisatie, programmeren in R en waterkwaliteit"
+  open-graph:
+    locale: nl_NL
+    site-name: "Meer doen met data"
+      
   
 format:
   html:
@@ -37,3 +46,4 @@ lang: nl
 execute: 
   freeze: auto
 
+twitter-card: true
