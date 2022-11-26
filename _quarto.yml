@@ -32,6 +32,7 @@ website:
   open-graph:
     locale: nl_NL
     site-name: "Meer doen met data"
+    description: "Over data, visualisatie, programmeren in R en waterkwaliteit"
       
   
 format:
