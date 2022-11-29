@@ -47,4 +47,4 @@ lang: nl
 execute: 
   freeze: auto
 
-twitter-card: true
+# twitter-card: true

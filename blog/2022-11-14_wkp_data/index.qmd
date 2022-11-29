@@ -78,7 +78,7 @@ waterpest_kaart
 Je kunt de code-blokken inklappen door op de *Code*-knop boven aan het blok te klikken.
 :::
 
-De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2016. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
+De data op het WKP wordt in verschillende ZIP-bestanden beschikbaar gesteld. De eerste stappen zijn om deze bestanden te downloaden en uit te pakken. In deze post maak ik alleen gebruik van data in het IM-metingen formaat vanaf 2011. Met de onderstaande code heb ik de bestanden gedownload en uitgepakt.
 
 Ik maak gebruik van de functies `walk` en `walk2`. Deze functies maken het mogelijk om zonder loops de bestanden een voor een te downloaden en uit te pakken.
 
