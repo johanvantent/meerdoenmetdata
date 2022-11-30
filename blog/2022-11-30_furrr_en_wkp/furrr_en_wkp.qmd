@@ -1,0 +1,10 @@
+---
+title: "WKP-data met furrr"
+date: "2022-11-30"
+image: "https://furrr.futureverse.org/logo.png"
+format: html
+categories: [R] 
+draft: true
+---
+
+Test
