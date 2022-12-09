@@ -1,0 +1,47 @@
+---
+title: "Kick-off DEEP3"
+description: "DEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data."
+date: "2022-12-09"
+image: "deep_brug.png"
+format: html
+categories: [DEEP] 
+draft: false
+listing: 
+  fields:
+    - title
+    - description
+---
+
+# Wat is DEEP?
+
+DEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van datagedreven werken en de digitale transformatie.
+
+In 2023 ga ik mee doen aan de derde ronde van DEEP. Afgelopen dinsdag is de kick-off bijeenkomst geweest. Het begint nu echt allemaal concreet te worden en ik heb er veel zin in.
+
+DEEP3 is ingedeeld in 10 blokken van 4 weken. In elk blok komt er een bepaald onderwerp aan bod. Ik heb me voorgenomen om bij elk blok minstens één blogpost te schrijven over het thema van dat blok en wat ik er van geleerd heb.
+
+
+# Praktische informatie
+
+In deze post heb ik wat meer informatie opgenomen over DEEP3 en hoe het komende jaar er voor mij uit ziet.
+
+## Curriculum
+
+```{=html}
+<iframe class="slide-deck" src="Curriculum opzet DST en DE.pdf" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+
+## Kick-off meeting
+
+```{=html}
+<iframe class="slide-deck" src="Kick_off_december_2022_verkort.pdf" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+*Bovenstaande presentatie is een bewerkte versie waar alle persoonlijke informatie uit is weggelaten*
+
+## Planning
+
+```{=html}
+<iframe class="slide-deck" src="Planning DEEP 3 2023.pdf" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
