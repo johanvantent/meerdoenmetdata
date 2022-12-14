@@ -28,11 +28,39 @@
     "text": "Alternatieve aanpak\nAlles in het geheugen inlezen is dus niet de optimale aanpak. Een betere aanpak is een database-achtige aanpak waarbij niet alle data in één keer in het geheugen ingelezen wordt, maar waarbij data pas wordt ingelezen wanneer dat nodig is.\nVoor deze aanpak is het wel handig om de bestanden eerst te uniformeren en op te schonen. Ik gebruik deze stap ook gelijk om de meetpuntcoördinaten aan de IM-metingbestanden toe te voegen.\nOpschonen meetpunten\nVoor het opschonen van de meetpuntbestanden zijn er een paar aandachtspunten:\n\nDezelfde informatie zit in de verschillende bestanden niet in dezelfde kolom. De namen verschillen en soms is het soort informatie een beetje verschillend.\nEr zijn soms onnodige aanhalingstekens toegevoegd, die haal ik weer weg.\nVeel meetpunten komen in meer dan 1 bestand voor. Het is wenselijk om voor elk meetpunt maar 1 set met informatie te hebben. Hiervoor maak ik een aparte tabel en bestand.\n\n\nCodefiles_mp <- list.files(\"data-raw/meetpunten/\", full.names = TRUE)\n\nmeetpunten <- \n  tibble(pad = files_mp, bestandsnaam = basename(files_mp)) %>% \n    mutate(jaar = str_extract(bestandsnaam, \"\\\\d{4}\")) %>% \n    arrange(jaar) %>% \n    mutate(meetpuntinfo = map(pad, ~read_csv2(.x, col_types = cols(.default = col_character())))) %>% \n    unnest(meetpuntinfo) %>% \n  mutate( \n    Meetobject.namespace = case_when(\n      !is.na(Meetobject.namespace) ~ Meetobject.namespace,\n      !is.na(Namespace) ~ Namespace,\n      !is.na(Waterbeheerder.code) ~ paste0(\"NL\", Waterbeheerder.code),\n      !is.na(sub_subident) ~ paste0(\"NL\", sub_subident)),\n    Meetobject.lokaalID = coalesce(Identificatie, Meetpunt.identificatie, mpn_mpnident),\n    GeometriePunt.X_RD = coalesce(GeometriePunt.X_RD, mpn_mrfxcoor),\n    GeometriePunt.Y_RD = coalesce(GeometriePunt.Y_RD, mpn_mrfycoor),\n    Meetobject.Omschrijving = coalesce(Omschrijving, Meetpuntomschrijving, Meetpunt.omschrijving, mpn_mpnomsch)) %>% \n  select(Meetobject.namespace,\n         Meetobject.lokaalID,\n         Meetobject.Omschrijving,\n         GeometriePunt.X_RD,\n         GeometriePunt.Y_RD,\n         bestandsnaam,\n         jaar) %>% \n  mutate(across(where(is.character), ~str_remove_all(.x, '\"'))) %>% \n  mutate(across(.cols = contains(\"GeometriePunt\"), \n                .fns = ~parse_double(.x, locale = locale(decimal_mark = \".\")))) %>% \n  distinct()\n    \ndir.create(\"data\")\nmeetpunten %>% write_csv2(\"data/meetpunten_2011-2021.csv\", na = \"\")\n\n\n# Een aangepaste tabel met de meeste recente set coordinaten en zonder dummy coords.\n\nmeetpunten_clean <- \n  meetpunten %>% \n  filter(GeometriePunt.X_RD != 0, GeometriePunt.Y_RD != 0,\n         GeometriePunt.X_RD != 123546, GeometriePunt.Y_RD != 456789) %>% \n  arrange(desc(jaar)) %>% \n  group_by(Meetobject.namespace, Meetobject.lokaalID) %>% \n  summarise(GeometriePunt.X_RD = first(GeometriePunt.X_RD),\n            GeometriePunt.Y_RD = first(GeometriePunt.Y_RD),\n            Meetobject.Omschrijving = first(Meetobject.Omschrijving)) %>% \n  ungroup()\n\nmeetpunten_clean %>% write_csv2(\"data/meetpunten_2011-2021_clean.csv\", na = \"\")\n\n\nOpschonen metingen\nDe volgende stap is het opschonen van de metingen bestanden. Dit doe ik door de volgende stappen:\n\nselectie van de noodzakelijke kolommen\nverwijderen van de overbodige aanhalingstekens\nhet toevoegen van de meest recente coördinaten van ieder meetpunt.\n\n\nCodefiles_IM <- list.files(\"data-raw/IM-metingen/\", full.names = TRUE)\ndir.create(\"data/IM-metingen\")\n\nopschoon_fun <- function(filename){\n  \n  im_kolommen <- c(\n    \"Meetobject.namespace\",\n    \"Meetobject.lokaalID\",\n    \"MonsterCompartiment.code\",\n    \"Begindatum\",\n    \"Begintijd\",\n    \"Typering.code\",\n    \"Grootheid.code\",\n    \"Parameter.groep\",\n    \"Parameter.code\",\n    \"Parameter.omschrijving\",\n    \"Biotaxon.naam\",\n    \"Eenheid.code\",\n    \"Hoedanigheid.code\",\n    \"Levensstadium.code\",\n    \"Lengteklasse.code\",\n    \"Geslacht.code\",\n    \"Verschijningsvorm.code\",\n    \"Levensvorm.code\",\n    \"Gedrag.code\",\n    \"Waardebewerkingsmethode.code\",\n    \"Limietsymbool\",\n    \"Numeriekewaarde\",\n    \"Alfanumeriekewaarde\",\n    \"AnalyseCompartiment.code\",\n    \"Kwaliteitsoordeel.code\")\n  \n  read_csv2(filename, \n            col_types = cols(Numeriekewaarde = col_number(), \n                             Begindatum = col_date(),\n                             Begintijd = col_time(),\n                             .default = col_character()),\n            col_select = any_of(im_kolommen),\n            locale = locale(decimal_mark = \".\")) %>% \n    \n    mutate(across(where(is.character), ~str_remove_all(.x, '\"'))) %>% \n    left_join(meetpunten_clean, by = c(\"Meetobject.namespace\", \"Meetobject.lokaalID\")) %>% \n    \n    write_csv2(file.path(\"data/IM-metingen\", basename(filename)),\n               na = \"\")\n}\n\nwalk(files_IM, opschoon_fun)"
   },
   {
+    "objectID": "blog/2022-12-09 Intro DEEP3/intro_deep3.html",
+    "href": "blog/2022-12-09 Intro DEEP3/intro_deep3.html",
+    "title": "Kick-off DEEP3",
+    "section": "",
+    "text": "DEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van datagedreven werken en de digitale transformatie.\nIn 2023 ga ik mee doen aan de derde ronde van DEEP. Afgelopen dinsdag is de kick-off bijeenkomst geweest. Het begint nu echt allemaal concreet te worden en ik heb er veel zin in.\nDEEP3 is ingedeeld in 10 blokken van 4 weken. In elk blok komt er een bepaald onderwerp aan bod. Ik heb me voorgenomen om bij elk blok minstens één blogpost te schrijven over het thema van dat blok en wat ik er van geleerd heb."
+  },
+  {
+    "objectID": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#curriculum",
+    "href": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#curriculum",
+    "title": "Kick-off DEEP3",
+    "section": "Curriculum",
+    "text": "Curriculum"
+  },
+  {
+    "objectID": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#kick-off-meeting",
+    "href": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#kick-off-meeting",
+    "title": "Kick-off DEEP3",
+    "section": "Kick-off meeting",
+    "text": "Kick-off meeting\n\nBovenstaande presentatie is een bewerkte versie waar alle persoonlijke informatie uit is weggelaten"
+  },
+  {
+    "objectID": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#planning",
+    "href": "blog/2022-12-09 Intro DEEP3/intro_deep3.html#planning",
+    "title": "Kick-off DEEP3",
+    "section": "Planning",
+    "text": "Planning"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Gebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
+    "text": "Kick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",
