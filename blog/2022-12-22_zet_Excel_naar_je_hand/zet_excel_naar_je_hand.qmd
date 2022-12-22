@@ -1,0 +1,53 @@
+---
+title: "Zet Excel naar je hand!"
+description: "Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent.  In deze post laat ik drie manieren zien waarop je Excel naar je hand kunt zetten."
+date: "2022-12-22"
+image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+format: html
+categories: [Excel] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+---
+
+# Zet Excel naar je hand!
+
+Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.
+
+Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. In deze post laat ik drie manieren zien waarop je dat kunt doen.
+
+1.  Het aanpassen van het lint -- alle veel gebruikte opdrachten op één plaats.
+
+2.  Het gebruik van macro's -- zelf opdrachten voor Excel maken.
+
+3.  Zelfgemaakte sneltoetsen -- zonder nadenken Excel aan het werk zetten.
+
+# Het lint aanpassen
+
+Het lint aanpassen is niet zo moeilijk Je kunt zelfs een eigen tabblad op het lint maken met daarop alle functies die je veel gebruikt. Als je dit tabblad voor het tabblad Start zet zal je eigen gepersonaliseerde tabblad altijd direct zichtbaar zijn.
+
+## Hoe pas je het lint aan?
+
+-   Klik op het lint met je rechtermuisknop en kies voor "Het lint aanpassen...". Het menu om het lint aan te passen wordt nu zichtbaar.
+
+::: column-margin
+![Menu om het lint aan te passen in Excel](images/paste-F14C7906.png)
+:::
+
+-   Klik rechtsonder op de knop "Nieuw tabblad". In de lijst met tabbladen is er een toegevoegd met "Nieuw tabblad (aangepast)" Met de knop "Naam wijzigen" kun je het tabblad een eigen naam geven.
+
+-   Je kunt het tabblad indelen in groepen, maar dat is niet per sé nodig.. Standaard wordt al één groep toegevoegd met de naam "Nieuwe groep (aangepast)".
+
+-   Je kunt nu uit de linkerkolom Excel-opdrachten kiezen en toevoegen aan je zelfgemaakte tabblad. Kies hier voor "Alle opdrachten" om alle mogelijke opdrachten weer te geven. Soms is het wel even zoeken om er achter te komen hoe een opdracht eigenlijk precies heet.
+
+-   Je kunt de positie van tabbladen, groepen en functies wijzigen met de pijlen aan de rechterzijde van het menu.
+
+    ::: callout-tip
+    Bij een update van Excel worden soms alle wijzigingen aan het lint ongedaan gemaakt. Je kunt je wijzigingen weer terugzetten als je een backup hebt gemaakt.
+
+    In het menu om het lint aan te passen (rechtsonder) is er een mogelijkheid om "Alle aanpassingen te exporteren". Hiermee worden alle wijzigingen in het lint in een bestand bewaard. Je kunt je wijzigingen weer terugzetten door met dezelfde knop te kiezen voor importeren van een aanpassingsbestand.
+    :::
+
+# Het gebruik van macro's
