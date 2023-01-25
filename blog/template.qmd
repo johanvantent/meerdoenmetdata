@@ -1,0 +1,16 @@
+---
+title: "Kick-off DEEP3"
+description: "DEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data."
+date: "2022-12-09"
+image: "deep_brug.png"
+format: html
+categories: [DEEP] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+---
+
+# 
+

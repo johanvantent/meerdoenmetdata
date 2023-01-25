@@ -1,0 +1,43 @@
+---
+title: "Beter communiceren met data"
+description: "Het boek *Storytelling with data* heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven."
+date: "2023-01-25"
+image: "storytelling with data.jpg"
+format: html
+categories: [Data-viz] 
+draft: false
+listing: 
+  fields:
+    - title
+    - description
+---
+
+Het boek *Storytelling with data* heeft mij radicaal veranderd in hoe ik grafieken maak. Met de inzichten uit dit boek is de kwaliteit van mijn grafieken en plaatjes aanzienlijk verbeterd. Het verschil is zo groot dat ik met gemak kan zien of ik een grafiek heb gemaakt voor of na het lezen van dit boek. Het boek is enorm waardevol voor mij geweest. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.
+
+![](storytelling%20with%20data.jpg){.column-margin group="Beter communiceren" style="max-heigth: 300px" fig-alt="Storytelling with data - cover" height="300"}
+
+![](storytelling%20met%20data.jpg){.column-margin group="Beter communiceren" style="max-" fig-alt="Storytelling met data - cover Nederlandse uitgave" height="300"}
+
+## Inhoud
+
+De inhoud van het boek steunt op twee pilaren. De eerste pilaar is het inzicht in hoe mensen grafieken interpreteren. Onze hersenen zijn heel goed in het onderscheiden van bepaalde zaken, maar veel slechter in andere. Dat verklaart onder andere waarom een staafdiagram bijna altijd beter is dan een cirkeldiagram (*Pie charts are evil* schrijf Cole). Welke elementen van een grafiek trekken de aandacht? En was dat eigenlijk wel de bedoeling? En hoe zorg je er voor dat je lezers de boodschap meekrijgen die jij bedoelde te brengen? Dat komt allemaal uitgebreid aan de orde en wordt geïllustreerd met voorbeelden zodat je het verschil ook zelf kunt ervaren.
+
+De tweede pilaar is dat je met een figuur altijd een bepaalde boodschap brengt. Als je een figuur maakt dan is het goed om erover na te denken hoe je die boodschap overbrengt. Zit die boodschap goed verstopt of haalt elke lezer er iets anders uit; of zorg je ervoor dat jouw boodschap de lezer tegemoet springt en niet te missen is? Dat laatste is natuurlijk wenselijk. Het boek geeft concrete aanknopingspunten over hoe je dat kunt aanpakken.
+
+![](inhoudsopgave.png){group="Beter communiceren" fig-alt="De inhoudsopgave van Storytelling met data" fig-align="center" width="400"}
+
+## Stijl
+
+De stijl van het boek is laagdrempelig en eenvoudig. Het is makkelijk te volgen en geeft heldere uitleg terwijl het toch beknopt blijft. De vele plaatjes en figuren maken snel duidelijk wat er bedoeld wordt; een fijne bijkomstigheid daarvan is dat je vlot door het boek heen gaat. Alle voorbeelden zijn gemaakt in Excel. Het boek bevat veel concrete voorbeelden en praktische aanwijzingen. Hierdoor helpt het boek ook om de inzichten in je dagelijks werk toe te passen.
+
+## Tot slot
+
+Bij het maken van deze recensie kwam ik onderstaande tekst uit de inleiding van het boek tegen.
+
+> "Ik kom heel wat matig beeldmateriaal tegen tijdens mijn werk (en ook in het dagelijks leven; als je er eenmaal oog voor hebt zie je het overal). Niemand wil een slechte grafiek maken, maar toch gebeurt het, steeds maar weer. Bij elk bedrijf, in alle sectoren en door allerlei soorten mensen. Het vindt plaats in de media en op plekken waarvan je denkt dat mensen beter moeten weten. Hoe kan dit?"
+>
+> --- Cole Nussbaumer Knaflic uit Storytelling met data ---
+
+Dit is een citaat van de schrijfster. Maar het grappige is, sinds ik dit boek gelezen heb geldt dit ook voor mij. Het is verbazingwekkend hoe vaak je voorbeelden van slechte afbeeldingen tegen komt. En dat is niet alleen een kwestie van smaak: in veel gevallen gaat de boodschap grotendeels verloren door slechte keuzes bij het maken van grafieken. Het boek is een echte aanrader voor wie wel eens een grafiek maakt om aan anderen te laten zien.
+
+![](voor%20wie.png){group="Beter communiceren" fig-alt="Voor wie is het boek bedoeld?" fig-align="center"}

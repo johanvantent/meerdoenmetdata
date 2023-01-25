@@ -1,1 +1,6 @@
 /* css styles */
+
+div.quarto-post .thumbnail img {
+    object-fit: scale-down;
+    max-height: 200px;
+}
