@@ -1,4 +1,7 @@
-# meerdoenmetdata
-Blog en website
+# Meer doen met data
 
-TEST
+[Meer doen met data](https://johanvantent.github.io/meerdoenmetdata/)
+
+Broncode voor mijn website en blog.
+
+![]("images/JTIP-grey80")
