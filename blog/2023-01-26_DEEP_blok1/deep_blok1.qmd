@@ -1,8 +1,8 @@
 ---
-title: "Introductie Data Science Translator"
+title: "Introductie Data Science Translator - DEEP blok 1"
 description: ""
 date: "2023-01-28"
-image: "deep_brug.png"
+image: "../images/deep_brug.png"
 format: html
 categories: [DEEP] 
 draft: false
@@ -12,7 +12,9 @@ listing:
     - description
 ---
 
-Op 26 januari heb ik de start gemaakt met DEEP. De eerste dag stond vooral in het teken van het verkennen van data science begrippen en de rol van Data Science Translator (DST of AT Analytics Translator). We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
+Op 26 januari heb ik de start gemaakt met DEEP. De eerste dagen  stonden in het teken van het verkennen datagedreven organisaties en de rol van Data Science Translator.(DST of AT Analytics Translator). 
+
+We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
 
 ::: callout-note
 Deze blogpost is nogal lang geworden. Het blog helpt mijzelf ook om overzicht te houden van wat ik leer. In dit eerste blok zijn er veel definities en uitgangspunten aanbod gekomen die ik toch ook graag een plek wil geven. Volgende posts zijn hopelijk wat compacter.
