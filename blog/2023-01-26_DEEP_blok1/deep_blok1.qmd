@@ -1,0 +1,36 @@
+---
+title: "Introductie Data Science Translator"
+description: ""
+date: "2023-01-26"
+image: "deep_brug.png"
+format: html
+categories: [DEEP] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+---
+
+Op 26 januari heb ik de start gemaakt met DEEP. De eerste dag stond vooral in het teken van het verkennen van data science begrippen en de rol van Data Science Translator (DST). We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
+
+# Wat je kunt leren van een spelletje *Wie is het?*
+
+Als je een training volgt om Data Science Translator volgt verwacht je niet dat je zult beginnen met een spelletje *Wie is het?*. Toch blijkt *Wie is het?* veel relevante aspecten te bevatten die relevant zijn voor het werken met data. Welke kenmerken hebben de figuren? Wat is de optimale combinatie van vragen? En wat is het doel. In ons geval bleek het doel anders dan verwacht. Het ging niet alleen om het raden van de juiste persoon, maar om het halen van veel punten. We kregen bijvoorbeeld strafpunten voor het gebruiken van de subjectieve vraag: "Heeft de persoon een smalle mond?"
+
+**10 lessen uit Wie is het?** 
+
+1. Vooraf vragen formuleren is eigenlijk het ontwikkelen van een algoritme - stappen om tot een antwoord te komen
+2. Het type algoritme is eenvoudig en begrijpelijk - decision tree
+3. Door de data te verkennen blijkt dat sommige vragen/features niet relevant zijn. 
+4. Verschillende vragen bevattn subjectieve definities die om scherpte vragen.
+5. Het bepalen van de kwaliteit van het algorimte is een afweging van verschillende factoren.
+6. Voor het bepalen van de belangrijkste vragen/features onderzoek je het onderscheidend vermogen
+7. Bepaal met domeinexperts en een dataverkenning in hoeverre deze steekproef representatief is. Is de classificatie juist? 
+8. Er is geen sprake van een zelflerend Machine Learning algoritme
+9. Door vragen toe te voegen of de volgorde te veranderen verandert het algoritme.
+10. Je kunt alleen een algoritme optimaliseren als het doel hetzelfde blijft. En weet wat het doel is. Bij Wie is het ging het om de punten niet om de persoon.
+
+# Definities en begrippen
+
+# Context en positie van de DST
