@@ -1,11 +1,11 @@
 ---
 title: "Introductie Data Science Translator"
 description: ""
-date: "2023-01-26"
+date: "2023-01-28"
 image: "deep_brug.png"
 format: html
 categories: [DEEP] 
-draft: true
+draft: false
 listing: 
   fields:
     - title
@@ -96,14 +96,14 @@ Operationeel (verrichten) - ontwikkeling en implementatie van oplossingen.
 
 Eerder zijn de succes factoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij?
 
-- Samen met anderen de reis uitstippelen en meenemen 
-- Waardecreatie in het oog houden en iedereen scherp houden 
-- In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases 
-- Continue leercyclus opgang brengen en houden. 
-- Competenties die horen bij de datarollen zorgen dat die er komen 
-- Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden 
-- Continu proces creëren 
-- Bewustzijn creëren
+-   Samen met anderen de reis uitstippelen en meenemen
+-   Waardecreatie in het oog houden en iedereen scherp houden
+-   In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases
+-   Continue leercyclus opgang brengen en houden.
+-   Competenties die horen bij de datarollen zorgen dat die er komen
+-   Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden
+-   Continu proces creëren
+-   Bewustzijn creëren
 
 ## Welke competentie heeft een DST nodig?
 
@@ -142,94 +142,108 @@ Iedereen heeft deze competenties gerangschikt in de volgorde waarin we deze al m
 
 # Operationele taken van de DST
 
-Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. De innovatiefunnel is een gestructureerde manier om van een datavraag te komen tot een oplossing die waardevol is voor een organisatie.
+Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. De innovatiefunnel is een gestructureerde manier om van een datavraag te komen tot een datagedreven[^1] oplossing die waardevol is voor een organisatie.
+
+[^1]: ik kort datagedreven verder af als DG
 
 **Plaatje innovatiefunnel**
 
 **Stappen innovatiefunnel**
 
-- Verkennen en prioriteren
-- Solution design
-- Proof of Concept
-- Pilot
-- Implementeren
-- Beheren en doorontwikkelen
-- Verkennen en prioriteren
+-   Verkennen en prioriteren
+-   Solution design
+-   Proof of Concept
+-   Pilot
+-   Implementeren
+-   Beheren en doorontwikkelen
+-   Verkennen en prioriteren
 
 ## Fase 1 - verkenning en prioritering
 
-5 Stappen 
+De eerste fase bestaat uit het verkennen van data-vraagstukken en om hier een prioritering in aan te brengen. Het doel is om een concrete casus te vinden om mee aan de slag te gaan. De prioritering komt tot stand door te kijken naar haalbaarheid van een beoogde data-oplossing en de (toegevoegde) waarde voor de organisatie. Haalbare projecten die veel waarde toevoegen krijgen de hoogste prioriteit. Projecten die veel waarde toevoegen maar (nog) niet haalbaar zijn, zijn ook interessant: wat is er voor nodig om deze projecten wel haalbaar te maken?
 
-1. Achterhalen daadwerkelijk vraag/behoefte/context
-2. Bepalen huidige manier van werken
-3. Omzetten daadwerkelijke vraag naar functionaliteit en user stories
-4. Bepalen technische haalbaarheid
-5. Prioriteren o.b.v. haalbaarheid en businesswaarde
-	
-Vraag centraal stellen
+Fase 1 heeft vijf stappen
 
-Belangrijkste rollen - de AT heeft in alle stappen van het verkennen en prioriteren een leidende rol
+1.  Achterhalen daadwerkelijk vraag/behoefte/context
+2.  Bepalen huidige manier van werken
+3.  Omzetten daadwerkelijke vraag naar functionaliteit en user stories[^2]
+4.  Bepalen technische haalbaarheid
+5.  Prioriteren o.b.v. haalbaarheid en businesswaarde
 
-User story opbreken tot het niveau dat je het kan doorgeven aan een ander die er mee verder moet
+[^2]: Een user story is een behoefte in de vorm: Als \[...\] wil ik \[...\] zodat ik \[...\]. Het bevat een middel om een concrete behoefte te vervullen.
 
-## Fase 2 - Solution design
+Losse opmerkingen
 
-1. Verzamelen relevante databronnen (klein beginnen en dan schalen)
-2. Begrijpen data, kwaliteit, structuur, lineage (genererende proces van data) en beschikbaarheid
-3. Schetsen van  het eindresultaten DG oplossing
-4. Opstellen van de benodigde data-infrastructuur
-5. Plan van aanpak voor de Proof of Concept 
+-   In fase 1 is het belangrijk om de vraag centraal stellen.
+-   De DST heeft in alle stappen van het verkennen en prioriteren een leidende rol.
+-   Een user story moet je opbreken tot het detailniveau dat je het kan doorgeven aan een ander die er mee verder moet.
+
+## Fase 2 - Solution Design
+
+In fase 2 Solution Design gaat het erom om een passende oplossing te bedenken bij het data-vraagstuk. Deze wordt in deze fase nog niet gerealiseerd maar alleen geschetst.
+
+1.  Verzamelen relevante databronnen (klein beginnen en dan schalen)
+2.  Begrijpen data, kwaliteit, structuur, lineage (genererende proces van data) en beschikbaarheid
+3.  Schetsen van de eindresultaten van de datagedreven-oplossing
+4.  Opstellen van de benodigde data-infrastructuur
+5.  Plan van aanpak voor de Proof of Concept.[^3]
+
+[^3]: Het plan van aanpak komt steeds terug in elke fase. Er wordt elke keer vooruitgekeken naar alle komende fases, maar het detailniveau neemt af naarmate er verder in de toekomst wordt gekeken.
 
 Resultaat Solution Design
 
-- Schetsen (mock-up) van het eindresultaat (niet functioneel / wel beeld) - Shiny UI builder
-- Verkennende data-analyse voor koppeling databronnen - kwaliteit van data en koppelbaarheid (ongelijke sleutels)
-- Succesvolle implementatie vraag data-management
-- Data-infrastructuur toont de benodigde bouwblokken voor het realiseren van het dashboard
+-   Schetsen (mock-up) van het eindresultaat (niet functioneel / wel beeld). JT: hier kan ik de Shiny UI builder voor gebruiken
+-   Verkennende data-analyse voor koppeling databronnen - kwaliteit van data en koppelbaarheid (denk bijv. aan ongelijke sleutels)
+-   Succesvolle implementatie vraagt data-management
+-   Data-infrastructuur toont de benodigde bouwblokken voor het realiseren van het dashboard
 
 Denk aan het betrekken van mensen die het beheren aan het eind.
 
-
 ## Fase 3 - Proof of Concept
 
+Het Proof of Concept dient om een eerste werkende versie van de DG-oplossing te maken. Hierin wordt duidelijk of de geschetste oplossing ook echt te realiseren is en wat daar bij komt kijken.
+
 Doelen
 
-- Eerste werkende versie van de DG oplossing
-- Eerste test of de veronderstelde waarde ook gerealiseerd kan worden.
-- Opstellen van een PvA voor de Pilot-fase
+-   Eerste werkende versie van de datagedrevenoplossing
+-   Eerste test of de veronderstelde waarde ook gerealiseerd kan worden.
+-   Opstellen van een Plan van aanpak voor de Pilot-fase
 
-1. Creeeren train, test en validatiedatasets
-2. Realiseren van de DG oplossing (iteratief)
-3. Kwaliteit van de DG oplossing bepalen en aanscherpen (iteratief)
-4. Business case opstellen, aanscherpen haalbaarheid en uitbreiden aspecten rondom ethiek en privacy - doel BC is om de toegeovegde waarde aan te tonen.
-5. PvA voor vervolgfases ontwikkelen en afstemmen.
-	
+1.  Creëren train, test en validatiedatasets
+2.  Realiseren van de DG oplossing (iteratief)
+3.  Kwaliteit van de DG oplossing bepalen en aanscherpen (iteratief)
+4.  Businesscase opstellen, aanscherpen haalbaarheid en uitbreiden aspecten rondom ethiek en privacy - Doel van de businesscase is om de toegevoegde waarde aan te tonen.
+5.  Plan van aanpak voor vervolgfases ontwikkelen en afstemmen.
+
 ## Fase 4 - Pilot
 
+De pilot dient om de DG-oplossing in de praktijk te testen. Werkt het ook in de praktijk en kan er echt een toegevoegde waarde voor de organisatie worden bereikt?
+
 Doelen
 
-- Gerealiseerde oplossing in de praktijk toetsen/uitproberen door eindgebruikers
-- Inventariseren bugs, aanscherpingen en mogelijkheden voor doorontwikkeling
-- Verder uitwerking PvA
+-   Gerealiseerde oplossing in de praktijk toetsen/uitproberen door eindgebruikers
+-   Inventariseren bugs, aanscherpingen en mogelijkheden voor doorontwikkeling
+-   Verder uitwerking Plan van aanpak.
 
 ## Fase 5 Implementatiefase
 
+Na de pilot kan de DG-oplossing werkelijk worden geimplementeerd. Dat betekent dat de oplossing zodanig wordt aangepast dat deze structureel gebruikt kan worden en dat er gezorgd wordt voor kwaliteitscontrole en dergelijke
+
 Doelen
 
-- Omzetten van de oplossing naar een structurele geautomatiseerde oplossing
-- Opzetten van oplossingen voor monitoring van de kwaliteit van de DG-oplossing - logs etc.
-- Eventueel aanscherpen PvA voor de beheerfase
-	
+-   Omzetten van de oplossing naar een structurele geautomatiseerde oplossing
+-   Opzetten van oplossingen voor monitoring van de kwaliteit van de DG-oplossing - logs etc.
+-   Eventueel aanscherpen PvA voor de beheerfase
+
 ## Fase 6 Beheren en doorontwikkelen
 
-Zie ook fase 1
+In fase 6 is de DG-oplossing en gebruik en wordt deze beheerd. Het is ook de fase waarin gedacht kan worden aan het doorontwikkelen, o.a. van features die gedurende het ontwerpproces naar voren zijn gekomen. Bij het doorontwikkelen start je eigenlijk weer opnieuw bij fase 1: verkennen en prioriteren. 
 
 Doelen
 
-- Operationeel houden DG-oplossing door inrichten en uitvoeren van functioneel en technisch beheer
-- Borgen kwaliteit door implementeren processen en beleggen van verantwoordelijkheden
-- Bijhouden mogelijkheden voor doorontwikkeling en uitbreiding DG-oplossing
-
+-   Operationeel houden DG-oplossing door inrichten en uitvoeren van functioneel en technisch beheer
+-   Borgen kwaliteit door implementeren processen en beleggen van verantwoordelijkheden
+-   Bijhouden mogelijkheden voor doorontwikkeling en uitbreiding DG-oplossing
 
 # Boekentip
 
