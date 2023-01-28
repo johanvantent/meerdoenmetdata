@@ -84,11 +84,102 @@
     "text": "Tot slot\nBij het maken van deze recensie kwam ik onderstaande tekst uit de inleiding van het boek tegen.\n\n“Ik kom heel wat matig beeldmateriaal tegen tijdens mijn werk (en ook in het dagelijks leven; als je er eenmaal oog voor hebt zie je het overal). Niemand wil een slechte grafiek maken, maar toch gebeurt het, steeds maar weer. Bij elk bedrijf, in alle sectoren en door allerlei soorten mensen. Het vindt plaats in de media en op plekken waarvan je denkt dat mensen beter moeten weten. Hoe kan dit?”\n— Cole Nussbaumer Knaflic uit Storytelling met data —\n\nDit is een citaat van de schrijfster. Maar het grappige is, sinds ik dit boek gelezen heb geldt dit ook voor mij. Het is verbazingwekkend hoe vaak je voorbeelden van slechte afbeeldingen tegen komt. En dat is niet alleen een kwestie van smaak: in veel gevallen gaat de boodschap grotendeels verloren door slechte keuzes bij het maken van grafieken. Het boek is een echte aanrader voor wie wel eens een grafiek maakt om aan anderen te laten zien."
   },
   {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "",
+    "text": "Op 26 januari heb ik de start gemaakt met DEEP. De eerste dagen stonden in het teken van het verkennen datagedreven organisaties en de rol van Data Science Translator.(DST of AT Analytics Translator).\nWe zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje Wie is het?"
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#wat-is-een-datagedreven-organisatie",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#wat-is-een-datagedreven-organisatie",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Wat is een datagedreven organisatie?",
+    "text": "Wat is een datagedreven organisatie?\nEr zijn twee aspecten die een organisatie datagedreven maken:\n\nIn een datagedreven organisatie heeft data een belangrijke rol (als productiemiddel/hulpbron) net als mensen/kapitaal etc. Net als met andere productiemiddelen wordt er goed voor data gezorgd: de organisatie weet welke data het heeft, welke data het nodig heeft en wat de kwaliteit ervan is.\nData wordt gezien en ingezet als middel om waarde mee te creëren op operationeel, tactisch en strategisch niveau.\n\nIn een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan mensen zodat het gebruik van data ook echt tot waardecreatie kan leiden. De DST heeft een belangrijke rol als verbindende factor tussen de meeste1 van deze rollen."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#de-reis-naar-een-datagedreven-organisatie",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#de-reis-naar-een-datagedreven-organisatie",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "De reis naar een datagedreven organisatie",
+    "text": "De reis naar een datagedreven organisatie\nEen datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te komen. Die reis bevat grofweg 3 onderdelen: richten, inrichten en verrichten. Daarnaast is communicatie in het hele traject van groot belang om iedereen in het traject mee te nemen.\n\nRichten heeft alles te maken met een visie op het gebruik van data en beleid voor de inzet van de juiste mensen en middelen om data de juiste plek in een organisatie te kunnen geven.\nInrichten gaat om het organiseren van de infrastructuur zowel in de techniek als in het toekennen van de verschillende rollen die vervuld moeten worden.\nVerrichten gaat over het daadwerkelijk waarde creeren door het gebruik van data."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#succesfactoren-voor-een-datagedreven-organisatie",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#succesfactoren-voor-een-datagedreven-organisatie",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Succesfactoren voor een datagedreven organisatie",
+    "text": "Succesfactoren voor een datagedreven organisatie\nDe volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:\n\nOnderkenning van het feit dat je een (ontdekkings)reis onderneemt - het is geen lineair proces, je moet steeds evalueren en bijstellen\nWaardecreatie staat voorop - het moet wel leiden tot waarde anders heeft het geen zin\nJust-in-time, just-enough - niet te groot en te vroeg beginnen met dingen die je nog niet nodig hebt.\nLeren door te doen - je moet gewoon beginnen en niet eerst alles op orde willen hebben.\nBouw eigen competenties op - je kan veel inkopen, maar op dit gebied - regie op je data en de juiste dingen is het belangrijk om dat zelf te doen.\nStart small, scale fast - klein beginnen en snel opschalen; zo snel als mogelijk is want dat levert meer waarde op.\nZorg dat de stappen herhaalbaar, incrementeel en duurzaam zijn - het is belangrijk om structurele voortuitgang te boeken.\nCreeer momentum - als je momentum hebt niet stoppen, maar doorgaan en doorpakken zodat het proces vaart houdt."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#plek-van-de-dst",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#plek-van-de-dst",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Plek van de DST",
+    "text": "Plek van de DST\nDe DST heeft een brugfunctie om de business (mensen met kennis van de inhoud) te verbinden met de analytics (mensen met kennis van het werken met data). De DST zorgt voor een optimale afstemming tussen beide en moet ook kennis hebben van beide kanten. De DST is de brug van A naar B - van Analytics naar Business en vice versa.\nDe DST is een met zijn ro een veranderagent en facilitator in een organisatie: het is een professional die een organisatie helpt om een hoger volwassenheidsniveau te bereiken.\nDe DST heeft op alle niveau’s van een organisatie een rol:\nStrategisch (richten) - het helpen opstellen van een datastrategie.\nTactisch inrichten) - realisatie van een datastrategie en een bijbehorende prioritering.\nOperationeel (verrichten) - ontwikkeling en implementatie van oplossingen."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#bijdrage-dst-aan-de-datagedreven-organisatie",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#bijdrage-dst-aan-de-datagedreven-organisatie",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Bijdrage DST aan de datagedreven organisatie",
+    "text": "Bijdrage DST aan de datagedreven organisatie\nEerder zijn de succes factoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij?\n\nSamen met anderen de reis uitstippelen en meenemen\nWaardecreatie in het oog houden en iedereen scherp houden\nIn beeld brengen wat er nodig is, wie en wat hebben we nu nodig voor concrete cases\nContinue leercyclus opgang brengen en houden.\nCompetenties die horen bij de datarollen zorgen dat die er komen\nKlein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden\nContinu proces creëren\nBewustzijn creëren"
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#welke-competentie-heeft-een-dst-nodig",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#welke-competentie-heeft-een-dst-nodig",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Welke competentie heeft een DST nodig?",
+    "text": "Welke competentie heeft een DST nodig?\nVoor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk om de rol succesvol in te vullen.\nVaardigheden\n\nCommunicatief vermogen\nProjectmanagement\nStakeholdermanagement\nAnalytsich vermogen\nReflecterend vermogen\nVerandervermogen\n\nGedrag\n\nVerbindend\nEmpatisch\nFlexibel\nOndernemend zijn\nResultaatgedreven - snel tot resultaat\nBetrouwbaar\n\nKennis\n\nDomeinkennis\nData\nStorytelling met data\nTechnisch modelleren\nData infrastructuur\nEthiek en privacy\n\nIedereen heeft deze competenties gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-1---verkenning-en-prioritering",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-1---verkenning-en-prioritering",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 1 - verkenning en prioritering",
+    "text": "Fase 1 - verkenning en prioritering\nDe eerste fase bestaat uit het verkennen van data-vraagstukken en om hier een prioritering in aan te brengen. Het doel is om een concrete casus te vinden om mee aan de slag te gaan. De prioritering komt tot stand door te kijken naar haalbaarheid van een beoogde data-oplossing en de (toegevoegde) waarde voor de organisatie. Haalbare projecten die veel waarde toevoegen krijgen de hoogste prioriteit. Projecten die veel waarde toevoegen maar (nog) niet haalbaar zijn, zijn ook interessant: wat is er voor nodig om deze projecten wel haalbaar te maken?\nFase 1 heeft vijf stappen\n\nAchterhalen daadwerkelijk vraag/behoefte/context\nBepalen huidige manier van werken\nOmzetten daadwerkelijke vraag naar functionaliteit en user stories2\nBepalen technische haalbaarheid\nPrioriteren o.b.v. haalbaarheid en businesswaarde\n\n2 Een user story is een behoefte in de vorm: Als […] wil ik […] zodat ik […]. Het bevat een middel om een concrete behoefte te vervullen.Losse opmerkingen\n\nIn fase 1 is het belangrijk om de vraag centraal stellen.\nDe DST heeft in alle stappen van het verkennen en prioriteren een leidende rol.\nEen user story moet je opbreken tot het detailniveau dat je het kan doorgeven aan een ander die er mee verder moet."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-2---solution-design",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-2---solution-design",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 2 - Solution Design",
+    "text": "Fase 2 - Solution Design\nIn fase 2 Solution Design gaat het erom om een passende oplossing te bedenken bij het data-vraagstuk. Deze wordt in deze fase nog niet gerealiseerd maar alleen geschetst.\n\nVerzamelen relevante databronnen (klein beginnen en dan schalen)\nBegrijpen data, kwaliteit, structuur, lineage (genererende proces van data) en beschikbaarheid\nSchetsen van de eindresultaten van de datagedreven-oplossing\nOpstellen van de benodigde data-infrastructuur\nPlan van aanpak voor de Proof of Concept.3\n\n3 Het plan van aanpak komt steeds terug in elke fase. Er wordt elke keer vooruitgekeken naar alle komende fases, maar het detailniveau neemt af naarmate er verder in de toekomst wordt gekeken.Resultaat Solution Design\n\nSchetsen (mock-up) van het eindresultaat (niet functioneel / wel beeld). JT: hier kan ik de Shiny UI builder voor gebruiken\nVerkennende data-analyse voor koppeling databronnen - kwaliteit van data en koppelbaarheid (denk bijv. aan ongelijke sleutels)\nSuccesvolle implementatie vraagt data-management\nData-infrastructuur toont de benodigde bouwblokken voor het realiseren van het dashboard\n\nDenk aan het betrekken van mensen die het beheren aan het eind."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-3---proof-of-concept",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-3---proof-of-concept",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 3 - Proof of Concept",
+    "text": "Fase 3 - Proof of Concept\nHet Proof of Concept dient om een eerste werkende versie van de DG-oplossing te maken. Hierin wordt duidelijk of de geschetste oplossing ook echt te realiseren is en wat daar bij komt kijken.\nDoelen\n\nEerste werkende versie van de datagedrevenoplossing\nEerste test of de veronderstelde waarde ook gerealiseerd kan worden.\nOpstellen van een Plan van aanpak voor de Pilot-fase\n\n\nCreëren train, test en validatiedatasets\nRealiseren van de DG oplossing (iteratief)\nKwaliteit van de DG oplossing bepalen en aanscherpen (iteratief)\nBusinesscase opstellen, aanscherpen haalbaarheid en uitbreiden aspecten rondom ethiek en privacy - Doel van de businesscase is om de toegevoegde waarde aan te tonen.\nPlan van aanpak voor vervolgfases ontwikkelen en afstemmen."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-4---pilot",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-4---pilot",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 4 - Pilot",
+    "text": "Fase 4 - Pilot\nDe pilot dient om de DG-oplossing in de praktijk te testen. Werkt het ook in de praktijk en kan er echt een toegevoegde waarde voor de organisatie worden bereikt?\nDoelen\n\nGerealiseerde oplossing in de praktijk toetsen/uitproberen door eindgebruikers\nInventariseren bugs, aanscherpingen en mogelijkheden voor doorontwikkeling\nVerder uitwerking Plan van aanpak."
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-5-implementatiefase",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-5-implementatiefase",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 5 Implementatiefase",
+    "text": "Fase 5 Implementatiefase\nNa de pilot kan de DG-oplossing werkelijk worden geimplementeerd. Dat betekent dat de oplossing zodanig wordt aangepast dat deze structureel gebruikt kan worden en dat er gezorgd wordt voor kwaliteitscontrole en dergelijke\nDoelen\n\nOmzetten van de oplossing naar een structurele geautomatiseerde oplossing\nOpzetten van oplossingen voor monitoring van de kwaliteit van de DG-oplossing - logs etc.\nEventueel aanscherpen PvA voor de beheerfase"
+  },
+  {
+    "objectID": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-6-beheren-en-doorontwikkelen",
+    "href": "blog/2023-01-26_DEEP_blok1/deep_blok1.html#fase-6-beheren-en-doorontwikkelen",
+    "title": "Introductie Data Science Translator - DEEP blok 1",
+    "section": "Fase 6 Beheren en doorontwikkelen",
+    "text": "Fase 6 Beheren en doorontwikkelen\nIn fase 6 is de DG-oplossing en gebruik en wordt deze beheerd. Het is ook de fase waarin gedacht kan worden aan het doorontwikkelen, o.a. van features die gedurende het ontwerpproces naar voren zijn gekomen. Bij het doorontwikkelen start je eigenlijk weer opnieuw bij fase 1: verkennen en prioriteren.\nDoelen\n\nOperationeel houden DG-oplossing door inrichten en uitvoeren van functioneel en technisch beheer\nBorgen kwaliteit door implementeren processen en beleggen van verantwoordelijkheden\nBijhouden mogelijkheden voor doorontwikkeling en uitbreiding DG-oplossing"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Beter communiceren met data\n\n\n\n\n\n\n\nData-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
+    "text": "Introductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\nData-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",

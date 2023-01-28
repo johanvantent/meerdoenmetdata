@@ -12,16 +12,22 @@
     "items": []
   },
   {
+    "listing": "/blog/2023-01-26_DEEP_blok1/deep_blok1.html",
+    "items": []
+  },
+  {
     "listing": "/blog/template.html",
     "items": [
       "/blog/2023-01-25_storytelling_recensie/storytelling.html",
       "/blog/2022-11-14_wkp_data/index.html",
+      "/blog/2023-01-26_DEEP_blok1/deep_blok1.html",
       "/blog/2022-12-09 Intro DEEP3/intro_deep3.html"
     ]
   },
   {
     "listing": "/blog.html",
     "items": [
+      "/blog/2023-01-26_DEEP_blok1/deep_blok1.html",
       "/blog/2023-01-25_storytelling_recensie/storytelling.html",
       "/blog/2022-12-09 Intro DEEP3/intro_deep3.html",
       "/blog/2022-11-14_wkp_data/index.html"
