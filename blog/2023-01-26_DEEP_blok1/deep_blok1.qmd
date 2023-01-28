@@ -12,25 +12,150 @@ listing:
     - description
 ---
 
-Op 26 januari heb ik de start gemaakt met DEEP. De eerste dag stond vooral in het teken van het verkennen van data science begrippen en de rol van Data Science Translator (DST). We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
+Op 26 januari heb ik de start gemaakt met DEEP. De eerste dag stond vooral in het teken van het verkennen van data science begrippen en de rol van Data Science Translator (DST of AT Analytics Translator). We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
 
 # Wat je kunt leren van een spelletje *Wie is het?*
 
 Als je een training volgt om Data Science Translator volgt verwacht je niet dat je zult beginnen met een spelletje *Wie is het?*. Toch blijkt *Wie is het?* veel relevante aspecten te bevatten die relevant zijn voor het werken met data. Welke kenmerken hebben de figuren? Wat is de optimale combinatie van vragen? En wat is het doel. In ons geval bleek het doel anders dan verwacht. Het ging niet alleen om het raden van de juiste persoon, maar om het halen van veel punten. We kregen bijvoorbeeld strafpunten voor het gebruiken van de subjectieve vraag: "Heeft de persoon een smalle mond?"
 
-**10 lessen uit Wie is het?** 
+**10 lessen uit Wie is het?**
 
-1. Vooraf vragen formuleren is eigenlijk het ontwikkelen van een algoritme - stappen om tot een antwoord te komen
-2. Het type algoritme is eenvoudig en begrijpelijk - decision tree
-3. Door de data te verkennen blijkt dat sommige vragen/features niet relevant zijn. 
-4. Verschillende vragen bevattn subjectieve definities die om scherpte vragen.
-5. Het bepalen van de kwaliteit van het algorimte is een afweging van verschillende factoren.
-6. Voor het bepalen van de belangrijkste vragen/features onderzoek je het onderscheidend vermogen
-7. Bepaal met domeinexperts en een dataverkenning in hoeverre deze steekproef representatief is. Is de classificatie juist? 
-8. Er is geen sprake van een zelflerend Machine Learning algoritme
-9. Door vragen toe te voegen of de volgorde te veranderen verandert het algoritme.
-10. Je kunt alleen een algoritme optimaliseren als het doel hetzelfde blijft. En weet wat het doel is. Bij Wie is het ging het om de punten niet om de persoon.
+1.  Vooraf vragen formuleren is eigenlijk het ontwikkelen van een algoritme - stappen om tot een antwoord te komen
+2.  Het type algoritme is eenvoudig en begrijpelijk - decision tree
+3.  Door de data te verkennen blijkt dat sommige vragen/features niet relevant zijn.
+4.  Verschillende vragen bevatten subjectieve definities die om scherpte vragen.
+5.  Het bepalen van de kwaliteit van het algoritme is een afweging van verschillende factoren.
+6.  Voor het bepalen van de belangrijkste vragen/features onderzoek je het onderscheidend vermogen.
+7.  Bepaal met domeinexperts en een dataverkenning in hoeverre deze steekproef representatief is. Is de classificatie juist?
+8.  Er is geen sprake van een zelflerend Machine Learning algoritme
+9.  Door vragen toe te voegen of de volgorde te veranderen verandert het algoritme.
+10. Je kunt alleen een algoritme optimaliseren als het doel hetzelfde blijft. En als je weet wat het doel is. Bij Wie is het ging het bij ons om de punten niet alleen om de persoon te raden.
 
 # Definities en begrippen
 
+Het volgende onderdeel ging over allerlei definities en begrippen: Artificial Intelligence, Big data, Data science etc. Het begrip analytics is in het bijzonder relevant voor de rol van Data Science Translator of Analytics Translator.
+
+*Analytics*\
+Analytics gaat over het transformeren van data tot kennis en relevante inzichten. Er zijn 4 typen analytics te onderscheiden die zowel toenemen in complexiteit als in verwachte waarde:
+
+-   beschrijvende analytics - beschrijven van de huidige situatie met behulp van data
+-   diagnostische analytics - de huidige situatie begrijpen met behulp van data
+-   voorspellende analytics - welke ontwikkelingen verwachten we op basis van de data
+-   voorschrijvende analytics - welke acties zouden we op basis van de data en de voorspelde ontwikkelingen moeten nemen
+
+# Een datagedreven organisatie
+
+## Wat is een datagedreven organisatie?
+
+Er zijn twee aspecten die een organisatie datagedreven maken:
+
+1.  In een datagedreven organisatie heeft data een belangrijke rol (als productiemiddel/hulpbron) net als mensen/kapitaal etc. Net als met andere productiemiddelen wordt er goed voor data gezorgd: de organisatie weet welke data het heeft, welke data het nodig heeft en wat de kwaliteit ervan is.
+2.  Data wordt gezien en ingezet als middel om waarde mee te creëren op operationeel, tactisch en strategisch niveau.
+
+In een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan mensen zodat het gebruik van data ook echt tot waardecreatie kan leiden. De DST heeft een belangrijke rol als verbindende factor tussen de meeste van deze rollen.
+
+## De reis naar een datagedreven organisatie
+
+Een datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te komen. Die reis bevat grofweg 3 onderdelen: richten, inrichten en verrichten. Daarnaast is communicatie in het hele traject van groot belang om iedereen in het traject mee te nemen.
+
+-   Richten heeft alles te maken met een visie op het gebruik van data en beleid voor de inzet van de juiste mensen en middelen om data de juiste plek in een organisatie te kunnen geven.
+-   Inrichten gaat om het organiseren van de infrastructuur zowel in de techniek als in het toekennen van de verschillende rollen die vervuld moeten worden.
+-   Verrichten gaat over het daadwerkelijk waarde creeren door het gebruik van data.
+
+## Succesfactoren voor een datagedreven organisatie.
+
+De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:
+
+-   Onderkenning van het feit dat je een (ontdekkings)reis onderneemt - het is geen lineair proces, je moet steeds evalueren en bijstellen
+-   Waardecreatie staat voorop - het moet wel leiden tot waarde anders heeft het geen zin
+-   Just-in-time, just-enough - niet te groot en te vroeg beginnen met dingen die je nog niet nodig hebt.
+-   Leren door te doen - je moet gewoon beginnen en niet eerst alles op orde willen hebben.
+-   Bouw eigen competenties op - je kan veel inkopen, maar op dit gebied - regie op je data en de juiste dingen is het belangrijk om dat zelf te doen.
+-   Start small, scale fast - klein beginnen en snel opschalen; zo snel als mogelijk is want dat levert meer waarde op.
+-   Zorg dat de stappen herhaalbaar, incrementeel en duurzaam zijn - het is belangrijk om structurele voortuitgang te boeken.
+-   Creeer momentum - als je momentum hebt niet stoppen, maar doorgaan en doorpakken zodat het proces vaart houdt.
+
+
+
 # Context en positie van de DST
+
+## Plek van de DST
+
+De DST heeft een brugfunctie om de business (mensen met kennis van de inhoud) te verbinden met de analytics (mensen met kennis van het werken met data). De DST zorgt voor een optimale afstemming tussen beide en moet ook kennis hebben van beide kanten. De DST is de brug van A naar B - van Analytics naar Business en vice versa.
+
+De DST is een met zijn ro een veranderagent en facilitator in een organisatie: het is een professional die een organisatie helpt om een hoger volwassenheidsniveau te bereiken.
+
+De DST heeft op alle niveau's van een organisatie een rol:  
+Strategisch (richten) - het helpen opstellen van een datastrategie.  
+Tactisch inrichten) - realisatie van een datastrategie en een bijbehorende prioritering.  
+Operationeel (verrichten) -  ontwikkeling en implementatie van oplossingen.
+
+## Bijdrage DST aan de datagedreven organisatie
+
+Eerder zijn de succes factoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij? 
+- Samen met anderen de reis uitstippelen en meenemen
+- Waardecreatie in het oog houden en iedereen scherp houden
+- In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases
+- Continue leercyclus opgang brengen en houden.
+- Competenties die horen bij de datarollen zorgen dat die er komen
+- Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden
+- Continu proces creëren
+- Bewustzijn creëren
+
+
+## Welke competentie heeft een DST nodig?
+
+Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk om de rol succesvol in te vullen.
+
+**Vaardigheden**
+
+-   Communicatief vermogen
+-   Projectmanagement
+-   Stakeholdermanagement
+-   Analytsich vermogen
+-   Reflecterend vermogen
+-   Verandervermogen
+
+**Gedrag**
+
+-   Verbindend
+-   Empatisch
+-   Flexibel
+-   Ondernemend zijn
+-   Resultaatgedreven - snel tot resultaat
+-   Betrouwbaar
+
+**Kennis**
+
+-   Domeinkennis
+-   Data
+-   Storytelling met data
+-   Technisch modelleren
+-   Data infrastructuur
+-   Ethiek en privacy
+
+Iedereen heeft deze compententies gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling.
+
+![](foto_competenties_AT.jpg){fig-alt="Competenties voor de Analytics Translator" fig-align="center" width="310"}
+
+# Operationele taken van de DST
+
+Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. De innovatiefunnel is een gestructureerde manier om van een datavraag te komen tot een oplossing die waardevol is voor een organisatie.
+
+**Plaatje innovatiefunnel**
+
+
+
+# Boekentip
+
+Mijn favoriete manier van leren is door boeken te lezen. Daarom ben ik van plan om de trainers steeds naar een boekentip te vragen. Bij het eerste blok is de boekentip het boek *Become an Analytic Translator* van Wendy D. Lynch.
+
+> **Over dit boek op Amazon**
+>
+> Every day, companies waste millions of dollars and work hours answering the wrong analytic questions and delivering unusable results. Most analytic projects never produce business value---not because companies lack data, tools, or analytic talent, but because analysts and business teams don't speak the same language. Stuck in their own expertise, the two teams fail to define, explain, or deliver what the other needs, leaving everyone frustrated and resentful.
+>
+> Imagine, instead, if business leaders fully grasped the extraordinary potential hidden in their data. Imagine if data analysts continuously anticipated, and adjusted to, the ever-changing priorities facing their business colleagues. Imagine these teams collaborating proactively, appreciating each other's contributions. In most organizations, we can only imagine these things because there is a huge chasm between what is possible and what actually happens.
+>
+> What's missing is an Analytic Translator, a new kind of professional who bridges the gap between the promise of Big Data and the reality of defining and meeting essential business needs. Using a combination of structured discovery, effective communication, and clear sense-making, trained Analytic Translators identify the right questions, cultivate teamwork, and help deliver critical business intelligence on the first try.
+>
+> If you are the sort of person who helps make analytics understandable.... Become an Analytic Translator.
