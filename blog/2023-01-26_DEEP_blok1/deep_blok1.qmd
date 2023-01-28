@@ -14,6 +14,10 @@ listing:
 
 Op 26 januari heb ik de start gemaakt met DEEP. De eerste dag stond vooral in het teken van het verkennen van data science begrippen en de rol van Data Science Translator (DST of AT Analytics Translator). We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
 
+::: callout-note
+Deze blogpost is nogal lang geworden. Het blog helpt mijzelf ook om overzicht te houden van wat ik leer. In dit eerste blok zijn er veel definities en uitgangspunten aanbod gekomen die ik toch ook graag een plek wil geven. Volgende posts zijn hopelijk wat compacter.
+:::
+
 # Wat je kunt leren van een spelletje *Wie is het?*
 
 Als je een training volgt om Data Science Translator volgt verwacht je niet dat je zult beginnen met een spelletje *Wie is het?*. Toch blijkt *Wie is het?* veel relevante aspecten te bevatten die relevant zijn voor het werken met data. Welke kenmerken hebben de figuren? Wat is de optimale combinatie van vragen? En wat is het doel. In ons geval bleek het doel anders dan verwacht. Het ging niet alleen om het raden van de juiste persoon, maar om het halen van veel punten. We kregen bijvoorbeeld strafpunten voor het gebruiken van de subjectieve vraag: "Heeft de persoon een smalle mond?"
@@ -52,7 +56,7 @@ Er zijn twee aspecten die een organisatie datagedreven maken:
 1.  In een datagedreven organisatie heeft data een belangrijke rol (als productiemiddel/hulpbron) net als mensen/kapitaal etc. Net als met andere productiemiddelen wordt er goed voor data gezorgd: de organisatie weet welke data het heeft, welke data het nodig heeft en wat de kwaliteit ervan is.
 2.  Data wordt gezien en ingezet als middel om waarde mee te creëren op operationeel, tactisch en strategisch niveau.
 
-In een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan mensen zodat het gebruik van data ook echt tot waardecreatie kan leiden. De DST heeft een belangrijke rol als verbindende factor tussen de meeste van deze rollen.
+In een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan mensen zodat het gebruik van data ook echt tot waardecreatie kan leiden. De DST heeft een belangrijke rol als verbindende factor tussen de meeste1 van deze rollen.
 
 ## De reis naar een datagedreven organisatie
 
@@ -62,7 +66,7 @@ Een datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te ko
 -   Inrichten gaat om het organiseren van de infrastructuur zowel in de techniek als in het toekennen van de verschillende rollen die vervuld moeten worden.
 -   Verrichten gaat over het daadwerkelijk waarde creeren door het gebruik van data.
 
-## Succesfactoren voor een datagedreven organisatie.
+## Succesfactoren voor een datagedreven organisatie
 
 De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:
 
@@ -75,8 +79,6 @@ De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisa
 -   Zorg dat de stappen herhaalbaar, incrementeel en duurzaam zijn - het is belangrijk om structurele voortuitgang te boeken.
 -   Creeer momentum - als je momentum hebt niet stoppen, maar doorgaan en doorpakken zodat het proces vaart houdt.
 
-
-
 # Context en positie van de DST
 
 ## Plek van de DST
@@ -85,23 +87,23 @@ De DST heeft een brugfunctie om de business (mensen met kennis van de inhoud) te
 
 De DST is een met zijn ro een veranderagent en facilitator in een organisatie: het is een professional die een organisatie helpt om een hoger volwassenheidsniveau te bereiken.
 
-De DST heeft op alle niveau's van een organisatie een rol:  
-Strategisch (richten) - het helpen opstellen van een datastrategie.  
-Tactisch inrichten) - realisatie van een datastrategie en een bijbehorende prioritering.  
-Operationeel (verrichten) -  ontwikkeling en implementatie van oplossingen.
+De DST heeft op alle niveau's van een organisatie een rol:\
+Strategisch (richten) - het helpen opstellen van een datastrategie.\
+Tactisch inrichten) - realisatie van een datastrategie en een bijbehorende prioritering.\
+Operationeel (verrichten) - ontwikkeling en implementatie van oplossingen.
 
 ## Bijdrage DST aan de datagedreven organisatie
 
-Eerder zijn de succes factoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij? 
-- Samen met anderen de reis uitstippelen en meenemen
-- Waardecreatie in het oog houden en iedereen scherp houden
-- In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases
-- Continue leercyclus opgang brengen en houden.
-- Competenties die horen bij de datarollen zorgen dat die er komen
-- Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden
-- Continu proces creëren
-- Bewustzijn creëren
+Eerder zijn de succes factoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij?
 
+- Samen met anderen de reis uitstippelen en meenemen 
+- Waardecreatie in het oog houden en iedereen scherp houden 
+- In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases 
+- Continue leercyclus opgang brengen en houden. 
+- Competenties die horen bij de datarollen zorgen dat die er komen 
+- Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden 
+- Continu proces creëren 
+- Bewustzijn creëren
 
 ## Welke competentie heeft een DST nodig?
 
@@ -134,7 +136,7 @@ Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk
 -   Data infrastructuur
 -   Ethiek en privacy
 
-Iedereen heeft deze compententies gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling.
+Iedereen heeft deze competenties gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling.
 
 ![](foto_competenties_AT.jpg){fig-alt="Competenties voor de Analytics Translator" fig-align="center" width="310"}
 
@@ -144,6 +146,89 @@ Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. 
 
 **Plaatje innovatiefunnel**
 
+**Stappen innovatiefunnel**
+
+- Verkennen en prioriteren
+- Solution design
+- Proof of Concept
+- Pilot
+- Implementeren
+- Beheren en doorontwikkelen
+- Verkennen en prioriteren
+
+## Fase 1 - verkenning en prioritering
+
+5 Stappen 
+
+1. Achterhalen daadwerkelijk vraag/behoefte/context
+2. Bepalen huidige manier van werken
+3. Omzetten daadwerkelijke vraag naar functionaliteit en user stories
+4. Bepalen technische haalbaarheid
+5. Prioriteren o.b.v. haalbaarheid en businesswaarde
+	
+Vraag centraal stellen
+
+Belangrijkste rollen - de AT heeft in alle stappen van het verkennen en prioriteren een leidende rol
+
+User story opbreken tot het niveau dat je het kan doorgeven aan een ander die er mee verder moet
+
+## Fase 2 - Solution design
+
+1. Verzamelen relevante databronnen (klein beginnen en dan schalen)
+2. Begrijpen data, kwaliteit, structuur, lineage (genererende proces van data) en beschikbaarheid
+3. Schetsen van  het eindresultaten DG oplossing
+4. Opstellen van de benodigde data-infrastructuur
+5. Plan van aanpak voor de Proof of Concept 
+
+Resultaat Solution Design
+
+- Schetsen (mock-up) van het eindresultaat (niet functioneel / wel beeld) - Shiny UI builder
+- Verkennende data-analyse voor koppeling databronnen - kwaliteit van data en koppelbaarheid (ongelijke sleutels)
+- Succesvolle implementatie vraag data-management
+- Data-infrastructuur toont de benodigde bouwblokken voor het realiseren van het dashboard
+
+Denk aan het betrekken van mensen die het beheren aan het eind.
+
+
+## Fase 3 - Proof of Concept
+
+Doelen
+
+- Eerste werkende versie van de DG oplossing
+- Eerste test of de veronderstelde waarde ook gerealiseerd kan worden.
+- Opstellen van een PvA voor de Pilot-fase
+
+1. Creeeren train, test en validatiedatasets
+2. Realiseren van de DG oplossing (iteratief)
+3. Kwaliteit van de DG oplossing bepalen en aanscherpen (iteratief)
+4. Business case opstellen, aanscherpen haalbaarheid en uitbreiden aspecten rondom ethiek en privacy - doel BC is om de toegeovegde waarde aan te tonen.
+5. PvA voor vervolgfases ontwikkelen en afstemmen.
+	
+## Fase 4 - Pilot
+
+Doelen
+
+- Gerealiseerde oplossing in de praktijk toetsen/uitproberen door eindgebruikers
+- Inventariseren bugs, aanscherpingen en mogelijkheden voor doorontwikkeling
+- Verder uitwerking PvA
+
+## Fase 5 Implementatiefase
+
+Doelen
+
+- Omzetten van de oplossing naar een structurele geautomatiseerde oplossing
+- Opzetten van oplossingen voor monitoring van de kwaliteit van de DG-oplossing - logs etc.
+- Eventueel aanscherpen PvA voor de beheerfase
+	
+## Fase 6 Beheren en doorontwikkelen
+
+Zie ook fase 1
+
+Doelen
+
+- Operationeel houden DG-oplossing door inrichten en uitvoeren van functioneel en technisch beheer
+- Borgen kwaliteit door implementeren processen en beleggen van verantwoordelijkheden
+- Bijhouden mogelijkheden voor doorontwikkeling en uitbreiding DG-oplossing
 
 
 # Boekentip
