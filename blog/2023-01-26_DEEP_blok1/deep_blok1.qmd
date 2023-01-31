@@ -62,13 +62,19 @@ In een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan me
 
 ## De reis naar een datagedreven organisatie
 
+![](images/paste-ABACEECC.png){.column-margin group="blok1"}
+
 Een datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te komen. Die reis bevat grofweg 3 onderdelen: [richten, inrichten en verrichten]{.underline}. Daarnaast is communicatie in het hele traject van groot belang om iedereen in het traject mee te nemen.
+
+![](images/paste-23E5C850.png){.column-margin group="blok1"}
 
 -   [Richten]{.underline} heeft alles te maken met een visie op het gebruik van data en beleid voor de inzet van de juiste mensen en middelen om data de juiste plek in een organisatie te kunnen geven.
 -   [Inrichten]{.underline} gaat om het organiseren van de infrastructuur zowel in de techniek als in het toekennen van de verschillende rollen die vervuld moeten worden.
 -   [Verrichten]{.underline} gaat over het daadwerkelijk waarde creeren door het gebruik van data.
 
 ## Succesfactoren voor een datagedreven organisatie
+
+![](images/paste-667C9B2C.png){.margin-column group="blok1" fig-alt="Succesfactoren voor een datagedreven organisatie"}
 
 De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:
 
@@ -85,6 +91,8 @@ De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisa
 
 ## Plek van de DST
 
+![](images/paste-EA59974D.png){.column-margin group="blok1"}
+
 De DST heeft een brugfunctie om de business (mensen met kennis van de inhoud) te verbinden met de analytics (mensen met kennis van het werken met data). De DST zorgt voor een optimale afstemming tussen beide en moet ook kennis hebben van beide kanten. De DST is de brug van A naar B - van Analytics naar Business en vice versa.
 
 De DST is met zijn rol een veranderagent en facilitator in een organisatie: het is een professional die een organisatie helpt om een hoger volwassenheidsniveau te bereiken.
@@ -96,6 +104,8 @@ De DST heeft op alle niveau's van een organisatie een rol:
 [Operationeel]{.underline} (verrichten) - ontwikkeling en implementatie van oplossingen.
 
 ## Bijdrage DST aan de datagedreven organisatie
+
+![](images/paste-C3D57386.png){.column-margin group="blok1"}
 
 Eerder zijn de succesfactoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij?
 
@@ -109,6 +119,8 @@ Eerder zijn de succesfactoren voor een datagedreven organisatie benoemd. Hoe dra
 -   Bewustzijn creëren
 
 ## Welke competentie heeft een DST nodig?
+
+![](images/paste-E198ED89.png){.column-margin group="blok1" fig-alt="Competenties van de Analytics Translator"}
 
 Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk om de rol succesvol in te vullen.
 
@@ -141,7 +153,7 @@ Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk
 
 Iedereen heeft deze competenties gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling.
 
-![](foto_competenties_AT.jpg){fig-alt="Competenties voor de Analytics Translator" fig-align="center" width="310"}
+![](foto_competenties_AT.jpg){group="blok1" fig-alt="Competenties voor de Analytics Translator" fig-align="center" width="310"}
 
 # Operationele taken van de DST
 
@@ -149,7 +161,7 @@ Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. 
 
 [^1]: ik kort datagedreven verder af als DG
 
-**Plaatje innovatiefunnel**
+![](images/paste-CE801AA0.png){group="blok1" fig-alt="De innovatiefunnel" fig-align="center"}
 
 **Stappen innovatiefunnel**
 
@@ -261,3 +273,5 @@ Mijn favoriete manier van leren is door boeken te lezen. Daarom ben ik van plan 
 > What's missing is an Analytic Translator, a new kind of professional who bridges the gap between the promise of Big Data and the reality of defining and meeting essential business needs. Using a combination of structured discovery, effective communication, and clear sense-making, trained Analytic Translators identify the right questions, cultivate teamwork, and help deliver critical business intelligence on the first try.
 >
 > If you are the sort of person who helps make analytics understandable.... Become an Analytic Translator.
+
+![](images/paste-56F1EEF7.png){group="blok1"}
