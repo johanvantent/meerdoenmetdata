@@ -2,7 +2,7 @@
 title: "Introductie Data Science Translator - DEEP blok 1"
 description: ""
 date: "2023-01-28"
-image: "../images/deep_brug.png"
+image: "../images/deep_brug.jpg"
 format: html
 categories: [DEEP] 
 draft: false
@@ -22,7 +22,7 @@ Deze blogpost is nogal lang geworden. Het blog helpt mijzelf ook om overzicht te
 
 # Wat je kunt leren van een spelletje *Wie is het?*
 
-Als je een training volgt om Data Science Translator volgt verwacht je niet dat je zult beginnen met een spelletje *Wie is het?* Toch blijkt *Wie is het?* veel relevante aspecten te bevatten die relevant zijn voor het werken met data. Welke kenmerken hebben de figuren? Wat is de optimale combinatie van vragen? En wat is het doel. In ons geval bleek het doel anders dan verwacht. Het ging niet alleen om het raden van de juiste persoon, maar om het halen van veel punten. We kregen bijvoorbeeld strafpunten voor het gebruiken van de subjectieve vraag: "Heeft de persoon een smalle mond?"
+Als je een training volgt voor Data Science Translator verwacht je niet dat je zult beginnen met een spelletje *Wie is het?* Toch blijkt *Wie is het?* veel relevante aspecten te bevatten die relevant zijn als je data wilt omzetten in waardevolle oplossingen. Je vraagt je bijvoorbeeld af: Welke kenmerken hebben de personen? Wat is de optimale combinatie van vragen? En wat is het doel van het spel? In ons geval bleek het doel anders dan verwacht. Het ging om het halen van zoveel mogelijk punten, maar dat wisten we van te voren nog niet. We kregen punten als we weinig personen over hadden. Maar we kregen bijvoorbeeld ook strafpunten voor het gebruiken van de subjectieve vraag: "Heeft de persoon een smalle mond?"
 
 **10 lessen uit Wie is het?**
 
@@ -118,7 +118,7 @@ Eerder zijn de succesfactoren voor een datagedreven organisatie benoemd. Hoe dra
 -   Continu proces creëren
 -   Bewustzijn creëren
 
-## Welke competentie heeft een DST nodig?
+## Welke competenties heeft een DST nodig?
 
 Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk om de rol succesvol in te vullen.
 
