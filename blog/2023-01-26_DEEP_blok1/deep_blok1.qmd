@@ -76,7 +76,7 @@ Een datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te ko
 
 De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:
 
-![](images/paste-667C9B2C.png){.margin-column group="blok1" fig-alt="Succesfactoren voor een datagedreven organisatie"}
+![](images/paste-667C9B2C.png){.column-margin group="blok1" fig-alt="Succesfactoren voor een datagedreven organisatie"}
 
 -   Onderkenning van het feit dat je een (ontdekkings)reis onderneemt - het is geen lineair proces, je moet steeds evalueren en bijstellen
 -   Waardecreatie staat voorop - het moet wel leiden tot waarde anders heeft het geen zin
@@ -153,7 +153,7 @@ Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk
 
 Iedereen heeft deze competenties gerangschikt in de volgorde waarin we deze al meer of minder hadden. Hieronder mijn eigen indeling.
 
-![](foto_competenties_AT.jpg){group="blok1" fig-alt="Competenties voor de Analytics Translator" fig-align="center" width="310"}
+![](foto_competenties_AT.jpg){group="blok1" fig-alt="Competenties voor de Analytics Translator - mijn volgorde" fig-align="center" width="310"}
 
 # Operationele taken van de DST
 
