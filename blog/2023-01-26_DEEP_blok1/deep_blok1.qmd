@@ -13,7 +13,7 @@ listing:
     - description
 ---
 
-Op 26 januari heb ik de start gemaakt met DEEP en de opleiding tot Data Science Translator (DST of AT Analytics Translator). De eerste dagen stonden in het teken van het verkennen datagedreven organisaties en de rol van
+Op 26 januari heb ik de start gemaakt met DEEP en de opleiding tot Data Science Translator (DST of AT Analytics Translator). De eerste dagen stonden in het teken van het verkennen datagedreven organisaties en de rol van de analytics translator.
 
 ![](/blog/images/deep_brug.jpg){.column-margin fig-alt="De analytics translator vervult een brugfunctie" width="300"}
 
