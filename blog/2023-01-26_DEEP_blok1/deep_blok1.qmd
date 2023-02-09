@@ -15,12 +15,10 @@ listing:
 
 Op 26 januari heb ik de start gemaakt met DEEP en de opleiding tot Data Science Translator (DST of AT Analytics Translator). De eerste dagen stonden in het teken van het verkennen datagedreven organisaties en de rol van de analytics translator.
 
-![](/blog/images/deep_brug.jpg){.column-margin fig-alt="De analytics translator vervult een brugfunctie" width="300"}
-
 We zijn begonnen met een kleine kennismaking om vervolgens meer met inhoudelijke onderwerpen aan de slag te gaan. We begonnen met een spelletje *Wie is het?*
 
 ::: callout-note
-Deze blogpost is nogal lang geworden. Het blog helpt mijzelf ook om overzicht te houden van wat ik leer. In dit eerste blok zijn er veel definities en uitgangspunten aanbod gekomen die ik toch ook graag een plek wil geven. Volgende posts zijn hopelijk wat compacter.
+Eerder was deze blogpost uitgebreider. Ik heb deze echter ingekort en diverse afbeeldingen verwijderd: de bronnen die ik had gebruikt niet zijn bedoeld om op die manier te delen.
 :::
 
 # Wat je kunt leren van een spelletje *Wie is het?*
@@ -67,28 +65,10 @@ In een datagedreven organisatie zijn allerlei rollen benoemd en toegekend aan me
 
 Een datagedreven organisatie ontstaat niet zomaar. Het is een reis om daar te komen. Die reis bevat grofweg 3 onderdelen: [richten, inrichten en verrichten]{.underline}. Daarnaast is communicatie in het hele traject van groot belang om iedereen in het traject mee te nemen.
 
-![](images/paste-ABACEECC.png){.column-margin group="blok1" fig-alt="De reis naar een datagdreven organisatie - 1"}
+[Richten]{.underline} heeft alles te maken met een visie op het gebruik van data en beleid voor de inzet van de juiste mensen en middelen om data de juiste plek in een organisatie te kunnen geven.
 
-![](images/paste-23E5C850.png){.column-margin group="blok1" fig-alt="De reis naar een datagdreven organisatie - 2"}
-
--   [Richten]{.underline} heeft alles te maken met een visie op het gebruik van data en beleid voor de inzet van de juiste mensen en middelen om data de juiste plek in een organisatie te kunnen geven.
 -   [Inrichten]{.underline} gaat om het organiseren van de infrastructuur zowel in de techniek als in het toekennen van de verschillende rollen die vervuld moeten worden.
 -   [Verrichten]{.underline} gaat over het daadwerkelijk waarde creeren door het gebruik van data.
-
-## Succesfactoren voor een datagedreven organisatie
-
-De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisatie:
-
-![](images/paste-667C9B2C.png){.column-margin group="blok1" fig-alt="Succesfactoren voor een datagedreven organisatie"}
-
--   Onderkenning van het feit dat je een (ontdekkings)reis onderneemt - het is geen lineair proces, je moet steeds evalueren en bijstellen
--   Waardecreatie staat voorop - het moet wel leiden tot waarde anders heeft het geen zin
--   Just-in-time, just-enough - niet te groot en te vroeg beginnen met dingen die je nog niet nodig hebt.
--   Leren door te doen - je moet gewoon beginnen en niet eerst alles op orde willen hebben.
--   Bouw eigen competenties op - je kan veel inkopen, maar op dit gebied - regie op je data en de juiste dingen is het belangrijk om dat zelf te doen.
--   Start small, scale fast - klein beginnen en snel opschalen; zo snel als mogelijk is want dat levert meer waarde op.
--   Zorg dat de stappen herhaalbaar, incrementeel en duurzaam zijn - het is belangrijk om structurele voortuitgang te boeken.
--   Creeer momentum - als je momentum hebt niet stoppen, maar doorgaan en doorpakken zodat het proces vaart houdt.
 
 # Context en positie van de DST
 
@@ -96,36 +76,9 @@ De volgende succesfactoren zijn genoemd om te komen te een datagedreven organisa
 
 De DST heeft een brugfunctie om de business (mensen met kennis van de inhoud) te verbinden met de analytics (mensen met kennis van het werken met data). De DST zorgt voor een optimale afstemming tussen beide en moet ook kennis hebben van beide kanten. De DST is de brug van A naar B - van Analytics naar Business en vice versa.
 
-![](images/paste-EA59974D.png){.column-margin group="blok1" fig-alt="Van A(nalytics) naar B(usiness) met de Analytics Translator"}
-
-De DST is met zijn rol een veranderagent en facilitator in een organisatie: het is een professional die een organisatie helpt om een hoger volwassenheidsniveau te bereiken.
-
-De DST heeft op alle niveau's van een organisatie een rol:
-
-[Strategisch]{.underline} (richten) - het helpen opstellen van een datastrategie.\
-[Tactisch]{.underline} (inrichten) - realisatie van een datastrategie en een bijbehorende prioritering.\
-[Operationeel]{.underline} (verrichten) - ontwikkeling en implementatie van oplossingen.
-
-## Bijdrage DST aan de datagedreven organisatie
-
-Eerder zijn de succesfactoren voor een datagedreven organisatie benoemd. Hoe draagt de DST daar aan bij?
-
-![](images/paste-C3D57386.png){.column-margin group="blok1" fig-alt="Bijdrage van de Analytics aan de succesfactoren"}
-
--   Samen met anderen de reis uitstippelen en meenemen
--   Waardecreatie in het oog houden en iedereen scherp houden
--   In beeld brengen wat er nodig is, wie en wat hebben we *nu* nodig voor concrete cases
--   Continue leercyclus opgang brengen en houden.
--   Competenties die horen bij de datarollen zorgen dat die er komen
--   Klein beginnen, blokkades wegnemen, in productiename en opschalen/uitbreiden
--   Continu proces creëren
--   Bewustzijn creëren
-
 ## Welke competenties heeft een DST nodig?
 
 Voor de DST zijn 6 vaardigheden, 6 gedragingen en 6 kenniscomponenten belangrijk om de rol succesvol in te vullen.
-
-![](images/paste-E198ED89.png){.column-margin group="blok1" fig-alt="Competenties van de Analytics Translator"}
 
 **Vaardigheden**
 
@@ -180,88 +133,25 @@ Bij de operationele taken van de zijn we vooral ingegaan op de innovatiefunnel. 
 
 De eerste fase bestaat uit het verkennen van data-vraagstukken en om hier een prioritering in aan te brengen. Het doel is om een concrete casus te vinden om mee aan de slag te gaan. De prioritering komt tot stand door te kijken naar haalbaarheid van een beoogde data-oplossing en de (toegevoegde) waarde voor de organisatie. Haalbare projecten die veel waarde toevoegen krijgen de hoogste prioriteit. Projecten die veel waarde toevoegen maar (nog) niet haalbaar zijn, zijn ook interessant: wat is er voor nodig om deze projecten wel haalbaar te maken?
 
-Fase 1 heeft vijf stappen
-
-1.  Achterhalen daadwerkelijk vraag/behoefte/context
-2.  Bepalen huidige manier van werken
-3.  Omzetten daadwerkelijke vraag naar functionaliteit en user stories[^2]
-4.  Bepalen technische haalbaarheid
-5.  Prioriteren o.b.v. haalbaarheid en businesswaarde
-
-[^2]: Een user story is een behoefte in de vorm: Als \[...\] wil ik \[...\] zodat ik \[...\]. Het bevat een middel om een concrete behoefte te vervullen.
-
-Losse opmerkingen
-
--   In fase 1 is het belangrijk om de vraag centraal stellen.
--   De DST heeft in alle stappen van het verkennen en prioriteren een leidende rol.
--   Een user story moet je opbreken tot het detailniveau dat je het kan doorgeven aan een ander die er mee verder moet.
-
 ## Fase 2 - Solution Design
 
 In fase 2 Solution Design gaat het erom om een passende oplossing te bedenken bij het data-vraagstuk. Deze wordt in deze fase nog niet gerealiseerd maar alleen geschetst.
-
-1.  Verzamelen relevante databronnen (klein beginnen en dan schalen)
-2.  Begrijpen data, kwaliteit, structuur, lineage (genererende proces van data) en beschikbaarheid
-3.  Schetsen van de eindresultaten van de datagedreven-oplossing
-4.  Opstellen van de benodigde data-infrastructuur
-5.  Plan van aanpak voor de Proof of Concept.[^3]
-
-[^3]: Het plan van aanpak komt steeds terug in elke fase. Er wordt elke keer vooruitgekeken naar alle komende fases, maar het detailniveau neemt af naarmate er verder in de toekomst wordt gekeken.
-
-Resultaat Solution Design
-
--   Schetsen (mock-up) van het eindresultaat (niet functioneel / wel beeld). JT: hier kan ik de Shiny UI builder voor gebruiken
--   Verkennende data-analyse voor koppeling databronnen - kwaliteit van data en koppelbaarheid (denk bijv. aan ongelijke sleutels)
--   Succesvolle implementatie vraagt data-management
--   Data-infrastructuur toont de benodigde bouwblokken voor het realiseren van het dashboard
-
-Denk aan het betrekken van mensen die het beheren aan het eind.
 
 ## Fase 3 - Proof of Concept
 
 Het Proof of Concept dient om een eerste werkende versie van de DG-oplossing te maken. Hierin wordt duidelijk of de geschetste oplossing ook echt te realiseren is en wat daar bij komt kijken.
 
-Doelen
-
--   Eerste werkende versie van de datagedrevenoplossing
--   Eerste test of de veronderstelde waarde ook gerealiseerd kan worden.
--   Opstellen van een Plan van aanpak voor de Pilot-fase
-
-1.  Creëren train, test en validatiedatasets
-2.  Realiseren van de DG oplossing (iteratief)
-3.  Kwaliteit van de DG oplossing bepalen en aanscherpen (iteratief)
-4.  Businesscase opstellen, aanscherpen haalbaarheid en uitbreiden aspecten rondom ethiek en privacy - Doel van de businesscase is om de toegevoegde waarde aan te tonen.
-5.  Plan van aanpak voor vervolgfases ontwikkelen en afstemmen.
-
 ## Fase 4 - Pilot
 
 De pilot dient om de DG-oplossing in de praktijk te testen. Werkt het ook in de praktijk en kan er echt een toegevoegde waarde voor de organisatie worden bereikt?
-
-Doelen
-
--   Gerealiseerde oplossing in de praktijk toetsen/uitproberen door eindgebruikers
--   Inventariseren bugs, aanscherpingen en mogelijkheden voor doorontwikkeling
--   Verder uitwerking Plan van aanpak.
 
 ## Fase 5 Implementatiefase
 
 Na de pilot kan de DG-oplossing werkelijk worden geimplementeerd. Dat betekent dat de oplossing zodanig wordt aangepast dat deze structureel gebruikt kan worden en dat er gezorgd wordt voor kwaliteitscontrole en dergelijke
 
-Doelen
-
--   Omzetten van de oplossing naar een structurele geautomatiseerde oplossing
--   Opzetten van oplossingen voor monitoring van de kwaliteit van de DG-oplossing - logs etc.
--   Eventueel aanscherpen PvA voor de beheerfase
-
 ## Fase 6 Beheren en doorontwikkelen
 
 In fase 6 is de DG-oplossing en gebruik en wordt deze beheerd. Het is ook de fase waarin gedacht kan worden aan het doorontwikkelen, o.a. van features die gedurende het ontwerpproces naar voren zijn gekomen. Bij het doorontwikkelen start je eigenlijk weer opnieuw bij fase 1: verkennen en prioriteren.
-
-Doelen
-
--   Operationeel houden DG-oplossing door inrichten en uitvoeren van functioneel en technisch beheer
--   Borgen kwaliteit door implementeren processen en beleggen van verantwoordelijkheden
--   Bijhouden mogelijkheden voor doorontwikkeling en uitbreiding DG-oplossing
 
 # Boekentip
 
@@ -276,5 +166,3 @@ Mijn favoriete manier van leren is door boeken te lezen. Daarom ben ik van plan 
 > What's missing is an Analytic Translator, a new kind of professional who bridges the gap between the promise of Big Data and the reality of defining and meeting essential business needs. Using a combination of structured discovery, effective communication, and clear sense-making, trained Analytic Translators identify the right questions, cultivate teamwork, and help deliver critical business intelligence on the first try.
 >
 > If you are the sort of person who helps make analytics understandable.... Become an Analytic Translator.
-
-![](images/paste-56F1EEF7.png){group="blok1" fig-alt="Datarollen"}
