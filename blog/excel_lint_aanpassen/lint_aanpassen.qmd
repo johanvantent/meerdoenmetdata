@@ -45,7 +45,7 @@ Het lint aanpassen is niet zo moeilijk. Je kunt zelfs een eigen tabblad op het l
 -   Je kunt de positie van tabbladen, groepen en functies wijzigen met de pijlen aan de rechterzijde van het menu. Als je het nieuwe tabblad bovenaan zet dan zie je je eigen tabblad als eerste als Excel geopend wordt.
 
 ::: callout-tip
-## Maak een back-up van het lint
+## Tip: Maak een back-up van het lint
 
 Bij een update van Excel worden soms alle wijzigingen aan het lint ongedaan gemaakt. Je kunt je persoonlijke instellingen weer terugzetten als je een back-up hebt gemaakt.
 

@@ -1,0 +1,107 @@
+---
+title: "Zet Excel naar je hand! - Maak een macro (2)"
+description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
+# date: "2022-12-22"
+image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+format: html
+categories: [Excel] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+---
+
+# Zet Excel naar je hand!
+
+Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.
+
+Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. In deze serie posts laat ik drie manieren zien waarop je dat kunt doen.
+
+1.  Het aanpassen van het lint -- zet al je veel gebruikte opdrachten op één plaats.
+
+2.  **Het gebruik van macro's -- maak zelf opdrachten voor Excel.**
+
+3.  Zelfgemaakte sneltoetsen -- je eigen opdrachten met één druk op de knop.
+
+In deze post gaat het over het maken en gebruiken van macro's.
+
+# Het gebruik van macro's
+
+Excel heeft van zichzelf veel mogelijkheden. Maar soms wil je iets doen wat Excel nog niet kan. Of je wilt een aantal van de mogelijkheden van Excel aan elkaar koppelen. Om dat soort dingen voor elkaar te krijgen, kan je een macro maken. Een macro is een klein stukje computercode die Excel kan uitvoeren. Voor het maken van een macro hoef je die computercode meestal niet zelf te verzinnen. Excel heeft een optie waarbij je een macro kunt opnemen. Excel vertaalt dan alle handelingen die je doet in de bijbehorende computercode.
+
+::: callout-tip
+## Tip: Tabblad Ontwikkelaars
+
+Voor onderstaande stappen heb je het tabblad Ontwikkelaars nodig. Als je het tabblad Ontwikkelaars niet ziet kun je het zichtbaar in het menu om het lint aan te passen -- rechtsklikken op het lint.
+:::
+
+## Een macro opnemen
+
+Als je een macro opneemt dan maakt Excel zelf van de handelingen die je uitvoert een macro. Als voorbeeld gaan we een macro maken die het autofilter aanzet en tegelijk de eerste regel vastzet.
+
+-   Begin met een tabblad met wat gegevens en selecteer cel A1. (Linksboven, het soort gegevens maakt verder niet uit)
+
+    ![](images/paste-58E8CB90.png){.column-margin}
+
+-   Klik op de knop Macro opnemen op het tabblad Ontwikkelaars.
+
+-   Je krijgt een menu te zien. Kies voor het opslaan in Deze werkmap en geef de macro eventueel een eigen naam (geen spaties) en een beschrijving. Klik op OK.
+
+    ![](images/paste-49FBCF97.png){.column-margin}
+
+-   Dan voeren we de acties uit die Excel voor ons moet opnemen.
+
+    -   Klik op het tabblad Gegevens op de knop Filter.
+    -   Klik op het tabblad Beeld op de knop Blokkeren en dan Bovenste rij blokkeren.
+
+-   Klik op het tabblad Ontwikkelaars op de knop Opname stoppen.
+
+-   De macro is nu klaar.
+
+-   Om te zorgen dat de macro bewaard blijft moet je de Excel-werkmap opslaan als een .xlsm bestand.
+
+## De macro gebruiken
+
+Een makkelijke manier om een zelfgemaakte macro te gebruiken is door deze een knop te geven op het lint.
+
+-   Rechtsklikken op het lint en kiezen voor "Het lint aanpassen"
+
+-   Kies bij Opdrachten kiezen voor Macro's.
+
+    ![](images/paste-C521A516.png){.column-margin}
+
+-   Voeg de macro toe op gewenste plek op het lint.
+
+-   Eventueel kun je de naam en het icoon op het lint aanpassen via de knop Naam wijzigen... -
+
+## De macro zien
+
+In het voorbeeld hebben we zelf een macro gemaakt. Maar hoe ziet zo'n macro er dan uit? De macro is opgeslagen in je werkmap: we gaan eerst naar de plaats toe waar deze macro is opgeslagen.
+
+-   Klik op het tabblad Ontwikkelaars op de knop Visual Basic.
+
+    ![](images/paste-408EAC49.png){.column-margin}
+
+-   Er opent een nieuw venster. Ga hier in het venster Project -- VBAProject, naar het Excelbestand dat je gebruikt. Klik op Modules en vervolgens dubbelklikken op Module1.
+
+    ![](images/paste-37BD910E.png){.column-margin}
+
+-   In het venster aan de rechterzijde zie je nu de computercode van de macro.
+
+    ![](images/paste-755EB828.png){width="450"}
+
+-   Wat betekent de tekst van deze macro? Een korte uitleg:
+
+    -   Een macro begint en eindigt altijd met Sub ... () en End Sub -- dit geeft het begin en einde van de macro aan.
+    -   Achter Sub staat de naam van een macro.
+    -   Regels die beginnen met ' (een enkel aanhalingsteken) zijn opmerkingen. De computer doet daar niets mee. Daarom zijn deze regels ook groen gekleurd.
+    -   De rest van de tekst is de computercode die het autofilter aanzet () en de bovenste rij vastzet.
+
+-   Je kunt in dit scherm de macro uitvoeren door met de cursor in de macro te gaan staan (dat is van belang als je meer dan één macro hebt) en op F5 of het groene driehoekje te klikken.
+
+::: callout-tip
+## Hoe doe ik dat in Excel VBA?
+
+il je een macro wilt maken of aanpassen en je weet niet precies hoe? Dan is Google-en samen met de termen *Excel* en *VBA* een makkelijke manier om meer te weten te komen.
+:::
