@@ -1,0 +1,132 @@
+---
+title: "Zet Excel naar je hand! - Je eigen sneltoetsen (3)"
+description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
+# date: "2022-12-22"
+image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
+format: html
+categories: [Excel] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+---
+
+# Zet Excel naar je hand!
+
+Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.
+
+Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. In deze serie posts laat ik drie manieren zien waarop je dat kunt doen.
+
+1.  Het aanpassen van het lint -- zet al je veel gebruikte opdrachten op één plaats.
+
+2.  Het gebruik van macro's -- maak zelf opdrachten voor Excel.
+
+3.  **Zelfgemaakte sneltoetsen -- je eigen opdrachten met één druk op de knop.**
+
+In deze post gaat het over het zelf instellen van sneltoetsen.
+
+::: callout-warning
+## Verslavingsrisico
+
+Het gebruik van zelf ingestelde sneltoetsen is zeer verslavend. Als je er eenmaal aan gewend bent moet je rekening op ontwenningsverschijnselen als je in aanraking komt met de kale versie van Excel. Reken op irritatie, frustratie, een gevoelens van ontheemding en de neiging om tegen beter weten in toch de sneltoetscombinatie te gebruiken.
+:::
+
+## 
+
+# Maak je eigen sneltoetsen
+
+Het gebruik van sneltoetsen is een manier om snel en zonder al te veel na te denken iets te doen. Het is in Excel mogelijk om sneltoetsen te koppelen aan een macro die je zelf hebt gemaakt. Om je eigen sneltoetsen te maken zijn de volgende stappen nodig.
+
+1.  Maak een (lege) invoegtoepassing
+2.  Voeg een macro toe aan de invoegtoepassing.
+3.  Voeg een macro toe aan de invoegtoepassing die de sneltoetsen instelt.
+4.  Zorg dat de sneltoets-macro wordt uitgevoerd wanneer je Excel opstart.
+
+## Maak een invoegtoepassing
+
+Om overal in Excel zelfgemaakte macro's te kunnen gebruiken moet je een invoegtoepassing maken. Het maken van een (lege) invoegtoepassing is vrij eenvoudig.
+
+-   Open een nieuw Excel-document.
+
+-   Kies *Opslaan als* en sla het document op als een *Excel-invoegtoepassing (\*.xlam)*. Een goede plek voor deze invoegtoepassing is ergens op je persoonlijke schijf.
+
+-   Sluit het document af en open een nieuw document.
+
+-   Klik op het tabblad *Ontwikkelaars* op de knop *Excel-invoegtoepassingen* en voeg via *Bladeren...* de zojuist opgeslagen invoegtoepassing toe. Als het goed is, is de invoegtoepassing gelijk aangevinkt.
+
+-   Elke keer dat je nu Excel opent, wordt de zelfgemaakte invoegtoepassing geladen; maar de invoegtoepassing doet nu verder nog niets.
+
+## Macro's toevoegen aan de invoegtoepassing
+
+De volgende stap is om macro's toe te voegen aan de invoegtoepassing. We maken twee macro's. Eén macro is een opdracht voor Excel en de andere is een macro die de sneltoets instelt.
+
+-   Klik op het tabblad *Ontwikkelaars* op de knop *Visual Basic*
+
+-   Selecteer de invoegtoepassing die bij de vorige stap gemaakt is. (Linksboven in het venster *Project -- VBAProject*)
+
+-   Klik bovenaan op *Invoegen -- Module*.
+
+-   Onder de invoegtoepassing wordt een mapje *Modules* aangemaakt en daaronder *Module1*. Dubbelklik op *Module1*.
+
+-   In het grote witte scherm rechts komen nu de macro's. Die kun je zelf typen of kopiëren en plakken. In dit geval kopieer ik de tekst van de macro die ik eerder heb opgenomen.
+
+-   De volgende stap is een macro maken die een sneltoets instelt. Deze is heel kort en kunnen we zelf typen.\
+    Sub sneltoetsen()\
+    Application.OnKey "{F5}", "mijn_voorbeeld_macro"\
+    End Sub
+
+-   Tussen de eerste aanhalingstekens van de macro *sneltoetsen* zetten we de sneltoetscombinatie. Tussen de tweede aanhalingstekens de naam van de macro. Als je meer sneltoetsen- wilt instellen kun je die op een nieuwe regel toevoegen aan de macro *sneltoetsen.*
+
+-   Sla de invoegtoepassing met de macro's erin op. (NB doe dat altijd als je wijzigingen maakt aan je invoegtoepassing.)
+
+Als de macro *sneltoetsen* wordt uitgevoerd dan wordt in dit geval de knop F5 gekoppeld aan de macro *mijn_voorbeeld_macro*. Vanaf dat moment wordt *mijn_voorbeeld_macro* uitgevoerd als je op de toets F5 tikt.
+
+![](images/paste-BA6AA908.png)
+
+::: callout-tip
+## Codering sneltoetsen
+
+> Voor sneltoetsen is het meestal handig om een combinatie van toetsen te gebruiken. Hoe doe je dat en welke codes kun je gebruiken voor de toetsen?
+>
+> -   letters en cijfers voor de gewone letter- en cijfertoetsen
+>
+> -   \^ voor Ctrl
+>
+> -   \% voor Alt
+>
+> -   \+ voor Shift
+>
+> -   F-toetsen en andere bijzondere toetsen zet je tussen {}
+>
+> -   Zie verder [Application.OnKey method (Excel) \| Microsoft Learn](https://learn.microsoft.com/en-us/office/vba/api/excel.application.onkey)
+>
+>     "\^t" betekent *Ctrl + T\
+>     *"\^+{F5}" betekent *Ctrl + Shift + F5*
+:::
+
+## Instellen sneltoetsen bij opstarten Excel
+
+We zijn nu bijna zover dat onze zelfgemaakte sneltoets werkt. De laatste stap is dat sneltoetsen ook worden ingesteld zodra Excel wordt opgestart.
+
+-   Dubbelklik in het venster *Project -- VBAProject* op *ThisWorkbook*
+
+-   Klik in het linker dropdownmenu boven aan het witte venster op *Workbook*.
+
+    ![](images/paste-5EC2661A.png){.column-margin}
+
+-   Je ziet nu een bijzondere macro *Private Sub Workbook_Open()*. Deze bijzondere macro wordt altijd uitgevoerd als Excel wordt opgestart.
+
+-   Type in deze bijzondere macro de naam van de macro die de sneltoetsen instelt -- *sneltoetsen*
+
+    ![](images/paste-C8519FE9.png){.column-margin}
+
+-   Sla de invoegtoepassing opnieuw op.
+
+Als je nu Excel opnieuw opstart dan zul je zien dat de sneltoets werkt. In ons voorbeeld wordt dan het autofilter aangezet en de titels worden geblokkeerd.
+
+::: callout-warning
+## Let op
+
+Bij het maken van sneltoetsen bestaat de mogelijkheid dat je bestaande sneltoetsen van Excel overschrijft. Zorg ervoor geen ingebouwde sneltoetsen overschrijft die je wel eens gebruikt.
+:::
