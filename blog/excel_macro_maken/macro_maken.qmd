@@ -105,3 +105,9 @@ In het voorbeeld hebben we zelf een macro gemaakt. Maar hoe ziet zo'n macro er d
 
 il je een macro wilt maken of aanpassen en je weet niet precies hoe? Dan is Google-en samen met de termen *Excel* en *VBA* een makkelijke manier om meer te weten te komen.
 :::
+
+## Video
+
+En voor wie liever kijkt dan leest, hieronder een video met een demonstratie.
+
+{{< video https://youtu.be/OvHUvtABH4Q >}}

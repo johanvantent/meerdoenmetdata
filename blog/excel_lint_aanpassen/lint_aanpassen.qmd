@@ -51,3 +51,9 @@ Bij een update van Excel worden soms alle wijzigingen aan het lint ongedaan gema
 
 In het menu om het lint aan te passen (rechtsonder) is er een mogelijkheid om "Alle aanpassingen te exporteren". Hiermee worden alle aanpassingen aan het lint in een bestand bewaard. Je kunt je wijzigingen weer terugzetten door met dezelfde knop te kiezen voor importeren van een aanpassingsbestand.
 :::
+
+## Video
+
+En voor wie liever kijkt dan leest, hieronder een video met een demonstratie.
+
+{{< video https://youtu.be/QJKyaze6VjY >}}

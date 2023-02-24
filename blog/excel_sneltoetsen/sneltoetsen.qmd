@@ -130,3 +130,9 @@ Als je nu Excel opnieuw opstart dan zul je zien dat de sneltoets werkt. In ons v
 
 Bij het maken van sneltoetsen bestaat de mogelijkheid dat je bestaande sneltoetsen van Excel overschrijft. Zorg ervoor geen ingebouwde sneltoetsen overschrijft die je wel eens gebruikt.
 :::
+
+## Video
+
+En voor wie liever kijkt dan leest, hieronder een video met een demonstratie.
+
+{{< video https://youtu.be/Cd3pui1oMJA >}}
