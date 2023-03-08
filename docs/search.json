@@ -161,11 +161,32 @@
     "text": "Fase 6 Beheren en doorontwikkelen\nIn fase 6 is de DG-oplossing en gebruik en wordt deze beheerd. Het is ook de fase waarin gedacht kan worden aan het doorontwikkelen, o.a. van features die gedurende het ontwerpproces naar voren zijn gekomen. Bij het doorontwikkelen start je eigenlijk weer opnieuw bij fase 1: verkennen en prioriteren."
   },
   {
+    "objectID": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html",
+    "href": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html",
+    "title": "Zet Excel naar je hand! - Het lint aanpassen (1)",
+    "section": "",
+    "text": "Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.\nExcel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik wil in drie posts drie manieren zien laten waarop je dat kunt doen.\n\nHet aanpassen van het lint – zet al je veel gebruikte opdrachten op één plaats.\nHet gebruik van macro’s – maak zelf opdrachten voor Excel.\nZelfgemaakte sneltoetsen – je eigen opdrachten met één druk op de knop.\n\nIn deze post gaat het over het aanpassen van het lint."
+  },
+  {
+    "objectID": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html#hoe-pas-je-het-lint-aan",
+    "href": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html#hoe-pas-je-het-lint-aan",
+    "title": "Zet Excel naar je hand! - Het lint aanpassen (1)",
+    "section": "Hoe pas je het lint aan?",
+    "text": "Hoe pas je het lint aan?\n\nKlik op het lint met je rechtermuisknop en kies voor “Het lint aanpassen…”. Het menu om het lint aan te passen wordt nu zichtbaar.\n\nKlik rechtsonder op de knop “Nieuw tabblad”. In de lijst met tabbladen is er een toegevoegd met “Nieuw tabblad (aangepast)” Met de knop “Naam wijzigen” kun je het tabblad een eigen naam geven.\nJe kunt het tabblad indelen in groepen, maar dat is niet per sé nodig. Standaard wordt al één groep toegevoegd met de naam “Nieuwe groep (aangepast)”.\nJe kunt nu uit de linkerkolom Excel-opdrachten kiezen en toevoegen aan je zelfgemaakte tabblad. Kies hier voor “Alle opdrachten” om alle mogelijke opdrachten weer te geven. Soms is het wel even zoeken om er achter te komen hoe een opdracht eigenlijk precies heet.\nJe kunt de positie van tabbladen, groepen en functies wijzigen met de pijlen aan de rechterzijde van het menu. Als je het nieuwe tabblad bovenaan zet dan zie je je eigen tabblad als eerste als Excel geopend wordt.\n\n\n\n\n\n\n\n\n\n\n\nTip: Maak een back-up van het lint\n\n\n\nBij een update van Excel worden soms alle wijzigingen aan het lint ongedaan gemaakt. Je kunt je persoonlijke instellingen weer terugzetten als je een back-up hebt gemaakt.\nIn het menu om het lint aan te passen (rechtsonder) is er een mogelijkheid om “Alle aanpassingen te exporteren”. Hiermee worden alle aanpassingen aan het lint in een bestand bewaard. Je kunt je wijzigingen weer terugzetten door met dezelfde knop te kiezen voor importeren van een aanpassingsbestand."
+  },
+  {
+    "objectID": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html#video",
+    "href": "blog/2023-03-08_excel_lint_aanpassen/lint_aanpassen.html#video",
+    "title": "Zet Excel naar je hand! - Het lint aanpassen (1)",
+    "section": "Video",
+    "text": "Video\nEn voor wie liever kijkt dan leest, hieronder een video met een demonstratie."
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Introductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\nData-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
+    "text": "Zet Excel naar je hand! - Het lint aanpassen (1)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nIn deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten.\n\n\n\n\n\n\n2023-03-08\n\n\n\n\n\n\n  \n\n\n\n\nIntroductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\nData-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",
