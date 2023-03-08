@@ -16,7 +16,7 @@ listing:
 
 Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.
 
-Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. In deze serie posts laat ik drie manieren zien waarop je dat kunt doen.
+Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik wil in drie posts drie manieren zien laten waarop je dat kunt doen.
 
 1.  Het aanpassen van het lint -- zet al je veel gebruikte opdrachten op één plaats.
 

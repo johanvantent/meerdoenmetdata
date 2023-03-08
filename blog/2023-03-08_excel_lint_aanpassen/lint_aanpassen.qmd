@@ -1,11 +1,11 @@
 ---
 title: "Zet Excel naar je hand! - Het lint aanpassen (1)"
 description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
-# date: "2022-12-22"
+date: "2023-03-08"
 image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
 format: html
 categories: [Excel] 
-draft: true
+draft: false
 listing: 
   fields:
     - title
@@ -16,7 +16,7 @@ listing:
 
 Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.
 
-Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. In deze serie posts laat ik drie manieren zien waarop je dat kunt doen.
+Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik wil in drie posts drie manieren zien laten waarop je dat kunt doen.
 
 1.  **Het aanpassen van het lint -- zet al je veel gebruikte opdrachten op één plaats.**
 
