@@ -182,11 +182,46 @@
     "text": "Video\nEn voor wie liever kijkt dan leest, hieronder een video met een demonstratie."
   },
   {
+    "objectID": "blog/2023-03-15_excel_macro_maken/macro_maken.html",
+    "href": "blog/2023-03-15_excel_macro_maken/macro_maken.html",
+    "title": "Zet Excel naar je hand! - Maak een macro (2)",
+    "section": "",
+    "text": "Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.\nExcel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik wil in drie posts drie manieren zien laten waarop je dat kunt doen.\n\nHet aanpassen van het lint – zet al je veel gebruikte opdrachten op één plaats.\nHet gebruik van macro’s – maak zelf opdrachten voor Excel.\nZelfgemaakte sneltoetsen – je eigen opdrachten met één druk op de knop.\n\nIn deze post gaat het over het maken en gebruiken van macro’s."
+  },
+  {
+    "objectID": "blog/2023-03-15_excel_macro_maken/macro_maken.html#een-macro-opnemen",
+    "href": "blog/2023-03-15_excel_macro_maken/macro_maken.html#een-macro-opnemen",
+    "title": "Zet Excel naar je hand! - Maak een macro (2)",
+    "section": "Een macro opnemen",
+    "text": "Een macro opnemen\nAls je een macro opneemt dan maakt Excel zelf van de handelingen die je uitvoert een macro. Als voorbeeld gaan we een macro maken die het autofilter aanzet en tegelijk de eerste regel vastzet.\n\nBegin met een tabblad met wat gegevens en selecteer cel A1. (Linksboven, het soort gegevens maakt verder niet uit)\n\nKlik op de knop Macro opnemen op het tabblad Ontwikkelaars.\nJe krijgt een menu te zien. Kies voor het opslaan in Deze werkmap en geef de macro eventueel een eigen naam (geen spaties) en een beschrijving. Klik op OK.\n\nDan voeren we de acties uit die Excel voor ons moet opnemen.\n\nKlik op het tabblad Gegevens op de knop Filter.\nKlik op het tabblad Beeld op de knop Blokkeren en dan Bovenste rij blokkeren.\n\nKlik op het tabblad Ontwikkelaars op de knop Opname stoppen.\nDe macro is nu klaar.\nOm te zorgen dat de macro bewaard blijft moet je de Excel-werkmap opslaan als een .xlsm bestand."
+  },
+  {
+    "objectID": "blog/2023-03-15_excel_macro_maken/macro_maken.html#de-macro-gebruiken",
+    "href": "blog/2023-03-15_excel_macro_maken/macro_maken.html#de-macro-gebruiken",
+    "title": "Zet Excel naar je hand! - Maak een macro (2)",
+    "section": "De macro gebruiken",
+    "text": "De macro gebruiken\nEen makkelijke manier om een zelfgemaakte macro te gebruiken is door deze een knop te geven op het lint.\n\nRechtsklikken op het lint en kiezen voor “Het lint aanpassen”\nKies bij Opdrachten kiezen voor Macro’s.\n\nVoeg de macro toe op gewenste plek op het lint.\nEventueel kun je de naam en het icoon op het lint aanpassen via de knop Naam wijzigen… -"
+  },
+  {
+    "objectID": "blog/2023-03-15_excel_macro_maken/macro_maken.html#de-macro-zien",
+    "href": "blog/2023-03-15_excel_macro_maken/macro_maken.html#de-macro-zien",
+    "title": "Zet Excel naar je hand! - Maak een macro (2)",
+    "section": "De macro zien",
+    "text": "De macro zien\nIn het voorbeeld hebben we zelf een macro gemaakt. Maar hoe ziet zo’n macro er dan uit? De macro is opgeslagen in je werkmap: we gaan eerst naar de plaats toe waar deze macro is opgeslagen.\n\nKlik op het tabblad Ontwikkelaars op de knop Visual Basic.\n\nEr opent een nieuw venster. Ga hier in het venster Project – VBAProject, naar het Excelbestand dat je gebruikt. Klik op Modules en vervolgens dubbelklikken op Module1.\n\nIn het venster aan de rechterzijde zie je nu de computercode van de macro.\n\n\n\n\n\nWat betekent de tekst van deze macro? Een korte uitleg:\n\nEen macro begint en eindigt altijd met Sub … () en End Sub – dit geeft het begin en einde van de macro aan.\nAchter Sub staat de naam van een macro.\nRegels die beginnen met ’ (een enkel aanhalingsteken) zijn opmerkingen. De computer doet daar niets mee. Daarom zijn deze regels ook groen gekleurd.\nDe rest van de tekst is de computercode die het autofilter aanzet () en de bovenste rij vastzet.\n\nJe kunt in dit scherm de macro uitvoeren door met de cursor in de macro te gaan staan (dat is van belang als je meer dan één macro hebt) en op F5 of het groene driehoekje te klikken.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHoe doe ik dat in Excel VBA?\n\n\n\nil je een macro wilt maken of aanpassen en je weet niet precies hoe? Dan is Google-en samen met de termen Excel en VBA een makkelijke manier om meer te weten te komen."
+  },
+  {
+    "objectID": "blog/2023-03-15_excel_macro_maken/macro_maken.html#video",
+    "href": "blog/2023-03-15_excel_macro_maken/macro_maken.html#video",
+    "title": "Zet Excel naar je hand! - Maak een macro (2)",
+    "section": "Video",
+    "text": "Video\nEn voor wie liever kijkt dan leest, hieronder een video met een demonstratie."
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Zet Excel naar je hand! - Het lint aanpassen (1)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nIn deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten.\n\n\n\n\n\n\n2023-03-08\n\n\n\n\n\n\n  \n\n\n\n\nIntroductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\nData-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nWaterkwaliteit\n\n\nAnalyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
+    "text": "Zet Excel naar je hand! - Maak een macro (2)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nHoe kun je zelf je eigen macro’s maken?\n\n\n\n\n\n\n2023-03-15\n\n\n\n\n\n\n  \n\n\n\n\nZet Excel naar je hand! - Het lint aanpassen (1)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nJe hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!\n\n\n\n\n\n\n2023-03-08\n\n\n\n\n\n\n  \n\n\n\n\nIntroductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\ndata-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nwaterkwaliteit\n\n\ndata-analyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",
