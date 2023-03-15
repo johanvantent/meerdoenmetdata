@@ -3,7 +3,7 @@ title: "Gebruik van WKP-data"
 date: "2022-11-14"
 image: "logo-waterkwaliteitsportaal.png"
 format: html
-categories: [R, Waterkwaliteit, Analyse] 
+categories: [R, waterkwaliteit, "data-analyse"] 
 ---
 
 ```{r setup}

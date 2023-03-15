@@ -1,11 +1,11 @@
 ---
 title: "Zet Excel naar je hand! - Maak een macro (2)"
-description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
-# date: "2022-12-22"
+description: "Hoe kun je zelf je eigen macro's maken?"
+date: "2023-03-15"
 image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
 format: html
 categories: [Excel] 
-draft: true
+draft: false
 listing: 
   fields:
     - title
@@ -28,7 +28,7 @@ In deze post gaat het over het maken en gebruiken van macro's.
 
 # Het gebruik van macro's
 
-Excel heeft van zichzelf veel mogelijkheden. Maar soms wil je iets doen wat Excel nog niet kan. Of je wilt een aantal van de mogelijkheden van Excel aan elkaar koppelen. Om dat soort dingen voor elkaar te krijgen, kan je een macro maken. Een macro is een klein stukje computercode die Excel kan uitvoeren. Voor het maken van een macro hoef je die computercode meestal niet zelf te verzinnen. Excel heeft een optie waarbij je een macro kunt opnemen. Excel vertaalt dan alle handelingen die je doet in de bijbehorende computercode.
+Excel heeft van zichzelf veel mogelijkheden. Maar soms wil je iets doen wat Excel nog niet kan. Of je wilt een aantal van de mogelijkheden van Excel aan elkaar koppelen. Om dat soort dingen voor elkaar te krijgen, kan je een macro maken. Een macro is een klein stukje computercode die Excel kan uitvoeren. Voor het maken van een macro hoef je die computercode meestal niet zelf te verzinnen. Excel heeft een optie waarbij je een macro kunt opnemen (zoals je een filmpje opneemt). Excel vertaalt dan alle handelingen die je doet in de bijbehorende computercode en maakt daar een macro van.
 
 ::: callout-tip
 ## Tip: Tabblad Ontwikkelaars

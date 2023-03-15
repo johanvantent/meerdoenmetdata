@@ -1,6 +1,6 @@
 ---
 title: "Zet Excel naar je hand! - Het lint aanpassen (1)"
-description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
+description: "Je hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!"
 date: "2023-03-08"
 image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
 format: html

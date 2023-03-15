@@ -4,7 +4,7 @@ description: "Het boek *Storytelling with data* heeft mij radicaal veranderd in 
 date: "2023-01-25"
 image: "storytelling with data.jpg"
 format: html
-categories: [Data-viz] 
+categories: [data-viz] 
 draft: false
 listing: 
   fields:
