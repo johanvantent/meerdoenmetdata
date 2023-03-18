@@ -217,11 +217,60 @@
     "text": "Video\nEn voor wie liever kijkt dan leest, hieronder een video met een demonstratie."
   },
   {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "",
+    "text": "Om de waterkwaliteit in de gaten te houden wordt op sommige plaatsen jarenlang gemeten; dat levert mooie tijdreeksen op met maandelijkse metingen. Het is interessant om die tijdreeksen te analyseren, maar dat is vaak best wel ingewikkeld en tijdrovend. Wat het vooral ingewikkeld maakt is dat er in mijn meetreeksen wel eens een maand of zelfs een heel jaar ontbreekt. De tools die ik tot nu toe kende voor tijdreeksanalyse kunnen daar niet mee omgaan. Het gevolg is dat je dan eerst veel tijd kwijt bent aan bewerken van de data in plaats van dat je met de analyse zelf aan de slag kan.\nEen paar weken terug kwam ik op Linkedin een post tegen over het R-package timetk (voor time- toolkit) dat ontwikkeld is door Matt Dancho. Met dit package zou tijdreeksanalyse veel eenvoudiger zijn. Ik heb het geprobeerd en ik ben er behoorlijk enthousiast over. Het is zo makkelijk dat ik zelfs binnen een uurtje een Shiny-app1 in elkaar kon knutselen waarmee ik de tools van timetk op al mijn meetreeksen kan toepassen.1 Als je de app ook wilt draaien. Dat kan met de code op HHSK-wkl/chemie_diagnostics_shiny: Diagnostiek tijdreeksen (github.com). De app vereist ook het package HHSKwkl dat te installeren is vanaf HHSK-wkl/HHSKwkl: Package voor waterkwaliteit bij HHSK (github.com)\nIn de rest van deze post wil ik een kleine demonstratie geven van wat timetk kan en hoe makkelijk dat allemaal gaat. Ik wil laten zien hoe je afwijkende waarden kunt detecteren; hoe je seizoenspatronen kunt weergeven, hoe je de reeks kunt opdelen (decompositie) in een trend, seizoenspatroon en wat er dan nog overblijft (STL); en het bepalen van de (partiële) autocorrelatie.22 Als je meer over deze thema’s wilt weten dan kan ik het gratis en online boek Forecasting: Principles and Practice van Rob J Hyndman en George Athanasopoulos aanbevelen."
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#downloaden-tijdreeks",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#downloaden-tijdreeks",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Downloaden tijdreeks",
+    "text": "Downloaden tijdreeks\nVoor de demo download ik eerst een tijdreeks van de website van het hoogheemraadschap Schieland en de Krimpenerwaard. Ik heb voor de demo gekozen voor de meetreeks van Totaal fosfor in de Rottemeren. Deze meetreeks bestaat uit maandelijks metingen. Maar in deze meetreeks ontbreekt het jaar 2017 (behalve december) en in het droge jaar 2013 zijn er in de zomer een korte tijd wekelijkse metingen uitgevoerd. Het is dus een meetreeks met onvolkomenheden.\n\nCodeurl <- \"https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/wkl_gegevens_op_kaart/meetgegevens/S_0121.csv\"\ndownload.file(url, \"meetgegevens.csv\")\n\n\n\nCodelibrary(tidyverse)\nlibrary(timetk)\n\nmeetreeks <- read_csv2(\"meetgegevens.csv\") %>% \n  filter(parameteromschrijving == \"Fosfor totaal\") %>% \n  select(meetpuntcode, meetpuntomschrijving, datum, parameteromschrijving, limietsymbool, waarde, eenheid)\n\nmeetreeks\n\n# A tibble: 118 × 7\n   meetpuntcode meetpuntomschrijving   datum      param…¹ limie…² waarde eenheid\n   <chr>        <chr>                  <date>     <chr>   <chr>    <dbl> <chr>  \n 1 S_0121       Zevenhuizen Rottedijk… 2013-01-02 Fosfor… <NA>      0.13 mg P/l \n 2 S_0121       Zevenhuizen Rottedijk… 2013-02-07 Fosfor… <NA>      0.13 mg P/l \n 3 S_0121       Zevenhuizen Rottedijk… 2013-03-08 Fosfor… <NA>      0.11 mg P/l \n 4 S_0121       Zevenhuizen Rottedijk… 2013-04-10 Fosfor… <NA>      0.2  mg P/l \n 5 S_0121       Zevenhuizen Rottedijk… 2013-05-07 Fosfor… <NA>      0.29 mg P/l \n 6 S_0121       Zevenhuizen Rottedijk… 2013-06-06 Fosfor… <NA>      0.17 mg P/l \n 7 S_0121       Zevenhuizen Rottedijk… 2013-07-04 Fosfor… <NA>      0.35 mg P/l \n 8 S_0121       Zevenhuizen Rottedijk… 2013-07-31 Fosfor… <NA>      0.8  mg P/l \n 9 S_0121       Zevenhuizen Rottedijk… 2013-08-02 Fosfor… <NA>      0.7  mg P/l \n10 S_0121       Zevenhuizen Rottedijk… 2013-08-07 Fosfor… <NA>      0.68 mg P/l \n# … with 108 more rows, and abbreviated variable names ¹​parameteromschrijving,\n#   ²​limietsymbool"
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#detecteren-van-afwijkingen",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#detecteren-van-afwijkingen",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Detecteren van afwijkingen",
+    "text": "Detecteren van afwijkingen\nVoor veel van de functies van timetk hoef ik alleen maar op te geven wat de datum-kolom en wat de waarde-kolom is. De rest gebeurt volautomatisch. Er zijn overigens heel veel mogelijkheden om de werking van de functies bij te stellen. Maar voor de demo laat ik alles even op de default staan.\n\nCodemeetreeks %>% \n  timetk::plot_anomaly_diagnostics(.date_var = datum, .value = waarde)\n\nfrequency = 12 observations per 1 year\n\n\ntrend = 49 observations per 5 years\n\n\n\n\n\n\nIn de output van de functie zijn een aantal dingen te zien.\n\nDe functie heeft zelf achterhaald dat het gaat om een tijdreeks met 12 metingen in een jaar. De functie heeft dus geen moeite met het feit dat er een jaar ontbreekt of dat er soms meer metingen gedaan zijn.\nDe grijze band geeft de range aan van waarden die niet als afwijking worden gezien. Je kunt daarin zien dat daarbij rekening gehouden wordt met het seizoenspatroon.\nEr worden een aantal afwijkingen geconstateerd. Het is overigens de vraag of dit echte afwijkingen zijn. In dit geval zou ik denk ik de bandbreedte ruimer instellen met de parameter .alpha.\nDe figuren zijn interactief en gemaakt met plotly. Je kunt erover heen bewegen om de waarden te zien of om in te zoomen. In de volgende figuur zet ik de interactiviteit uit; in dat geval worden de figuren gemaakt met ggplot."
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#seizoenspatronen",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#seizoenspatronen",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Seizoenspatronen",
+    "text": "Seizoenspatronen\nIn de figuur met seizoenspatronen zet ik de interactiviteit uit. Dat leidt tot een statisch plot dat wordt gegenereerd met ggplot.\n\nCodemeetreeks %>% \n  timetk::plot_seasonal_diagnostics(.date_var = datum, .value = waarde, .interactive = FALSE)\n\n\n\n\n\n\n\nIn de figuren met seizoenspatronen is goed te zien dat hoge concentraties vooral voorkomen in de maanden juni tot en met oktober."
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#decompositie-van-de-tijdreeks",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#decompositie-van-de-tijdreeks",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Decompositie van de tijdreeks",
+    "text": "Decompositie van de tijdreeks\n\nCodemeetreeks %>% \n  timetk::plot_stl_diagnostics(.date_var = datum, .value = waarde)\n\nfrequency = 12 observations per 1 year\n\n\ntrend = 49 observations per 5 years\n\n\n\n\n\n\n\nDe tijdreeksdecompositie laat mooi zien dat de tijdreeks een seizoenscomponent heeft.\nIk vind de figuren voor de tijdreeksdecompositie wel een beetje in elkaar gedrukt. Dat maakt ze wel wat lastig leesbaar. Voor een mooie grafiek zou dat nog wat aangepast moeten worden. Zelf een grafiek maken is natuurlijk ook een optie, de data daarvoor kan je genereren met de functie tk_stl_diagnostics()."
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#autocorrelatie",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#autocorrelatie",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Autocorrelatie",
+    "text": "Autocorrelatie\nAutocorrelatie (ACF) beschrijft in hoeverre waarden verklaard kunnen worden uit eerdere waarden. De partiële autocorrelatie (PACF) beschrijft ook in hoeverre waarden verklaard kunnen worden uit eerdere waarden, maar dan exclusief dat wat verklaard kan worden d.m.v. recentere waarden. Dat is eigenlijk het meest interessant.\n\nCodemeetreeks %>% \n  timetk::plot_acf_diagnostics(.date_var = datum, .value = waarde)\n\nMax lag exceeds data available. Using max lag: 117\n\n\n\n\n\n\nDe partiële autocorrelatie laat zien dat de eigenlijk alleen de voorgaande meting een sterke autocorrelatie heeft. Metingen die langer daarvoor zijn gedaan voegen daar eigenlijk niet veel aan toe.\nIn het figuur voor de is ook de bandbreedte weergegeven die toont welke autocorrelatie nog significant is. Dat maakt de interpretatie van de figuren eenvoudiger."
+  },
+  {
+    "objectID": "blog/2023-03-18_demo_timetk/demo_timetk.html#verder-lezen",
+    "href": "blog/2023-03-18_demo_timetk/demo_timetk.html#verder-lezen",
+    "title": "Tijdreeksanalyse met timetk",
+    "section": "Verder lezen",
+    "text": "Verder lezen\nHet package timetk heeft een uitgebreide website met veel documentatie. Je kunt verder lezen op AToolKit for Working with Time Series in R • timetk (business-science.github.io)"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Zet Excel naar je hand! - Maak een macro (2)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nHoe kun je zelf je eigen macro’s maken?\n\n\n\n\n\n\n2023-03-15\n\n\n\n\n\n\n  \n\n\n\n\nZet Excel naar je hand! - Het lint aanpassen (1)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nJe hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!\n\n\n\n\n\n\n2023-03-08\n\n\n\n\n\n\n  \n\n\n\n\nIntroductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\ndata-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nwaterkwaliteit\n\n\ndata-analyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
+    "text": "Tijdreeksanalyse met timetk\n\n\n\n\n\n\n\nR\n\n\ndata-analyse\n\n\n\n\nHet package timetk is een toolkit voor tijdreeksanalyse. Het maakt tijdreeksanalyse verrassend eenvoudig.\n\n\n\n\n\n\n2023-03-18\n\n\n\n\n\n\n  \n\n\n\n\nZet Excel naar je hand! - Maak een macro (2)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nHoe kun je zelf je eigen macro’s maken?\n\n\n\n\n\n\n2023-03-15\n\n\n\n\n\n\n  \n\n\n\n\nZet Excel naar je hand! - Het lint aanpassen (1)\n\n\n\n\n\n\n\nExcel\n\n\n\n\nJe hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!\n\n\n\n\n\n\n2023-03-08\n\n\n\n\n\n\n  \n\n\n\n\nIntroductie Data Science Translator - DEEP blok 1\n\n\n\n\n\n\n\nDEEP\n\n\n\n\n\n\n\n\n\n\n\n2023-01-28\n\n\n\n\n\n\n  \n\n\n\n\nBeter communiceren met data\n\n\n\n\n\n\n\ndata-viz\n\n\n\n\nHet boek Storytelling with data heeft mij radicaal veranderd in hoe ik grafieken maak. Het boek is niet zo lang geleden in het Nederlands vertaald en daarom leek het me leuk en goed om er een korte recensie over te schrijven.\n\n\n\n\n\n\n2023-01-25\n\n\n\n\n\n\n  \n\n\n\n\nKick-off DEEP3\n\n\n\n\n\n\n\nDEEP\n\n\n\n\nDEEP is de afkorting voor Data science and Engineering Expert Programma. DEEP is opgezet om de waterschappen verder te brengen op het gebied van data.\n\n\n\n\n\n\n2022-12-09\n\n\n\n\n\n\n  \n\n\n\n\nGebruik van WKP-data\n\n\n\n\n\n\n\nR\n\n\nwaterkwaliteit\n\n\ndata-analyse\n\n\n\n\n\n\n\n\n\n\n\n2022-11-14\n\n\n\n\n\n\nGeen overeenkomsten"
   },
   {
     "objectID": "boeken.html",

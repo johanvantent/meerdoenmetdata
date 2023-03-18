@@ -6,7 +6,7 @@ image: "https://business-science.github.io/timetk/logo.png"
 format: html
 # code-tools: true
 categories: [R, "data-analyse"] 
-draft: true
+draft: false
 listing: 
   fields:
     - title
