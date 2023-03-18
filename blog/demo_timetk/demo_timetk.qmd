@@ -1,0 +1,108 @@
+---
+title: "Tijdreeksanalyse met timetk"
+description: "Het package timetk is een toolkit voor tijdreeksanalyse. Het maakt tijdreeksanalyse verrassend eenvoudig."
+date: "2023-03-18"
+image: "https://business-science.github.io/timetk/logo.png"
+format: html
+# code-tools: true
+categories: [R, "data-analyse"] 
+draft: true
+listing: 
+  fields:
+    - title
+    - description
+editor_options: 
+  chunk_output_type: console
+---
+
+# Over tijdreeksanalyses
+
+Om de waterkwaliteit in de gaten te houden wordt op sommige plaatsen jarenlang gemeten; dat levert mooie tijdreeksen op met maandelijkse metingen. Het is interessant om die tijdreeksen te analyseren, maar dat is vaak best wel ingewikkeld en tijdrovend. Wat het vooral ingewikkeld maakt is dat er in mijn meetreeksen wel eens een maand of zelfs een heel jaar ontbreekt. De tools die ik tot nu toe kende voor tijdreeksanalyse kunnen daar niet mee omgaan. Het gevolg is dat je dan eerst veel tijd kwijt bent aan bewerken van de data in plaats van dat je met de analyse zelf aan de slag kan.
+
+Een paar weken terug kwam ik op Linkedin een post tegen over het R-package [*timetk*](https://business-science.github.io/timetk/){target="”_blank”"} (voor time- toolkit) dat ontwikkeld is door Matt Dancho. Met dit package zou tijdreeksanalyse veel eenvoudiger zijn. Ik heb het geprobeerd en ik ben er behoorlijk enthousiast over. Het is zo makkelijk dat ik zelfs binnen een uurtje een Shiny-app[^1] in elkaar kon knutselen waarmee ik de tools van *timetk* op al mijn meetreeksen kan toepassen.
+
+[^1]: Als je de app ook wilt draaien. Dat kan met de code op [HHSK-wkl/chemie_diagnostics_shiny: Diagnostiek tijdreeksen (github.com)](https://github.com/HHSK-wkl/chemie_diagnostics_shiny). De app vereist ook het package HHSKwkl dat te installeren is vanaf [HHSK-wkl/HHSKwkl: Package voor waterkwaliteit bij HHSK (github.com)](https://github.com/HHSK-wkl/HHSKwkl)
+
+In de rest van deze post wil ik een kleine demonstratie geven van wat *timetk* kan en hoe makkelijk dat allemaal gaat. Ik wil laten zien hoe je afwijkende waarden kunt detecteren; hoe je seizoenspatronen kunt weergeven, hoe je de reeks kunt opdelen (decompositie) in een trend, seizoenspatroon en wat er dan nog overblijft (STL); en het bepalen van de (partiële) autocorrelatie.[^2]
+
+[^2]: Als je meer over deze thema's wilt weten dan kan ik het gratis en online boek [Forecasting: Principles and Practice](https://otexts.com/fpp3/){target="”_blank”"} van Rob J Hyndman en George Athanasopoulos aanbevelen.
+
+# Demo timetk
+
+## Downloaden tijdreeks
+
+Voor de demo download ik eerst een tijdreeks van de website van het hoogheemraadschap Schieland en de Krimpenerwaard. Ik heb voor de demo gekozen voor de meetreeks van Totaal fosfor in de Rottemeren. Deze meetreeks bestaat uit maandelijks metingen. Maar in deze meetreeks ontbreekt het jaar 2017 (behalve december) en in het droge jaar 2013 zijn er in de zomer een korte tijd wekelijkse metingen uitgevoerd. Het is dus een meetreeks met onvolkomenheden.
+
+```{r download-data}
+#| eval: false
+url <- "https://www.schielandendekrimpenerwaard.nl/kaart/waterkwaliteit/wkl_gegevens_op_kaart/meetgegevens/S_0121.csv"
+download.file(url, "meetgegevens.csv")
+```
+
+```{r packages-en-inlezen}
+#| warning: false
+#| message: false
+library(tidyverse)
+library(timetk)
+
+meetreeks <- read_csv2("meetgegevens.csv") %>% 
+  filter(parameteromschrijving == "Fosfor totaal") %>% 
+  select(meetpuntcode, meetpuntomschrijving, datum, parameteromschrijving, limietsymbool, waarde, eenheid)
+
+meetreeks
+```
+
+## Detecteren van afwijkingen
+
+Voor veel van de functies van *timetk* hoef ik alleen maar op te geven wat de datum-kolom en wat de waarde-kolom is. De rest gebeurt volautomatisch. Er zijn overigens heel veel mogelijkheden om de werking van de functies bij te stellen. Maar voor de demo laat ik alles even op de default staan.
+
+```{r}
+meetreeks %>% 
+  timetk::plot_anomaly_diagnostics(.date_var = datum, .value = waarde)
+```
+
+In de output van de functie zijn een aantal dingen te zien.
+
+1.  De functie heeft zelf achterhaald dat het gaat om een tijdreeks met 12 metingen in een jaar. De functie heeft dus geen moeite met het feit dat er een jaar ontbreekt of dat er soms meer metingen gedaan zijn.
+2.  De grijze band geeft de range aan van waarden die niet als afwijking worden gezien. Je kunt daarin zien dat daarbij rekening gehouden wordt met het seizoenspatroon.
+3.  Er worden een aantal afwijkingen geconstateerd. Het is overigens de vraag of dit echte afwijkingen zijn. In dit geval zou ik denk ik de bandbreedte ruimer instellen met de parameter `.alpha`.
+4.  De figuren zijn interactief en gemaakt met plotly. Je kunt erover heen bewegen om de waarden te zien of om in te zoomen. In de volgende figuur zet ik de interactiviteit uit; in dat geval worden de figuren gemaakt met ggplot.
+
+## Seizoenspatronen
+
+In de figuur met seizoenspatronen zet ik de interactiviteit uit. Dat leidt tot een statisch plot dat wordt gegenereerd met ggplot.
+
+```{r}
+meetreeks %>% 
+  timetk::plot_seasonal_diagnostics(.date_var = datum, .value = waarde, .interactive = FALSE)
+```
+
+In de figuren met seizoenspatronen is goed te zien dat hoge concentraties vooral voorkomen in de maanden juni tot en met oktober.
+
+## Decompositie van de tijdreeks
+
+```{r}
+meetreeks %>% 
+  timetk::plot_stl_diagnostics(.date_var = datum, .value = waarde)
+```
+
+-   De tijdreeksdecompositie laat mooi zien dat de tijdreeks een seizoenscomponent heeft.
+
+-   Ik vind de figuren voor de tijdreeksdecompositie wel een beetje in elkaar gedrukt. Dat maakt ze wel wat lastig leesbaar. Voor een mooie grafiek zou dat nog wat aangepast moeten worden. Zelf een grafiek maken is natuurlijk ook een optie, de data daarvoor kan je genereren met de functie `tk_stl_diagnostics()`.
+
+## Autocorrelatie
+
+Autocorrelatie (ACF) beschrijft in hoeverre waarden verklaard kunnen worden uit eerdere waarden. De partiële autocorrelatie (PACF) beschrijft ook in hoeverre waarden verklaard kunnen worden uit eerdere waarden, maar dan exclusief dat wat verklaard kan worden d.m.v. recentere waarden. Dat is eigenlijk het meest interessant.
+
+```{r}
+meetreeks %>% 
+  timetk::plot_acf_diagnostics(.date_var = datum, .value = waarde)
+```
+
+De partiële autocorrelatie laat zien dat de eigenlijk alleen de voorgaande meting een sterke autocorrelatie heeft. Metingen die langer daarvoor zijn gedaan voegen daar eigenlijk niet veel aan toe.
+
+In het figuur voor de is ook de bandbreedte weergegeven die toont welke autocorrelatie nog significant is. Dat maakt de interpretatie van de figuren eenvoudiger.
+
+## Verder lezen
+
+Het package *timetk* heeft een uitgebreide website met veel documentatie. Je kunt verder lezen op [A ](https://business-science.github.io/timetk/)[Tool](https://business-science.github.io/timetk/){target="_blank"}[Kit for Working with Time Series in R • timetk (business-science.github.io)](https://business-science.github.io/timetk/)
