@@ -1,11 +1,11 @@
 ---
 title: "Zet Excel naar je hand! - Je eigen sneltoetsen (3)"
-description: "In deze serie blogposts laat ik zien hoe je Excel naar je hand kunt zetten."
-# date: "2022-12-22"
+description: "Leer hoe je je eigen sneltoetsen in Excel kunt maken."
+date: "2023-03-22"
 image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg"
 format: html
 categories: [Excel] 
-draft: true
+draft: false
 listing: 
   fields:
     - title
@@ -27,9 +27,9 @@ Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik w
 In deze post gaat het over het zelf instellen van sneltoetsen.
 
 ::: callout-warning
-## Verslavingsrisico
+## Verslavingsrisico 
 
-Het gebruik van zelf ingestelde sneltoetsen is zeer verslavend. Als je er eenmaal aan gewend bent moet je rekening op ontwenningsverschijnselen als je in aanraking komt met de kale versie van Excel. Reken op irritatie, frustratie, een gevoelens van ontheemding en de neiging om tegen beter weten in toch de sneltoetscombinatie te gebruiken.
+Het gebruik van zelf ingestelde sneltoetsen is zeer verslavend. Het leidt tot allerlei ontwenningsverschijnselen als je je eigen sneltoetsen een keer moet missen. Reken dan op irritatie, frustratie, gevoelens van ontheemding en de neiging om tegen beter weten in toch de sneltoetscombinatie te gebruiken.
 :::
 
 ## 
@@ -39,13 +39,13 @@ Het gebruik van zelf ingestelde sneltoetsen is zeer verslavend. Als je er eenmaa
 Het gebruik van sneltoetsen is een manier om snel en zonder al te veel na te denken iets te doen. Het is in Excel mogelijk om sneltoetsen te koppelen aan een macro die je zelf hebt gemaakt. Om je eigen sneltoetsen te maken zijn de volgende stappen nodig.
 
 1.  Maak een (lege) invoegtoepassing
-2.  Voeg een macro toe aan de invoegtoepassing.
-3.  Voeg een macro toe aan de invoegtoepassing die de sneltoetsen instelt.
+2.  Maak in de invoegtoepassing een macro die je later aan een sneltoets wilt koppelen.
+3.  Maak in de invoegtoepassing een macro die de sneltoetsen instelt.
 4.  Zorg dat de sneltoets-macro wordt uitgevoerd wanneer je Excel opstart.
 
 ## Maak een invoegtoepassing
 
-Om overal in Excel zelfgemaakte macro's te kunnen gebruiken moet je een invoegtoepassing maken. Het maken van een (lege) invoegtoepassing is vrij eenvoudig.
+Om overal in Excel zelfgemaakte macro's te kunnen gebruiken moet je een invoegtoepassing maken. De invoegtoepassing is een bestand waarin je je macro's opslaat. Het maken van een (lege) invoegtoepassing is heel eenvoudig.
 
 -   Open een nieuw Excel-document.
 

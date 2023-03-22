@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Je hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!">
+<meta name="description" content="Leer hoe je je eigen sneltoetsen in Excel kunt maken.">
 
-<title>Meer doen met data - Zet Excel naar je hand! - Het lint aanpassen (1)</title>
+<title>Meer doen met data - Zet Excel naar je hand! - Je eigen sneltoetsen (3)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Meer doen met data - Zet Excel naar je hand! - Het lint aanpassen (1)">
+<meta property="og:title" content="Meer doen met data - Zet Excel naar je hand! - Je eigen sneltoetsen (3)">
 <meta property="og:description" content="Over data, visualisatie, programmeren in R en waterkwaliteit">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg">
 <meta property="og:site-name" content="Meer doen met data">
@@ -170,10 +170,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Zet Excel naar je hand! - Het lint aanpassen (1)</h1>
+      <h1 class="title">Zet Excel naar je hand! - Je eigen sneltoetsen (3)</h1>
                   <div>
         <div class="description">
-          Je hoeft je niet aan te passen aan het lint. Pas het lint aan aan jou!
+          Leer hoe je je eigen sneltoetsen in Excel kunt maken.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Publicatiedatum</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">8 maart 2023</p>
+        <p class="date">22 maart 2023</p>
       </div>
     </div>
     
@@ -205,10 +205,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Op deze pagina</h2>
    
   <ul>
-  <li><a href="#zet-excel-naar-je-hand" id="toc-zet-excel-naar-je-hand" class="nav-link active" data-scroll-target="#zet-excel-naar-je-hand">Zet Excel naar je hand!</a></li>
-  <li><a href="#het-lint-aanpassen" id="toc-het-lint-aanpassen" class="nav-link" data-scroll-target="#het-lint-aanpassen">Het lint aanpassen</a>
+  <li><a href="#zet-excel-naar-je-hand" id="toc-zet-excel-naar-je-hand" class="nav-link active" data-scroll-target="#zet-excel-naar-je-hand">Zet Excel naar je hand!</a>
   <ul class="collapse">
-  <li><a href="#hoe-pas-je-het-lint-aan" id="toc-hoe-pas-je-het-lint-aan" class="nav-link" data-scroll-target="#hoe-pas-je-het-lint-aan">Hoe pas je het lint aan?</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  <li><a href="#maak-je-eigen-sneltoetsen" id="toc-maak-je-eigen-sneltoetsen" class="nav-link" data-scroll-target="#maak-je-eigen-sneltoetsen">Maak je eigen sneltoetsen</a>
+  <ul class="collapse">
+  <li><a href="#maak-een-invoegtoepassing" id="toc-maak-een-invoegtoepassing" class="nav-link" data-scroll-target="#maak-een-invoegtoepassing">Maak een invoegtoepassing</a></li>
+  <li><a href="#macros-toevoegen-aan-de-invoegtoepassing" id="toc-macros-toevoegen-aan-de-invoegtoepassing" class="nav-link" data-scroll-target="#macros-toevoegen-aan-de-invoegtoepassing">Macro’s toevoegen aan de invoegtoepassing</a></li>
+  <li><a href="#instellen-sneltoetsen-bij-opstarten-excel" id="toc-instellen-sneltoetsen-bij-opstarten-excel" class="nav-link" data-scroll-target="#instellen-sneltoetsen-bij-opstarten-excel">Instellen sneltoetsen bij opstarten Excel</a></li>
   <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
   </ul></li>
   </ul>
@@ -225,48 +230,135 @@ ul.task-list li input[type="checkbox"] {
 <p>Excel is een makkelijk toegankelijk programma om met data te werken. Een nadeel is echter wel dat je voor sommige functies nogal wat aan het zoeken en het klikken bent. Voor handelingen die je veel doet of functies die je veel gebruikt kan dat best onhandig zijn.</p>
 <p>Excel is echter ook een flexibel programma wat je naar je hand kunt zetten. Ik wil in drie posts drie manieren zien laten waarop je dat kunt doen.</p>
 <ol type="1">
-<li><p><strong>Het aanpassen van het lint – zet al je veel gebruikte opdrachten op één plaats.</strong></p></li>
+<li><p>Het aanpassen van het lint – zet al je veel gebruikte opdrachten op één plaats.</p></li>
 <li><p>Het gebruik van macro’s – maak zelf opdrachten voor Excel.</p></li>
-<li><p>Zelfgemaakte sneltoetsen – je eigen opdrachten met één druk op de knop.</p></li>
+<li><p><strong>Zelfgemaakte sneltoetsen – je eigen opdrachten met één druk op de knop.</strong></p></li>
 </ol>
-<p>In deze post gaat het over het aanpassen van het lint.</p>
-</section>
-<section id="het-lint-aanpassen" class="level1 page-columns page-full">
-<h1>Het lint aanpassen</h1>
-<p>Het lint aanpassen is niet zo moeilijk. Je kunt zelfs een eigen tabblad op het lint maken met daarop alle functies die je veel gebruikt. Je eigen gepersonaliseerde tabblad is altijd direct zichtbaar als je dit tabblad direct voor het tabblad Start plaatst.</p>
-<section id="hoe-pas-je-het-lint-aan" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="hoe-pas-je-het-lint-aan">Hoe pas je het lint aan?</h2>
-<ul>
-<li><p>Klik op het lint met je rechtermuisknop en kies voor “Het lint aanpassen…”. Het menu om het lint aan te passen wordt nu zichtbaar.</p>
-</li>
-<li><p>Klik rechtsonder op de knop “Nieuw tabblad”. In de lijst met tabbladen is er een toegevoegd met “Nieuw tabblad (aangepast)” Met de knop “Naam wijzigen” kun je het tabblad een eigen naam geven.</p></li>
-<li><p>Je kunt het tabblad indelen in groepen, maar dat is niet per sé nodig. Standaard wordt al één groep toegevoegd met de naam “Nieuwe groep (aangepast)”.</p></li>
-<li><p>Je kunt nu uit de linkerkolom Excel-opdrachten kiezen en toevoegen aan je zelfgemaakte tabblad. Kies hier voor “Alle opdrachten” om alle mogelijke opdrachten weer te geven. Soms is het wel even zoeken om er achter te komen hoe een opdracht eigenlijk precies heet.</p></li>
-<li><p>Je kunt de positie van tabbladen, groepen en functies wijzigen met de pijlen aan de rechterzijde van het menu. Als je het nieuwe tabblad bovenaan zet dan zie je je eigen tabblad als eerste als Excel geopend wordt.</p></li>
-</ul>
-<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/paste-061C5D72.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/paste-061C5D72.png" class="img-fluid figure-img"></a></p>
-</figure>
-</div></div><div class="callout-tip callout callout-style-default callout-captioned">
+<p>In deze post gaat het over het zelf instellen van sneltoetsen.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-caption-container flex-fill">
-Tip: Maak een back-up van het lint
+Verslavingsrisico
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Bij een update van Excel worden soms alle wijzigingen aan het lint ongedaan gemaakt. Je kunt je persoonlijke instellingen weer terugzetten als je een back-up hebt gemaakt.</p>
-<p>In het menu om het lint aan te passen (rechtsonder) is er een mogelijkheid om “Alle aanpassingen te exporteren”. Hiermee worden alle aanpassingen aan het lint in een bestand bewaard. Je kunt je wijzigingen weer terugzetten door met dezelfde knop te kiezen voor importeren van een aanpassingsbestand.</p>
+<p>Het gebruik van zelf ingestelde sneltoetsen is zeer verslavend. Het leidt tot allerlei ontwenningsverschijnselen als je je eigen sneltoetsen een keer moet missen. Reken dan op irritatie, frustratie, gevoelens van ontheemding en de neiging om tegen beter weten in toch de sneltoetscombinatie te gebruiken.</p>
+</div>
+</div>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
+</section>
+</section>
+<section id="maak-je-eigen-sneltoetsen" class="level1 page-columns page-full">
+<h1>Maak je eigen sneltoetsen</h1>
+<p>Het gebruik van sneltoetsen is een manier om snel en zonder al te veel na te denken iets te doen. Het is in Excel mogelijk om sneltoetsen te koppelen aan een macro die je zelf hebt gemaakt. Om je eigen sneltoetsen te maken zijn de volgende stappen nodig.</p>
+<ol type="1">
+<li>Maak een (lege) invoegtoepassing</li>
+<li>Maak in de invoegtoepassing een macro die je later aan een sneltoets wilt koppelen.</li>
+<li>Maak in de invoegtoepassing een macro die de sneltoetsen instelt.</li>
+<li>Zorg dat de sneltoets-macro wordt uitgevoerd wanneer je Excel opstart.</li>
+</ol>
+<section id="maak-een-invoegtoepassing" class="level2">
+<h2 class="anchored" data-anchor-id="maak-een-invoegtoepassing">Maak een invoegtoepassing</h2>
+<p>Om overal in Excel zelfgemaakte macro’s te kunnen gebruiken moet je een invoegtoepassing maken. De invoegtoepassing is een bestand waarin je je macro’s opslaat. Het maken van een (lege) invoegtoepassing is heel eenvoudig.</p>
+<ul>
+<li><p>Open een nieuw Excel-document.</p></li>
+<li><p>Kies <em>Opslaan als</em> en sla het document op als een <em>Excel-invoegtoepassing (*.xlam)</em>. Een goede plek voor deze invoegtoepassing is ergens op je persoonlijke schijf.</p></li>
+<li><p>Sluit het document af en open een nieuw document.</p></li>
+<li><p>Klik op het tabblad <em>Ontwikkelaars</em> op de knop <em>Excel-invoegtoepassingen</em> en voeg via <em>Bladeren…</em> de zojuist opgeslagen invoegtoepassing toe. Als het goed is, is de invoegtoepassing gelijk aangevinkt.</p></li>
+<li><p>Elke keer dat je nu Excel opent, wordt de zelfgemaakte invoegtoepassing geladen; maar de invoegtoepassing doet nu verder nog niets.</p></li>
+</ul>
+</section>
+<section id="macros-toevoegen-aan-de-invoegtoepassing" class="level2">
+<h2 class="anchored" data-anchor-id="macros-toevoegen-aan-de-invoegtoepassing">Macro’s toevoegen aan de invoegtoepassing</h2>
+<p>De volgende stap is om macro’s toe te voegen aan de invoegtoepassing. We maken twee macro’s. Eén macro is een opdracht voor Excel en de andere is een macro die de sneltoets instelt.</p>
+<ul>
+<li><p>Klik op het tabblad <em>Ontwikkelaars</em> op de knop <em>Visual Basic</em></p></li>
+<li><p>Selecteer de invoegtoepassing die bij de vorige stap gemaakt is. (Linksboven in het venster <em>Project – VBAProject</em>)</p></li>
+<li><p>Klik bovenaan op <em>Invoegen – Module</em>.</p></li>
+<li><p>Onder de invoegtoepassing wordt een mapje <em>Modules</em> aangemaakt en daaronder <em>Module1</em>. Dubbelklik op <em>Module1</em>.</p></li>
+<li><p>In het grote witte scherm rechts komen nu de macro’s. Die kun je zelf typen of kopiëren en plakken. In dit geval kopieer ik de tekst van de macro die ik eerder heb opgenomen.</p></li>
+<li><p>De volgende stap is een macro maken die een sneltoets instelt. Deze is heel kort en kunnen we zelf typen.<br>
+Sub sneltoetsen()<br>
+Application.OnKey “{F5}”, “mijn_voorbeeld_macro”<br>
+End Sub</p></li>
+<li><p>Tussen de eerste aanhalingstekens van de macro <em>sneltoetsen</em> zetten we de sneltoetscombinatie. Tussen de tweede aanhalingstekens de naam van de macro. Als je meer sneltoetsen- wilt instellen kun je die op een nieuwe regel toevoegen aan de macro <em>sneltoetsen.</em></p></li>
+<li><p>Sla de invoegtoepassing met de macro’s erin op. (NB doe dat altijd als je wijzigingen maakt aan je invoegtoepassing.)</p></li>
+</ul>
+<p>Als de macro <em>sneltoetsen</em> wordt uitgevoerd dan wordt in dit geval de knop F5 gekoppeld aan de macro <em>mijn_voorbeeld_macro</em>. Vanaf dat moment wordt <em>mijn_voorbeeld_macro</em> uitgevoerd als je op de toets F5 tikt.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/paste-BA6AA908.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/paste-BA6AA908.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Codering sneltoetsen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>Voor sneltoetsen is het meestal handig om een combinatie van toetsen te gebruiken. Hoe doe je dat en welke codes kun je gebruiken voor de toetsen?</p>
+<ul>
+<li><p>letters en cijfers voor de gewone letter- en cijfertoetsen</p></li>
+<li><p>^ voor Ctrl</p></li>
+<li><p>% voor Alt</p></li>
+<li><p>+ voor Shift</p></li>
+<li><p>F-toetsen en andere bijzondere toetsen zet je tussen {}</p></li>
+<li><p>Zie verder <a href="https://learn.microsoft.com/en-us/office/vba/api/excel.application.onkey">Application.OnKey method (Excel) | Microsoft Learn</a></p>
+<p>“^t” betekent <em>Ctrl + T<br>
+</em>”^+{F5}” betekent <em>Ctrl + Shift + F5</em></p></li>
+</ul>
+</blockquote>
+</div>
+</div>
+</section>
+<section id="instellen-sneltoetsen-bij-opstarten-excel" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="instellen-sneltoetsen-bij-opstarten-excel">Instellen sneltoetsen bij opstarten Excel</h2>
+<p>We zijn nu bijna zover dat onze zelfgemaakte sneltoets werkt. De laatste stap is dat sneltoetsen ook worden ingesteld zodra Excel wordt opgestart.</p>
+<ul>
+<li><p>Dubbelklik in het venster <em>Project – VBAProject</em> op <em>ThisWorkbook</em></p></li>
+<li><p>Klik in het linker dropdownmenu boven aan het witte venster op <em>Workbook</em>.</p>
+</li>
+<li><p>Je ziet nu een bijzondere macro <em>Private Sub Workbook_Open()</em>. Deze bijzondere macro wordt altijd uitgevoerd als Excel wordt opgestart.</p></li>
+<li><p>Type in deze bijzondere macro de naam van de macro die de sneltoetsen instelt – <em>sneltoetsen</em></p>
+</li>
+<li><p>Sla de invoegtoepassing opnieuw op.</p></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/paste-5EC2661A.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/paste-5EC2661A.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/paste-C8519FE9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/paste-C8519FE9.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div></div><p>Als je nu Excel opnieuw opstart dan zul je zien dat de sneltoets werkt. In ons voorbeeld wordt dan het autofilter aangezet en de titels worden geblokkeerd.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Let op
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bij het maken van sneltoetsen bestaat de mogelijkheid dat je bestaande sneltoetsen van Excel overschrijft. Zorg ervoor geen ingebouwde sneltoetsen overschrijft die je wel eens gebruikt.</p>
 </div>
 </div>
 </section>
 <section id="video" class="level2">
 <h2 class="anchored" data-anchor-id="video">Video</h2>
 <p>En voor wie liever kijkt dan leest, hieronder een video met een demonstratie.</p>
-<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/QJKyaze6VjY" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="quarto-video ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Cd3pui1oMJA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 
 
 
@@ -530,7 +622,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});</script>
 
 
 
