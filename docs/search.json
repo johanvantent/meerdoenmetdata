@@ -326,7 +326,7 @@
     "href": "boeken.html#data-analyse",
     "title": "Boeken",
     "section": "Data-analyse",
-    "text": "Data-analyse\n\nAn Introduction to Statistical Learning with Applications in R - Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani - 2018\n\nIntroductie in allerlei methodes voor Statistical learning (Machine learning)\nhttp://faculty.marshall.usc.edu/gareth-james/ISL/\nZie ook de bijbehorende gratis cursus op de Stanford pagina https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/about\n\nForecasting: Principles and Practice - Rob J. Hyndman, George Athanasopoulos - 2020\n\nAnalyse en voorspellen van tijdreeksen\nhttps://otexts.com/fpp3/\nZie ook: https://github.com/rstudio-conf-2020/time-series-forecasting\n\nHead First Data Analysis - Michael Milton - 2021\n\nGoede introductie als je nog weinig weet over data-analyse.\nBoek leest makkelijk weg en heeft interactieve opzet.\n\nElements of Statistical Learning - Hastie, Tibshirani and Friedman (2009)\n\nhttps://web.stanford.edu/~hastie/ElemStatLearn/\n\nApplied Predictive Modeling - Max Kuhn, Kjell Johnson\n\nPraktische toepassing van voorspelling\nOp basis van R.\n\nInterpretable Machine Learning - Christoph Molnar\n\nOver hoe je voorkomt dat machine learning alleen een black-box is.\nhttps://christophm.github.io/interpretable-ml-book/\n\nSupervised Machine Learning for Text Analysis in R - Emil Hvitfeldt and Julia Silge\n\nhttps://smltar.com/\n\nTidy Modeling with R - Max Kuhn and Julia Silge\n\nhttps://www.tmwr.org/\n\nFeature Engineering and Selection: A Practical Approach for Predictive Models - Max Kuhn and Kjell Johnson\n\nhttps://bookdown.org/max/FES/"
+    "text": "Data-analyse\n\nAn Introduction to Statistical Learning with Applications in R - Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani - 2018\n\nIntroductie in allerlei methodes voor Statistical learning (Machine learning)\nhttp://faculty.marshall.usc.edu/gareth-james/ISL/\nZie ook de bijbehorende gratis cursus op de Stanford pagina https://lagunita.stanford.edu/courses/HumanitiesSciences/StatLearning/Winter2016/about\n\nForecasting: Principles and Practice - Rob J. Hyndman, George Athanasopoulos - 2020\n\nAnalyse en voorspellen van tijdreeksen\nhttps://otexts.com/fpp3/\nZie ook: https://github.com/rstudio-conf-2020/time-series-forecasting\n\nHead First Data Analysis - Michael Milton - 2021\n\nGoede introductie als je nog weinig weet over data-analyse.\nBoek leest makkelijk weg en heeft interactieve opzet.\n\nLeading with AI and Analytics - Eric Anderson, Florian Zettelmeyer - 2023 (Luisterboek)\n\nBoek voor managers om AI en anlytics te benutten - Build your data science IQ to drive business value.\nIn this book, you’ll find the essential tools to help you: develop a strong data science intuition quotient, lead and scale AI and analytics throughout your organization, move from “best-guess” decision making to evidence-based decisions, and craft strategies and tactics to create real impact.\nAudible\n\nElements of Statistical Learning - Hastie, Tibshirani and Friedman (2009)\n\nhttps://web.stanford.edu/~hastie/ElemStatLearn/\n\nApplied Predictive Modeling - Max Kuhn, Kjell Johnson\n\nPraktische toepassing van voorspelling\nOp basis van R.\n\nInterpretable Machine Learning - Christoph Molnar\n\nOver hoe je voorkomt dat machine learning alleen een black-box is.\nhttps://christophm.github.io/interpretable-ml-book/\n\nSupervised Machine Learning for Text Analysis in R - Emil Hvitfeldt and Julia Silge\n\nhttps://smltar.com/\n\nTidy Modeling with R - Max Kuhn and Julia Silge\n\nhttps://www.tmwr.org/\n\nFeature Engineering and Selection: A Practical Approach for Predictive Models - Max Kuhn and Kjell Johnson\n\nhttps://bookdown.org/max/FES/"
   },
   {
     "objectID": "boeken.html#data-visualisatie",
@@ -340,21 +340,35 @@
     "href": "boeken.html#design",
     "title": "Boeken",
     "section": "Design",
-    "text": "Design\n\nThe design of everyday things - Don Norman - 2017\n\nOver ontwerpen: hoe maak je iets dat goed functioneert, dat voldoet aan de wensen van de gebruikers.\n\nHow design makes the world - Scott Berkun - 2020\n\nOverzichtelijk en goed leesbaar boek dat een overzicht geeft wat “design” is en hoe dat in de praktijk werkt.\n\nDesign Thinking - Nigel Cross - 2021\n\nHoe werken en denken designers?\nBoek met diverse voorbeelden en studies die illustreren hoe designers denken."
+    "text": "Design\n\nThe design of everyday things - Don Norman - 2017/2024 (Luisterboek)\n\nOver ontwerpen: hoe maak je iets dat goed functioneert, dat voldoet aan de wensen van de gebruikers.\nAudible\n\nHow design makes the world - Scott Berkun - 2020\n\nOverzichtelijk en goed leesbaar boek dat een overzicht geeft wat “design” is en hoe dat in de praktijk werkt.\n\nDesign Thinking - Nigel Cross - 2021\n\nHoe werken en denken designers?\nBoek met diverse voorbeelden en studies die illustreren hoe designers denken."
   },
   {
     "objectID": "boeken.html#denken-en-leren",
     "href": "boeken.html#denken-en-leren",
     "title": "Boeken",
     "section": "Denken en leren",
-    "text": "Denken en leren\n\nThe Creative Curve - Allen Gannett - 2020\n\nHow to Develop the Right Idea, at the Right Time\n\nBadass - Making Users Awesome - Kathy Sierra - 2021\n\nGeweldig boek dat veel inzicht geeft je mensen kunt leren om ergens goed in te worden.\nVeel inzichten over hoe mensen en de automatische processen werken en hoe je dat kunt benutten om ze iets te leren.\n\nThinking, Fast and slow - Daniel Kahneman - 2022\n\nOver hoe je hersenen werken en dat dat niet altijd zo rationeel is als je zou denken.\n\nHow we learn- The Surprising Truth About When, Where, and Why It Happens - Benedict Carey - 2022\n\nOver op welke manieren we informatie onthouden. Dat is soms anders dan je zou denken.\n\nThe programmers brain - Felienne Hermans - 2021\n\nHoe je inzichten over de werking van de hersenen praktisch kunt toepassen bij het (leren van) programmeren."
+    "text": "Denken en leren\n\nThe Creative Curve - Allen Gannett - 2020\n\nHow to Develop the Right Idea, at the Right Time\n\nThe Creative Habit - Twyla Tharp - 2021/2024 - (Luisterboek)\n\nErg leuk boek, ook al gaat het veel over dans.\nThe Creative Habit - Audible\n\nBadass - Making Users Awesome - Kathy Sierra - 2021\n\nGeweldig boek dat veel inzicht geeft je mensen kunt leren om ergens goed in te worden.\nVeel inzichten over hoe mensen en de automatische processen werken en hoe je dat kunt benutten om ze iets te leren.\n\nThinking, Fast and slow - Daniel Kahneman - 2022\n\nOver hoe je hersenen werken en dat dat niet altijd zo rationeel is als je zou denken.\n\nHow we learn - The Surprising Truth About When, Where, and Why It Happens - Benedict Carey - 2022\n\nOver op welke manieren we informatie onthouden. Dat is soms anders dan je zou denken.\n\nThe programmers brain - Felienne Hermans - 2021\n\nHoe je inzichten over de werking van de hersenen praktisch kunt toepassen bij het (leren van) programmeren.\n\nMindset - Carol Dweck - 2023 (Luisterboek)\n\nDweck explains why it’s not just our abilities and talent that bring us success but whether we approach them with a fixed or growth mindset. She makes clear why praising intelligence and ability doesn’t foster self-esteem and lead to accomplishment but may actually jeopardise success.\nAudible\n\nNudge: The Final Edition - Richard H. Thaler, Cass R. Sunstein - 2024 (Luisterboek)\n\nImproving Decisions About Money, Health, and the Environment\nAudible"
+  },
+  {
+    "objectID": "boeken.html#werk-en-productiviteit",
+    "href": "boeken.html#werk-en-productiviteit",
+    "title": "Boeken",
+    "section": "Werk en productiviteit",
+    "text": "Werk en productiviteit\n\nRework - Jason Fried, David Heinemeier Hanson - 2021\n\nHoe je werk en het functioneren van een bedrijf anders aan kunt pakken. Nadruk op hoe je het simpel en effectief kunt houden.\n\nDeep Work - Cal Newport - 2023 (Luisterboek)\n\nOver hoe je zorg dat je geconcentreerd werkt zonder afgeleid te raken.\nAudible\n\nThe Progress Principle - Teresa M. Amabile - 2023 (Luisterboek)\n\nThe book shows how to remove obstacles to progress, including meaningless tasks and toxic relationships. It also explains how to activate two forces that enable progress: (1) catalysts—events that directly facilitate project work, such as clear goals and autonomy—and (2) nourishers—interpersonal events that uplift workers, including encouragement and demonstrations of respect and collegiality.\nAudible\n\nBecome an Analytic Translator - Wendy D. Lynch - 2024\n\nAmazon\n\nIt doesn’t have to be Crazy at Work - Jason Fried, David Heinemeier Hanson"
+  },
+  {
+    "objectID": "boeken.html#communicatie",
+    "href": "boeken.html#communicatie",
+    "title": "Boeken",
+    "section": "Communicatie",
+    "text": "Communicatie\n\nThe Sense of Structure - George D. Gopen - 2018\n\nErg nuttig om te begrijpen hoe je als schrijver de juiste boodschap overbrengt aan je lezers. George Gopen doet dit aan de hand van de Reader Expectation Approach. Het helpt om erachter te komen wat een lezer verwacht en hoe je die kennis als schrijver kunt gebruiken.\nVeel van de principes worden ook uitgelegd in the Litigation Articles https://www.georgegopen.com/the-litigation-articles.html\n\nSocrates op Sneakers - Elke Wiss - 2023 (Luisterboek)\n\nOver diepgaande gesprekken, vragenstellen en doorvragen\nOnline Bibliotheek"
   },
   {
     "objectID": "boeken.html#overig",
     "href": "boeken.html#overig",
     "title": "Boeken",
     "section": "Overig",
-    "text": "Overig\n\nThe Sense of Structure - George D. Gopen - 2018\n\nErg nuttig om te begrijpen hoe je als schrijver de juiste boodschap overbrengt aan je lezers. George Gopen doet dit aan de hand van de Reader Expectation Approach. Het helpt om erachter te komen wat een lezer verwacht en hoe je die kennis als schrijver kunt gebruiken.\nVeel van de principes worden ook uitgelegd in the Litigation Articles https://www.georgegopen.com/the-litigation-articles.html\n\nAn introduction to APIs - Brian Cooksey - 2019\n\nOver hoe APIs werken\nhttps://zapier.com/learn/apis/\n\nRework - Jason Fried, David Heinemeier Hanson - 2021\n\nHoe je werk en het functioneren van een bedrijf anders aan kunt pakken. Nadruk op hoe je het simpel en effectief kunt houden.\n\nIt doesn’t have to be Crazy at Work - Jason Fried, David Heinemeier Hanson"
+    "text": "Overig\n\nAn introduction to APIs - Brian Cooksey - 2019\n\nOver hoe APIs werken\nhttps://zapier.com/learn/apis/\n\nWhy We Sleep - Matthew Walker - 2024\n\nAudible"
   },
   {
     "objectID": "boeken.html#tutorials",
@@ -368,7 +382,7 @@
     "href": "boeken.html#podcasts",
     "title": "Boeken",
     "section": "Podcasts",
-    "text": "Podcasts\n\nNot So Standard Deviations - Roger Peng & Hilary Parker\n\nNot So Standard Deviations: The Data Science Podcast Roger Peng and Hilary Parker talk about the latest in data science and data analysis in academia and industry.\nhttp://nssdeviations.com/\n\nStorytelling with Data Podcast - Cole Nussbaumer Knaflic\n\nRid your world of ineffective graphs and mediocre presentations, one exploding 3D pie chart at a time! The storytelling with data podcast covers topics related to data storytelling, better presentations, and all things data viz. There is a story in your data—get the skills and power to tell it!\nhttp://www.storytellingwithdata.com/podcast\n\nRework\n\nhttps://www.rework.fm/\nA podcast about a better way to work and run your business, from 37signals.\nInteressante podcast over werk, kleine bedrijven en het boek Rework"
+    "text": "Podcasts\n\nNot So Standard Deviations - Roger Peng & Hilary Parker\n\nNot So Standard Deviations: The Data Science Podcast Roger Peng and Hilary Parker talk about the latest in data science and data analysis in academia and industry.\nhttp://nssdeviations.com/\n\nStorytelling with Data Podcast - Cole Nussbaumer Knaflic\n\nRid your world of ineffective graphs and mediocre presentations, one exploding 3D pie chart at a time! The storytelling with data podcast covers topics related to data storytelling, better presentations, and all things data viz. There is a story in your data—get the skills and power to tell it!\nhttp://www.storytellingwithdata.com/podcast\n\nRework\n\nhttps://www.rework.fm/\nA podcast about a better way to work and run your business, from 37signals.\nInteressante podcast over werk, kleine bedrijven en het boek Rework\n\nDe Dataloog\n\nhttps://dedataloog.nl/\nDe Dataloog is de onafhankelijke Nederlandstalige podcast over data & kunstmatige intelligentie. Hier hoor je alles wat je moet weten over de zin en onzin van data, de nieuwste ontwikkelingen en echte verhalen uit de praktijk."
   },
   {
     "objectID": "boeken.html#videos",
@@ -383,13 +397,6 @@
     "title": "Boeken",
     "section": "Blogs",
     "text": "Blogs\n\nCreating Passionate Users - Kathy Sierra\n\nhttps://headrush.typepad.com/\n\nToo many companies are like bad marriages\nWhat tail is wagging the “user happiness” dog?\nDon’t ask employees to be passionate about the company!\n\n\nSerious Pony - Kathy Sierra\n\nhttp://seriouspony.com/blog\nTwee geweldige artikelen over presenteren en over ‘cognitive load’\n\nSignal v. Noise - Jason Fried, David Heinemeier Hanson and others\n\nhttps://m.signalvnoise.com/\nBlog over werken, software en meer interessante thema’s uit Rework\nValidation is a mirage\nDon’t take their word for it"
-  },
-  {
-    "objectID": "boeken.html#wensenlijst",
-    "href": "boeken.html#wensenlijst",
-    "title": "Boeken",
-    "section": "Wensenlijst",
-    "text": "Wensenlijst\n\nStyle: Lessons in Clarity and Grace - Joseph Williams Joseph Bizup"
   },
   {
     "objectID": "index.html",

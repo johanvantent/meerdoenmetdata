@@ -310,7 +310,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Voor veel van de functies van <em>timetk</em> hoef ik alleen maar op te geven wat de datum-kolom en wat de waarde-kolom is. De rest gebeurt volautomatisch. Er zijn overigens heel veel mogelijkheden om de werking van de functies bij te stellen. Maar voor de demo laat ik alles even op de default staan.</p>
 <div class="cell">
 <details open=""><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meetreeks</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://business-science.github.io/timetk/reference/plot_anomaly_diagnostics.html">plot_anomaly_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/timetk/man/plot_anomaly_diagnostics.html">plot_anomaly_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>frequency = 12 observations per 1 year</code></pre>
 </div>
@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In de figuur met seizoenspatronen zet ik de interactiviteit uit. Dat leidt tot een statisch plot dat wordt gegenereerd met ggplot.</p>
 <div class="cell">
 <details open=""><summary>Code</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meetreeks</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://business-science.github.io/timetk/reference/plot_seasonal_diagnostics.html">plot_seasonal_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span>, .interactive <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/timetk/man/plot_seasonal_diagnostics.html">plot_seasonal_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span>, .interactive <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><a href="demo_timetk_files/figure-html/unnamed-chunk-2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="demo_timetk_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></a></p>
@@ -344,7 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section><section id="decompositie-van-de-tijdreeks" class="level2"><h2 class="anchored" data-anchor-id="decompositie-van-de-tijdreeks">Decompositie van de tijdreeks</h2>
 <div class="cell">
 <details open=""><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meetreeks</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://business-science.github.io/timetk/reference/plot_stl_diagnostics.html">plot_stl_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/timetk/man/plot_stl_diagnostics.html">plot_stl_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>frequency = 12 observations per 1 year</code></pre>
 </div>
@@ -358,12 +358,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <ul>
 <li><p>De tijdreeksdecompositie laat mooi zien dat de tijdreeks een seizoenscomponent heeft.</p></li>
-<li><p>Ik vind de figuren voor de tijdreeksdecompositie wel een beetje in elkaar gedrukt. Dat maakt ze wel wat lastig leesbaar. Voor een mooie grafiek zou dat nog wat aangepast moeten worden. Zelf een grafiek maken is natuurlijk ook een optie, de data daarvoor kan je genereren met de functie <code><a href="https://business-science.github.io/timetk/reference/tk_stl_diagnostics.html">tk_stl_diagnostics()</a></code>.</p></li>
+<li><p>Ik vind de figuren voor de tijdreeksdecompositie wel een beetje in elkaar gedrukt. Dat maakt ze wel wat lastig leesbaar. Voor een mooie grafiek zou dat nog wat aangepast moeten worden. Zelf een grafiek maken is natuurlijk ook een optie, de data daarvoor kan je genereren met de functie <code><a href="https://rdrr.io/pkg/timetk/man/tk_stl_diagnostics.html">tk_stl_diagnostics()</a></code>.</p></li>
 </ul></section><section id="autocorrelatie" class="level2"><h2 class="anchored" data-anchor-id="autocorrelatie">Autocorrelatie</h2>
 <p>Autocorrelatie (ACF) beschrijft in hoeverre waarden verklaard kunnen worden uit eerdere waarden. De partiële autocorrelatie (PACF) beschrijft ook in hoeverre waarden verklaard kunnen worden uit eerdere waarden, maar dan exclusief dat wat verklaard kan worden d.m.v. recentere waarden. Dat is eigenlijk het meest interessant.</p>
 <div class="cell">
 <details open=""><summary>Code</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meetreeks</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://business-science.github.io/timetk/reference/plot_acf_diagnostics.html">plot_acf_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">timetk</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/timetk/man/plot_acf_diagnostics.html">plot_acf_diagnostics</a></span><span class="op">(</span>.date_var <span class="op">=</span> <span class="va">datum</span>, .value <span class="op">=</span> <span class="va">waarde</span><span class="op">)</span></span></code><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>Max lag exceeds data available. Using max lag: 117</code></pre>
 </div>
@@ -635,7 +635,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","loop":true,"openEffect":"zoom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 </body></html>

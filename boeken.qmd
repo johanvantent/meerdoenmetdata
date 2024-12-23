@@ -94,6 +94,10 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 -   **Head First Data Analysis** - Michael Milton - *2021*
     -   Goede introductie als je nog weinig weet over data-analyse.
     -   Boek leest makkelijk weg en heeft interactieve opzet.
+-   **Leading with AI and Analytics** - Eric Anderson, Florian Zettelmeyer - *2023 (Luisterboek)*
+    -   Boek voor managers om AI en anlytics te benutten - Build your data science IQ to drive business value.
+    -   *In this book, you'll find the essential tools to help you: develop a strong data science intuition quotient, lead and scale AI and analytics throughout your organization, move from "best-guess" decision making to evidence-based decisions, and craft strategies and tactics to create real impact.*
+    -   [Audible](https://www.audible.co.uk/pd/Leading-with-AI-and-Analytics-Audiobook/B09R34LTKD)
 -   Elements of Statistical Learning - Hastie, Tibshirani and Friedman (2009)
     -   <https://web.stanford.edu/~hastie/ElemStatLearn/>
 -   Applied Predictive Modeling - Max Kuhn, Kjell Johnson
@@ -108,6 +112,7 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
     -   <https://www.tmwr.org/>
 -   Feature Engineering and Selection: A Practical Approach for Predictive Models - Max Kuhn and Kjell Johnson
     -   <https://bookdown.org/max/FES/>
+-   
 
 ------------------------------------------------------------------------
 
@@ -142,8 +147,9 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 
 ## Design
 
--   **The design of everyday things** - Don Norman - *2017*
+-   **The design of everyday things** - Don Norman - *2017/2024 (Luisterboek)*
     -   Over ontwerpen: hoe maak je iets dat goed functioneert, dat voldoet aan de wensen van de gebruikers.
+    -   [Audible](https://www.audible.de/pd/The-Design-of-Everyday-Things-Hoerbuch/B07L5KY2XG)
 -   **How design makes the world** - Scott Berkun - *2020*
     -   Overzichtelijk en goed leesbaar boek dat een overzicht geeft wat "design" is en hoe dat in de praktijk werkt.
 -   **Design Thinking** - Nigel Cross - *2021*
@@ -154,27 +160,55 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 
 -   **The Creative Curve** - Allen Gannett - *2020*
     -   How to Develop the Right Idea, at the Right Time
+-   **The Creative Habit** - Twyla Tharp - *2021/2024 - (Luisterboek)*
+    -   Erg leuk boek, ook al gaat het veel over dans.
+    -   [The Creative Habit - Audible](https://www.audible.de/pd/The-Creative-Habit-Hoerbuch/B00BTETLLU)
 -   **Badass - Making Users Awesome** - Kathy Sierra - *2021*
     -   Geweldig boek dat veel inzicht geeft je mensen kunt leren om ergens goed in te worden.
     -   Veel inzichten over hoe mensen en de automatische processen werken en hoe je dat kunt benutten om ze iets te leren.
--   *Thinking, Fast and slow* - Daniel Kahneman - *2022*
+-   **Thinking, Fast and slow - Daniel Kahneman - 2022**
     -   Over hoe je hersenen werken en dat dat niet altijd zo rationeel is als je zou denken.
--   **How we learn- The Surprising Truth About When, Where, and Why It Happens** - Benedict Carey - *2022*
+-   **How we learn - The Surprising Truth About When, Where, and Why It Happens** - Benedict Carey - *2022*
     -   Over op welke manieren we informatie onthouden. Dat is soms anders dan je zou denken.
 -   **The programmers brain** - Felienne Hermans - *2021*
     -   Hoe je inzichten over de werking van de hersenen praktisch kunt toepassen bij het (leren van) programmeren.
+-   **Mindset** - Carol Dweck - *2023 (Luisterboek)*
+    -   Dweck explains why it's not just our abilities and talent that bring us success but whether we approach them with a fixed or growth mindset. She makes clear why praising intelligence and ability doesn't foster self-esteem and lead to accomplishment but may actually jeopardise success.
+    -   [Audible](https://www.audible.de/pd/Mindset-Updated-Edition-Hoerbuch/140554399X)
+-   **Nudge: The Final Edition** - Richard H. Thaler, Cass R. Sunstein - *2024 (Luisterboek)*
+    -   Improving Decisions About Money, Health, and the Environment
+    -   [Audible](https://www.audible.de/pd/Nudge-The-Final-Edition-Hoerbuch/1663714924)
 
-## Overig
+## Werk en productiviteit
+
+-   **Rework** - Jason Fried, David Heinemeier Hanson - *2021*
+    -   Hoe je werk en het functioneren van een bedrijf anders aan kunt pakken. Nadruk op hoe je het simpel en effectief kunt houden.
+-   **Deep Work** - Cal Newport - *2023 (Luisterboek)*
+    -   Over hoe je zorg dat je geconcentreerd werkt zonder afgeleid te raken.
+    -   [Audible](https://www.audible.de/pd/Deep-Work-Hoerbuch/B01CYLJ49U)
+-   **The Progress Principle** - Teresa M. Amabile - **2023 (Luisterboek)**
+    -   The book shows how to remove obstacles to progress, including meaningless tasks and toxic relationships. It also explains how to activate two forces that enable progress: (1) catalysts---events that directly facilitate project work, such as clear goals and autonomy---and (2) nourishers---interpersonal events that uplift workers, including encouragement and demonstrations of respect and collegiality.
+    -   [Audible](https://www.audible.de/pd/The-Progress-Principle-Hoerbuch/B0BSMW53Q1)
+-   *Become an Analytic Translator - Wendy D. Lynch - 2024*
+    -   [Amazon](https://www.amazon.com/Become-Analytic-Translator-Business-Analysts/dp/0578316803)
+-   It doesn't have to be Crazy at Work - Jason Fried, David Heinemeier Hanson
+
+## Communicatie
 
 -   **The Sense of Structure** - George D. Gopen - *2018*
     -   Erg nuttig om te begrijpen hoe je als schrijver de juiste boodschap overbrengt aan je lezers. George Gopen doet dit aan de hand van de Reader Expectation Approach. Het helpt om erachter te komen wat een lezer verwacht en hoe je die kennis als schrijver kunt gebruiken.
     -   Veel van de principes worden ook uitgelegd in the Litigation Articles <https://www.georgegopen.com/the-litigation-articles.html>
+-   **Socrates op Sneakers** - Elke Wiss - *2023 (Luisterboek)*
+    -   Over diepgaande gesprekken, vragenstellen en doorvragen
+    -   [Online Bibliotheek](https://www.onlinebibliotheek.nl/catalogus/433176369/socrates-op-sneakers--)
+
+## Overig
+
 -   **An introduction to APIs** - Brian Cooksey - *2019*
     -   Over hoe APIs werken
     -   <https://zapier.com/learn/apis/>
--   **Rework** - Jason Fried, David Heinemeier Hanson - *2021*
-    -   Hoe je werk en het functioneren van een bedrijf anders aan kunt pakken. Nadruk op hoe je het simpel en effectief kunt houden.
--   It doesn't have to be Crazy at Work - Jason Fried, David Heinemeier Hanson
+-   **Why We Sleep** - Matthew Walker - *2024*
+    -   [Audible](https://www.audible.de/pd/Why-We-Sleep-Hoerbuch/B07613968Q)
 
 ------------------------------------------------------------------------
 
@@ -197,6 +231,9 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
     -   <https://www.rework.fm/>
     -   A podcast about a better way to work and run your business, from 37signals.
     -   Interessante podcast over werk, kleine bedrijven en het boek Rework
+-   *De Dataloog*
+    -   <https://dedataloog.nl/>
+    -   De Dataloog is de onafhankelijke Nederlandstalige podcast over data & kunstmatige intelligentie. Hier hoor je alles wat je moet weten over de zin en onzin van data, de nieuwste ontwikkelingen en echte verhalen uit de praktijk.
 
 ------------------------------------------------------------------------
 
@@ -227,8 +264,6 @@ Lijst van interessante (gelezen) boeken en andere resources. Veel van de onderst
 
 ------------------------------------------------------------------------
 
-## Wensenlijst
-
--   Style: Lessons in Clarity and Grace - Joseph Williams Joseph Bizup
+## 
 
 ------------------------------------------------------------------------
